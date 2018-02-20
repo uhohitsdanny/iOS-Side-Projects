@@ -17,6 +17,8 @@ enum Status: Int {
     case reqTimeout
 }
 
+
+
 class Decision {
     
     private var dId: Int = 0
@@ -28,4 +30,12 @@ class Decision {
         self.dId = id
     }
 
+}
+
+extension Decision {
+    
+//    func get decisionList() -> [Decision] {
+//        return self
+//    }
+    
 }
