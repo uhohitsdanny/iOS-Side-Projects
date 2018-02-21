@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Easy Decision/Controller/Decisions_VC.swift"
+            timestampString = "540891230.650684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "addNewDecision()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Easy_Decision.Decisions_VC.addNewDecision() -&gt; ()"
+                  moduleName = "Easy Decision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/Easy%20Decision/Easy%20Decision/Controller/Decisions_VC.swift"
+                  timestampString = "540891230.735829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Easy_Decision.Decisions_VC.addNewDecision() -&gt; ()"
+                  moduleName = "Easy Decision"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/Easy%20Decision/Easy%20Decision/Controller/Decisions_VC.swift"
+                  timestampString = "540891230.739956"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2892">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

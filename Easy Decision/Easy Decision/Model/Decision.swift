@@ -21,7 +21,7 @@ enum Status: Int {
 
 class Decision {
     
-    private var dId: Int = 0
+    private var dId: Int?
     private var img: String?
     private var str: String = ""
     private var sts: Status?
@@ -37,5 +37,7 @@ extension Decision {
 //    func get decisionList() -> [Decision] {
 //        return self
 //    }
-    
+    func getId() -> Int {
+        return self.dId!
+    }
 }
