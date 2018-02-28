@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Easy Decision/Controller/Decisions_VC.swift"
-            timestampString = "540891230.650684"
+            timestampString = "540892083.6728131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -19,14 +19,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Easy_Decision.Decisions_VC.addNewDecision() -&gt; ()"
                   moduleName = "Easy Decision"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/Easy%20Decision/Easy%20Decision/Controller/Decisions_VC.swift"
-                  timestampString = "540891230.735829"
+                  timestampString = "540892083.751259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -34,19 +34,19 @@
                   offsetFromSymbolStart = "152">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Easy_Decision.Decisions_VC.addNewDecision() -&gt; ()"
                   moduleName = "Easy Decision"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/Easy%20Decision/Easy%20Decision/Controller/Decisions_VC.swift"
-                  timestampString = "540891230.739956"
+                  timestampString = "540892083.753493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
                   endingLineNumber = "50"
-                  offsetFromSymbolStart = "2892">
+                  offsetFromSymbolStart = "2895">
                </Location>
             </Locations>
          </BreakpointContent>

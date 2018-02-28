@@ -7,37 +7,30 @@
 
 import Foundation
 
-enum Status: Int {
-    case idle   = 0
-    case fetching
-    case ready
-    case done
-    case networkNotAvailable
-    case noDataAvailable
-    case reqTimeout
-}
-
-
-
-class Decision {
+struct Decision {
     
     private var dId: Int?
     private var img: String?
     private var str: String = ""
-    private var sts: Status?
+    private var sts: NSNumber?
     
-    init(id:Int) {
-        self.dId = id
-    }
-
 }
 
 extension Decision {
     
-//    func get decisionList() -> [Decision] {
-//        return self
-//    }
     func getId() -> Int {
         return self.dId!
+    }
+    
+    func getImg() -> String {
+        return self.img!
+    }
+    
+    func getDecision() -> String {
+        return self.str
+    }
+    
+    func getSts() -> NSNumber {
+        return self.sts!
     }
 }

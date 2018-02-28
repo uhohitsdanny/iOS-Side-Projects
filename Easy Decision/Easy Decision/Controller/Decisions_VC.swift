@@ -47,7 +47,7 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     @IBAction func addNewDecision() -> Void {
         if decision_count < limit {
-            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: decision_count, section: 0)) as! TextInputCell
+            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: decision_count, section: 1)) as! TextInputCell
             cell.textField.isUserInteractionEnabled = false;
             
             let text = cell.textField.text

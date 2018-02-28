@@ -14,6 +14,7 @@
 		3011CEF7203442C900AB71F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3011CEF5203442C900AB71F0 /* LaunchScreen.storyboard */; };
 		305157CD2035B3F00061BA0F /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157CC2035B3F00061BA0F /* Decision.swift */; };
 		305157D6203ACD390061BA0F /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157D5203ACD390061BA0F /* TextFieldCell.swift */; };
+		30774CD020466EA100CB5A16 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30774CCF20466EA100CB5A16 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3011CEF8203442CA00AB71F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		305157CC2035B3F00061BA0F /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		305157D5203ACD390061BA0F /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		30774CCF20466EA100CB5A16 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,6 @@
 			children = (
 				3011CEF0203442C900AB71F0 /* Main.storyboard */,
 				3011CEF5203442C900AB71F0 /* LaunchScreen.storyboard */,
-				305157D5203ACD390061BA0F /* TextFieldCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +90,7 @@
 		3011CF002034444B00AB71F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				305157D5203ACD390061BA0F /* TextFieldCell.swift */,
 				3011CEEE203442C900AB71F0 /* Decisions_VC.swift */,
 			);
 			path = Controller;
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3011CEF3203442C900AB71F0 /* Assets.xcassets */,
+				30774CCF20466EA100CB5A16 /* Globals.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				3011CEEF203442C900AB71F0 /* Decisions_VC.swift in Sources */,
 				3011CEED203442C900AB71F0 /* AppDelegate.swift in Sources */,
 				305157CD2035B3F00061BA0F /* Decision.swift in Sources */,
+				30774CD020466EA100CB5A16 /* Globals.swift in Sources */,
 				305157D6203ACD390061BA0F /* TextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
