@@ -30,6 +30,6 @@ extension Decisions_VC {
     }
     
     func resetTableViewCells() -> Void {
-        tableView?.reloadData()
+        tableView?.reload
     }
 }
