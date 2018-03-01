@@ -115,6 +115,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clearDecisions" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7e-Ea-4hd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
