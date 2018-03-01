@@ -9,7 +9,7 @@ import UIKit
 
 class Decisions_VC: UIViewController {
     
-    var decision_list = [String]()
+    var decision_list = [Decision]()
     var cell_height: CGFloat?
     let limit: Int = 6
 
@@ -40,6 +40,13 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "decision_cell", for: indexPath!) as! TextInputCell
+        let index = indexPath?.row
+        var new_decision: Decision = self.decision_list[index!]
+        new_decision.setDecision(decision: cell.textField.text!)
+    }
+    
     func setupView() {
         self.tableView!.tableFooterView = UIView(frame: .zero)
         self.tableView!.delegate = self
@@ -56,8 +63,11 @@ extension Decisions_VC {
             let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 1)) as! TextInputCell
             cell.textField.isUserInteractionEnabled = false;
             
+            var new_decision: Decision = Decision()
             let text = cell.textField.text
-            self.decision_list.append(text!)
+            
+            new_decision.setDecision(decision: text!)
+            self.decision_list.append(new_decision)
             
             self.tableView!.beginUpdates()
             self.tableView!.insertRows(at: [IndexPath(row: self.decision_list.count , section: 0)], with: .automatic)
@@ -69,6 +79,9 @@ extension Decisions_VC {
             // Notify the user
             limitAlert()
         }
+    }
+    @IBAction func submitDecisions() -> Void {
+        print("\(self.decision_list)")
     }
     
     @IBAction func clearDecisions() -> Void {

@@ -16,6 +16,9 @@ struct Decision {
     
 }
 
+//
+// Getter Functions
+//
 extension Decision {
     
     func getId() -> Int {
@@ -32,5 +35,15 @@ extension Decision {
     
     func getSts() -> NSNumber {
         return self.sts!
+    }
+}
+
+//
+// Setter Functions
+//
+extension Decision {
+    
+    mutating func setDecision(decision: String) -> Void {
+        self.str = decision
     }
 }

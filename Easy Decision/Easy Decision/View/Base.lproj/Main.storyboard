@@ -100,6 +100,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitDecisions" destination="BYZ-38-t0r" eventType="touchUpInside" id="brq-5d-1CM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-0Z-Ibd">
                                                 <rect key="frame" x="3.5" y="34" width="46" height="29"/>
