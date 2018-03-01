@@ -16,20 +16,26 @@ extension Decisions_VC {
     
     func updateAddBtnPos() -> Void {
         let frame = tableView?.rectForRow(at: IndexPath(item: 0, section: 0))
-        self.cell_height = (frame?.size.height)! * CGFloat(self.decision_count)
+        self.cell_height = (frame?.size.height)! * CGFloat(self.decision_list.count)
         UIView.animate(withDuration: 0.3, animations: {   self.addBtn?.transform = CGAffineTransform(translationX: 0, y: self.cell_height!) })
     }
     
     func resetBtnPosition() -> Void {
-//        addBtn?.frame.origin = CGPoint(x: begin_pos_x!, y: begin_pos_y!)
         let frame = tableView?.rectForRow(at: IndexPath(item: 0, section: 0))
-        self.cell_height = (frame?.size.height)! * CGFloat(self.decision_count)
+        self.cell_height = (frame?.size.height)! * CGFloat(self.decision_list.count + 1)
         UIView.animate(withDuration: 0.3, animations: {
             self.addBtn?.transform = CGAffineTransform(translationX: 0, y:0)
         })
     }
     
     func resetTableViewCells() -> Void {
-        tableView?.reload
+        for index in stride(from: self.decision_list.count, to: 0, by: -1){
+            self.decision_list.remove(at: index - 1)
+            
+            let indexPath = IndexPath(row: index, section: 0)
+            self.tableView?.beginUpdates()
+            self.tableView?.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView?.endUpdates()
+        }
     }
 }

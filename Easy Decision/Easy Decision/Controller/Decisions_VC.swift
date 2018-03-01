@@ -10,7 +10,6 @@ import UIKit
 class Decisions_VC: UIViewController {
     
     var decision_list = [String]()
-    var decision_count: Int = 1
     var cell_height: CGFloat?
     let limit: Int = 6
 
@@ -53,19 +52,18 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
 //
 extension Decisions_VC {
     @IBAction func addNewDecision() -> Void {
-        if decision_count < limit {
-            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: decision_count, section: 1)) as! TextInputCell
+        if self.decision_list.count < limit {
+            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 1)) as! TextInputCell
             cell.textField.isUserInteractionEnabled = false;
             
             let text = cell.textField.text
             self.decision_list.append(text!)
             
-            tableView!.beginUpdates()
-            tableView!.insertRows(at: [IndexPath(row: decision_count, section: 0)], with: .automatic)
-            tableView!.endUpdates()
+            self.tableView!.beginUpdates()
+            self.tableView!.insertRows(at: [IndexPath(row: self.decision_list.count , section: 0)], with: .automatic)
+            self.tableView!.endUpdates()
             
             updateAddBtnPos()
-            self.decision_count += 1
 
         } else {
             // Notify the user
