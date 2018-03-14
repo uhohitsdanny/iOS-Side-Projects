@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Easy Decision/Controller/HelperFunctions.swift"
-            timestampString = "541595681.074957"
+            timestampString = "541817018.150658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Easy Decision/Controller/Decisions_VC.swift"
-            timestampString = "541595681.075017"
+            timestampString = "542698019.285975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "addNewDecision()"
             landmarkType = "7">
          </BreakpointContent>

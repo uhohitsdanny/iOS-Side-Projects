@@ -10,6 +10,7 @@ import UIKit
 class Decisions_VC: UIViewController {
     
     var decision_list = [Decision]()
+    var cellText = [String]()
     var cell_height: CGFloat?
     let limit: Int = 6
 
@@ -40,6 +41,10 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         return cell
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.isUserInteractionEnabled = false;
+    }
+    
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "decision_cell", for: indexPath!) as! TextInputCell
         let index = indexPath?.row
@@ -51,16 +56,11 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         self.tableView!.tableFooterView = UIView(frame: .zero)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-    }    
-}
-
-//
-// Actions
-//
-extension Decisions_VC {
+    }
+    
     @IBAction func addNewDecision() -> Void {
-        if self.decision_list.count < limit {
-            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 1)) as! TextInputCell
+        if self.decision_list.count + 1 < limit {
+            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
             cell.textField.isUserInteractionEnabled = false;
             
             var new_decision: Decision = Decision()
@@ -74,7 +74,7 @@ extension Decisions_VC {
             self.tableView!.endUpdates()
             
             updateAddBtnPos()
-
+            
         } else {
             // Notify the user
             limitAlert()
@@ -89,6 +89,7 @@ extension Decisions_VC {
         resetTableViewCells()
     }
 }
+
 
 
 

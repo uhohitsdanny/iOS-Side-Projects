@@ -60,11 +60,13 @@
                                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="7b8-td-fZ5"/>
-                                                                <constraint firstAttribute="width" constant="169" id="E1N-Yb-5jc"/>
                                                             </constraints>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="BYZ-38-t0r" id="cZ6-wH-Ini"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
