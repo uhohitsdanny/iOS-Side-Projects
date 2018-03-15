@@ -20,6 +20,10 @@ extension Decisions_VC {
         UIView.animate(withDuration: 0.3, animations: {   self.addBtn?.transform = CGAffineTransform(translationX: 0, y: self.cell_height!) })
     }
     
+    func updateCursorToNextTextField() -> Void {
+        
+    }
+    
     func resetBtnPosition() -> Void {
         let frame = tableView?.rectForRow(at: IndexPath(item: 0, section: 0))
         self.cell_height = (frame?.size.height)! * CGFloat(self.decision_list.count + 1)

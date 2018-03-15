@@ -60,21 +60,20 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     @IBAction func addNewDecision() -> Void {
         if self.decision_list.count + 1 < limit {
-            let cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
-            cell.textField.isUserInteractionEnabled = false;
-            
+            var cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
+            cell.textField.endEditing(true)
             var new_decision: Decision = Decision()
             let text = cell.textField.text
             
             new_decision.setDecision(decision: text!)
             self.decision_list.append(new_decision)
-            
             self.tableView!.beginUpdates()
             self.tableView!.insertRows(at: [IndexPath(row: self.decision_list.count , section: 0)], with: .automatic)
             self.tableView!.endUpdates()
             
             updateAddBtnPos()
-            
+            cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
+            cell.textField.becomeFirstResponder()
         } else {
             // Notify the user
             limitAlert()
