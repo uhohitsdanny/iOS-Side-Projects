@@ -43,7 +43,14 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.isUserInteractionEnabled = false;
-    }
+        var new_decision: Decision = Decision()
+        let text = textField.text
+        new_decision.setDecision(decision: text!)
+        
+        self.decision_list.append(new_decision)
+        self.tableView!.beginUpdates()
+        self.tableView!.insertRows(at: [IndexPath(row: self.decision_list.count , section: 0)], with: .automatic)
+        self.tableView!.endUpdates()    }
     
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "decision_cell", for: indexPath!) as! TextInputCell
@@ -60,19 +67,16 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     @IBAction func addNewDecision() -> Void {
         if self.decision_list.count + 1 < limit {
-            var cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
-            cell.textField.endEditing(true)
-            var new_decision: Decision = Decision()
-            let text = cell.textField.text
             
-            new_decision.setDecision(decision: text!)
-            self.decision_list.append(new_decision)
-            self.tableView!.beginUpdates()
-            self.tableView!.insertRows(at: [IndexPath(row: self.decision_list.count , section: 0)], with: .automatic)
-            self.tableView!.endUpdates()
+            var index = IndexPath(row: self.decision_list.count, section: 0)
+            var cell = self.tableView?.cellForRow(at: index) as! TextInputCell
+            cell.textField.endEditing(true)
+            log("Edited disabled for cell at row \(index), section 0 ")
             
             updateAddBtnPos()
-            cell = tableView?.dequeueReusableCell(withIdentifier: "decision_cell", for: IndexPath(row: self.decision_list.count, section: 0)) as! TextInputCell
+            
+            index = IndexPath(row: self.decision_list.count, section: 0)
+            cell = self.tableView?.cellForRow(at: index) as! TextInputCell
             cell.textField.becomeFirstResponder()
         } else {
             // Notify the user
