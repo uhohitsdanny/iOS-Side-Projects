@@ -46,4 +46,8 @@ extension Decision {
     mutating func setDecision(decision: String) -> Void {
         self.str = decision
     }
+    
+    mutating func setDecisionID(id: Int) -> Void {
+        self.dId = id
+    }
 }
