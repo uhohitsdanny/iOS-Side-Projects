@@ -38,12 +38,13 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         let cell = tableView.dequeueReusableCell(withIdentifier: "decision_cell", for: indexPath) as! TextInputCell
         cell.textField.delegate = self
         cell.textField.placeholder = "Write Decision..."
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
-
+        log("Done editing at indexpath \(indexPath?.row ?? 0)")
     }
     
     func setupView() {
@@ -52,31 +53,13 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         self.tableView!.dataSource = self
     }
     
-//    @IBAction func addNewDecision() -> Void {
-//        if self.decision_list.count < limit {
-//
-//            var index = IndexPath(row: self.decision_list.count - 1, section: 0)
-//            var cell = self.tableView?.cellForRow(at: index) as! TextInputCell
-//            cell.textField.endEditing(true)
-//            log("Edited disabled for cell at \(index) in UITableView,")
-//
-//            updateAddBtnPos()
-//
-//            index = IndexPath(row: self.decision_list.count - 1, section: 0)
-//            cell = self.tableView?.cellForRow(at: index) as! TextInputCell
-//            cell.textField.becomeFirstResponder()
-//        } else {
-//            // Notify the user
-//            limitAlert()
-//        }
-//    }
     @IBAction func submitDecisions() -> Void {
-        log("Submitting the decision list containing: \(self.decision_list)")
         saveDecisionList(decisionlist:&self.decision_list, rowsize:limit, tbv:self.tableView!)
+        let decisionPackage = DecisionPackage(dlist: self.decision_list)
+        decisionPackage.queryGoogleImages()
     }
     
     @IBAction func clearDecisions() -> Void {
-//        resetBtnPosition()
         resetTableViewCells(rowsize: limit)
     }
 }

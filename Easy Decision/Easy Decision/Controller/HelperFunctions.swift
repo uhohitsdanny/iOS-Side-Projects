@@ -24,14 +24,17 @@ extension Decisions_VC {
         var indexPath: IndexPath
         var cell: TextInputCell
         
+        // Make sure to start with a fresh decision list
+        decisionlist = []
+        
         for index in stride(from: 0, to: rowsize, by: 1)
         {
             indexPath = IndexPath(row:index, section:0)
             cell = tbv.cellForRow(at: indexPath) as! TextInputCell
-            if !textfieldIsEmpty(cell.textField) {
+            if !textfieldIsEmpty(cell.textField){
                 var new_decision = Decision()
-                new_decision.setDecision(decision: cell.textField.text!)
-                new_decision.setDecisionID(id: index)
+                new_decision.str = cell.textField.text!
+                new_decision.dId = index
                 decisionlist.append(new_decision)
             }
         }
@@ -40,7 +43,7 @@ extension Decisions_VC {
             decisionsAlert()
         }
         else {
-            log("\(decisionlist)")
+            log("Submitting the decision list containing: \(decisionlist)")
         }
     }
     
@@ -62,18 +65,9 @@ extension Decisions_VC {
             return false
         }
     }
-
-    
-//    func resetBtnPosition() -> Void {
-//        let frame = tableView?.rectForRow(at: IndexPath(item: 0, section: 0))
-//        self.cell_height = (frame?.size.height)! * CGFloat(self.decision_list.count + 1)
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.addBtn?.transform = CGAffineTransform(translationX: 0, y:0)
-//        })
-//    }
     
     func resetTableViewCells(rowsize:Int) -> Void {
-        for index in stride(from: 0, through: rowsize, by: 1)
+        for index in stride(from: 0, to: rowsize, by: 1)
         {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = self.tableView?.cellForRow(at: indexPath) as! TextInputCell

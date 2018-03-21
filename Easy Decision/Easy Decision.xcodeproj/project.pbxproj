@@ -16,6 +16,7 @@
 		305157CD2035B3F00061BA0F /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157CC2035B3F00061BA0F /* Decision.swift */; };
 		305157D6203ACD390061BA0F /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157D5203ACD390061BA0F /* TextFieldCell.swift */; };
 		30774CD020466EA100CB5A16 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30774CCF20466EA100CB5A16 /* Globals.swift */; };
+		30FDA26E205C747B00786874 /* DecisionPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDA26D205C747B00786874 /* DecisionPackage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		305157CC2035B3F00061BA0F /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		305157D5203ACD390061BA0F /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		30774CCF20466EA100CB5A16 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		30FDA26D205C747B00786874 /* DecisionPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionPackage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				305157CC2035B3F00061BA0F /* Decision.swift */,
+				30FDA26D205C747B00786874 /* DecisionPackage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				3011CEEF203442C900AB71F0 /* Decisions_VC.swift in Sources */,
 				3011CEED203442C900AB71F0 /* AppDelegate.swift in Sources */,
+				30FDA26E205C747B00786874 /* DecisionPackage.swift in Sources */,
 				305157CD2035B3F00061BA0F /* Decision.swift in Sources */,
 				30774CD020466EA100CB5A16 /* Globals.swift in Sources */,
 				305157D6203ACD390061BA0F /* TextFieldCell.swift in Sources */,

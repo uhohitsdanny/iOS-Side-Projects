@@ -9,45 +9,11 @@ import Foundation
 
 struct Decision {
     
-    private var dId: Int?
-    private var img: String?
-    private var str: String = ""
-    private var sts: NSNumber?
+    var dId: Int?
+    var img: String?
+    var str: String = ""
+    var sts: NSNumber?
     
 }
 
-//
-// Getter Functions
-//
-extension Decision {
-    
-    func getId() -> Int {
-        return self.dId!
-    }
-    
-    func getImg() -> String {
-        return self.img!
-    }
-    
-    func getDecision() -> String {
-        return self.str
-    }
-    
-    func getSts() -> NSNumber {
-        return self.sts!
-    }
-}
 
-//
-// Setter Functions
-//
-extension Decision {
-    
-    mutating func setDecision(decision: String) -> Void {
-        self.str = decision
-    }
-    
-    mutating func setDecisionID(id: Int) -> Void {
-        self.dId = id
-    }
-}
