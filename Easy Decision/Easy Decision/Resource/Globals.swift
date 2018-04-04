@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias ServiceResponse = (JSON, NSError?) -> Void
-
 enum Status: NSNumber {
     case idle   = 0
     case fetching
@@ -18,7 +16,6 @@ enum Status: NSNumber {
     case noDataAvailable
     case reqTimeout
 }
-
 
 // Persistent Data
 let recentDecisionList: [Decision] = [Decision()]

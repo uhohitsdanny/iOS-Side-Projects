@@ -16,7 +16,7 @@
 		305157CD2035B3F00061BA0F /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157CC2035B3F00061BA0F /* Decision.swift */; };
 		305157D6203ACD390061BA0F /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305157D5203ACD390061BA0F /* TextFieldCell.swift */; };
 		30774CD020466EA100CB5A16 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30774CCF20466EA100CB5A16 /* Globals.swift */; };
-		30A271AF2072209E00F50D5D /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A271AE2072209E00F50D5D /* NetworkModel.swift */; };
+		30A271AF2072209E00F50D5D /* GoogleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A271AE2072209E00F50D5D /* GoogleImage.swift */; };
 		30FDA26E205C747B00786874 /* DecisionPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDA26D205C747B00786874 /* DecisionPackage.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		305157CC2035B3F00061BA0F /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		305157D5203ACD390061BA0F /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		30774CCF20466EA100CB5A16 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		30A271AE2072209E00F50D5D /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		30A271AE2072209E00F50D5D /* GoogleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleImage.swift; sourceTree = "<group>"; };
 		30FDA26D205C747B00786874 /* DecisionPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionPackage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +90,7 @@
 			children = (
 				305157CC2035B3F00061BA0F /* Decision.swift */,
 				30FDA26D205C747B00786874 /* DecisionPackage.swift */,
-				30A271AE2072209E00F50D5D /* NetworkModel.swift */,
+				30A271AE2072209E00F50D5D /* GoogleImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30A271AF2072209E00F50D5D /* NetworkModel.swift in Sources */,
+				30A271AF2072209E00F50D5D /* GoogleImage.swift in Sources */,
 				3011CEEF203442C900AB71F0 /* Decisions_VC.swift in Sources */,
 				3011CEED203442C900AB71F0 /* AppDelegate.swift in Sources */,
 				30FDA26E205C747B00786874 /* DecisionPackage.swift in Sources */,
