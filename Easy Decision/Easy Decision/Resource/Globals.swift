@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias ServiceResponse = (JSON, NSError?) -> Void
+
 enum Status: NSNumber {
     case idle   = 0
     case fetching
