@@ -25,7 +25,7 @@ extension DecisionPackage {
         
         for input in stride(from: 0, to: self.decision_list.count, by: 1) {
             query = self.decision_list[input].str
-            let request = "GET https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image"
+            let request_url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image"
         }
         
         

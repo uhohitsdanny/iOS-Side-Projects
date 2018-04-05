@@ -10,7 +10,7 @@ import Foundation
 struct Decision {
     
     var dId: Int?
-    var img: String?
+    var img: GoogleImage?
     var str: String = ""
     var sts: NSNumber?
     
