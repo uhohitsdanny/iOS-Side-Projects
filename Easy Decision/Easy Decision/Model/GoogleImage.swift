@@ -30,7 +30,8 @@ struct GoogleImage {
 
 extension GoogleImage {
     init?(json:[String:Any]) {
-        guard let jContextLink = json["contextLink"] as? String,
+        guard let json_items = json["items"] as? [String:Any],
+            let jContextLink = json_items["contextLink"] as? String,
             let jHeight = json["height"] as? Int,
             let jWidth = json["width"] as? Int,
             let jByteSize = json["byteSize"] as? Int,
@@ -54,17 +55,18 @@ extension GoogleImage {
 
 extension GoogleImage {
     
-    func search(with decision_url:URL){
-        let urlReq = URLRequest(url: decision_url)
+    static func search(with decision_url:URL, completion:@escaping (GoogleImage?)->Void){
         
+        let urlReq = URLRequest(url: decision_url)
         let config = URLSessionConfiguration.default
         let urlSession = URLSession(configuration: config)
         
+        
         urlSession.dataTask(with: urlReq) { (data, response, error) in
-            
             defer {
                 print("")
             }
+            
             //Check for errors
             guard error == nil else {
                 print("Error in URL Request for \(decision_url.absoluteURL)")
@@ -72,18 +74,18 @@ extension GoogleImage {
                 return
             }
             //Get the data
-            guard let imageData = data else {
+            do {
+            if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any],
+                let googleImage = GoogleImage(json: json){
+                completion(googleImage)
+            } else {
                 print("Error: data not received")
                 return
             }
-            
-            do {
-                //Parse into String obj with the json data
-                guard let json = try? JSONSerialization.jsonObject(with: imageData, options: []) as? [String:Any] else {
-                    print("Error: cannot convert to JSON")
-                    return
-                }
+            } catch {
+                print("Error:parsing data into JSON failed")
             }
-        }
+            
+        }.resume()
     }
 }
