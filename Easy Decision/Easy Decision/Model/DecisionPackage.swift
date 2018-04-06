@@ -33,7 +33,7 @@ extension DecisionPackage {
             }
 
             GoogleImage.search(with: url_request, completion: { (googleImage) in
-                self.googleImages.append(googleImage!)
+                self.googleImages.append(googleImage)
                 log("===================== SUCCESS =====================")
             })
         }
