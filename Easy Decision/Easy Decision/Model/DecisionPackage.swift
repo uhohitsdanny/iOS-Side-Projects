@@ -25,6 +25,9 @@ extension DecisionPackage {
         var query:String = ""
         
         for input in stride(from: 0, to: self.decision_list.count, by: 1) {
+            let group = DispatchGroup()
+            group.enter()
+            
             query = self.decision_list[input].str
             let url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image&num=1"
             guard let url_request = URL(string: url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!) else {
@@ -35,8 +38,11 @@ extension DecisionPackage {
             GoogleImage.search(with: url_request, completion: { (googleImage) in
                 self.googleImages.append(googleImage)
                 log("===================== SUCCESS =====================")
+                group.leave()
             })
+            group.wait()
         }
+        log("===================== DONE =====================")
     }
 }
 

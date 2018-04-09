@@ -94,7 +94,6 @@ extension GoogleImage {
 //                let dataStr = String(data: validData, encoding: .utf8)
 //                print(dataStr!)
                 let googleImage = try json_decoder.decode(GoogleImage.self, from: validData)
-                print(googleImage)
                 completion(googleImage)
             } catch {
                 print("Error:parsing data into JSON failed")
