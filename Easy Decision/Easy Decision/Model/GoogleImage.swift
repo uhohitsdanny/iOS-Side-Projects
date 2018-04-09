@@ -19,7 +19,17 @@ import Foundation
 //"thumbnailHeight": integer,
 //"thumbnailWidth": integer
 
-struct Image: Codable {
+
+
+struct GoogleImage: Decodable{
+    let items: [Items]?
+}
+
+struct Items: Decodable {
+    let image: Image?
+}
+
+struct Image: Decodable {
     let contextLink:String?
     let height:Int?
     let width:Int?
@@ -27,11 +37,6 @@ struct Image: Codable {
     let thumbnailLink:String?
     let thumbnailHeight:Int?
     let thumbnailWidth:Int?
-}
-
-struct GoogleImage: Codable {
-    let title:String
-    let image:Image
 }
 
 //extension GoogleImage {
@@ -63,18 +68,18 @@ extension GoogleImage {
     
     static func search(with decision_url:URL, completion:@escaping (GoogleImage)->Void){
         
-        let urlReq = URLRequest(url: decision_url)
+//        let urlReq = URLRequest(url: decision_url)
+        print("URL IS \(decision_url.description)")
         let config = URLSessionConfiguration.default
         let urlSession = URLSession(configuration: config)
         
         
-        urlSession.dataTask(with: urlReq) { (data, response, error) in
+        urlSession.dataTask(with: decision_url) { (data, response, error) in
             defer {
                 print("")
             }
             //Check for errors
             guard error == nil else {
-                print("Error in URL Request for \(decision_url.absoluteURL)")
                 print(error!)
                 return
             }
@@ -86,7 +91,10 @@ extension GoogleImage {
             //Get the data
             let json_decoder = JSONDecoder()
             do {
+//                let dataStr = String(data: validData, encoding: .utf8)
+//                print(dataStr!)
                 let googleImage = try json_decoder.decode(GoogleImage.self, from: validData)
+                print(googleImage)
                 completion(googleImage)
             } catch {
                 print("Error:parsing data into JSON failed")
