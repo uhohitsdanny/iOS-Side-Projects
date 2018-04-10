@@ -1,0 +1,6 @@
+Easy Decision App by Daniel Navarro
+
+This app takes up to 6 decisions and sends a request to Google using the Custom Search Enginge API.
+It then returns an image of the random decision.
+
+* As I cannot afford to pay for limit increase on how many requests I can make per day, it is limited at 100 per day for my API key.
