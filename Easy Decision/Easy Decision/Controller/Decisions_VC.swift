@@ -79,10 +79,10 @@ extension Decisions_VC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "imageSegue" {
             if let destinationVC = segue.destination as? DisplayDecision_VC {
-                
                 let rndmIndex = Int(arc4random_uniform(UInt32(self.decision_list.count)))
-                destinationVC.googleImg = self.decisionPackage!.googleImages[0]
                 
+                destinationVC.decisionTitle = self.decision_list[rndmIndex].str  
+                destinationVC.googleImg = self.decisionPackage!.googleImages[rndmIndex]
             }
         }
     }

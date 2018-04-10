@@ -9,9 +9,10 @@ import UIKit
 
 class DisplayDecision_VC: UIViewController {
 
-    @IBOutlet weak var decisionTitle:UILabel?
+    @IBOutlet weak var decisionTitleLabel:UILabel?
     @IBOutlet weak var imgView:UIImageView?
     
+    var decisionTitle:String?
     var googleImg:GoogleImage?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +26,7 @@ class DisplayDecision_VC: UIViewController {
     }
 
     func moduleInit() {
+        var image:UIImage?
         if googleImg != nil {
             //Check if items is nil
             if googleImg?.items != nil {
@@ -33,16 +35,17 @@ class DisplayDecision_VC: UIViewController {
                 let group = DispatchGroup()
                 group.enter()
                 
-
-                    let imgUrl = URL(string: (googleImg?.items![0].link)!)
-                    DispatchQueue.global().async {
+                let imgUrl = URL(string: (googleImg?.items![0].link)!)
+                DispatchQueue.global().async {
                     GoogleImage.retrieveImage(with: imgUrl!, completion: { (validData) in
-                        let image = UIImage(data: validData)
-                        self.imgView?.image = image
+                        image = UIImage(data: validData)
                         group.leave()
                     })
                 }
                 group.wait()
+                self.decisionTitleLabel?.text = decisionTitle
+                self.imgView?.image = image
+                self.imgView?.contentMode = .scaleAspectFit
             }
         }
         else {
