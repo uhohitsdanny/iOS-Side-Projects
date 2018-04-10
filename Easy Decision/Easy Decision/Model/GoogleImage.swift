@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 //JSON REST API
 //"image": {
 //"contextLink": string,
@@ -26,6 +24,8 @@ struct GoogleImage: Decodable{
 }
 
 struct Items: Decodable {
+    let title: String?
+    let link: String?
     let image: Image?
 }
 
@@ -39,39 +39,12 @@ struct Image: Decodable {
     let thumbnailWidth:Int?
 }
 
-//extension GoogleImage {
-//    init?(json:[String:Any]) {
-//        guard let jContextLink = json["contextLink"] as? String,
-//            let jHeight = json["height"] as? Int,
-//            let jWidth = json["width"] as? Int,
-//            let jByteSize = json["byteSize"] as? Int,
-//            let jThumbnailLink = json["thumbnailLink"] as? String,
-//            let jThumbnailHeight = json["thumbnailHeight"] as? Int,
-//            let jThumbnailWidth = json["thumbnailWidth"] as? Int
-//
-//        else
-//        {
-//            return nil
-//        }
-//
-//        self.contextLink = jContextLink
-//        self.height = jHeight
-//        self.width = jWidth
-//        self.byteSize = jByteSize
-//        self.thumbnailLink = jThumbnailLink
-//        self.thumbnailHeight = jThumbnailHeight
-//        self.thumbnailWidth = jThumbnailWidth
-//    }
-//}
-
 extension GoogleImage {
     
     static func search(with decision_url:URL, completion:@escaping (GoogleImage)->Void){
         
-//        let urlReq = URLRequest(url: decision_url)
         print("URL IS \(decision_url.description)")
-        let config = URLSessionConfiguration.default
-        let urlSession = URLSession(configuration: config)
+        let urlSession = URLSession(configuration: .default)
         
         
         urlSession.dataTask(with: decision_url) { (data, response, error) in
@@ -80,25 +53,45 @@ extension GoogleImage {
             }
             //Check for errors
             guard error == nil else {
-                print(error!)
+                log("\(error!)")
                 return
             }
             //Check data
             guard let validData = data else {
-                print("Error: could not retrieve data")
+                log("Error: could not retrieve data")
                 return
             }
             //Get the data
             let json_decoder = JSONDecoder()
             do {
-//                let dataStr = String(data: validData, encoding: .utf8)
-//                print(dataStr!)
                 let googleImage = try json_decoder.decode(GoogleImage.self, from: validData)
                 completion(googleImage)
             } catch {
-                print("Error:parsing data into JSON failed")
+                log("Error:parsing data into JSON failed")
             }
             
         }.resume()
+    }
+    
+    //Perform data task url session again, but this time with the link
+    //that was received from the google search
+    static func retrieveImage(with img_url:URL, completion:@escaping (Any?) -> Void){
+        
+        log("Retrieving image from \(img_url.absoluteURL)")
+        let urlSession = URLSession(configuration: .default)
+        
+        urlSession.dataTask(with: img_url) { (data, response, error) in
+            guard error == nil else {
+                log("\(error!)")
+                return
+            }
+            
+            guard let validData = data else {
+                log("Error: could not retrieve image data")
+                return
+            }
+            
+            completion(validData)
+        }
     }
 }

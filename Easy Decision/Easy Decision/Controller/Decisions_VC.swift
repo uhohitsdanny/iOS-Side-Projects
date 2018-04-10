@@ -9,6 +9,7 @@ import UIKit
 
 class Decisions_VC: UIViewController {
     
+    var decisionPackage:DecisionPackage? = nil
     var decision_list = [Decision]()
     var cellText = [String]()
     var cell_height: CGFloat?
@@ -55,8 +56,9 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     @IBAction func submitDecisions() -> Void {
         saveDecisionList(decisionlist:&self.decision_list, rowsize:limit, tbv:self.tableView!)
-        let decisionPackage = DecisionPackage(dlist: self.decision_list)
-        decisionPackage.queryGoogleImages()
+        self.decisionPackage = DecisionPackage(dlist: self.decision_list)
+        self.decisionPackage!.queryGoogleImages()
+        performSegue(withIdentifier: "imageSegue", sender: self)
     }
     
     @IBAction func clearDecisions() -> Void {
@@ -69,6 +71,23 @@ extension Decisions_VC {
     func moduleInit()
     {
         self.decision_list = [Decision]()
+    }
+}
+
+//Segue Functions
+extension Decisions_VC {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "imageSegue" {
+            if let destinationVC = segue.destination as? DisplayDecision_VC {
+                
+                let rndmIndex = Int(arc4random_uniform(UInt32(self.decision_list.count)))
+                destinationVC.googleImg = self.decisionPackage!.googleImages[rndmIndex]                
+            }
+        }
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        
     }
 }
 

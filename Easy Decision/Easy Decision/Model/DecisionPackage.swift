@@ -29,7 +29,7 @@ extension DecisionPackage {
             group.enter()
             
             query = self.decision_list[input].str
-            let url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image&num=1"
+            let url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image&imgSize=huge&num=1"
             guard let url_request = URL(string: url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!) else {
                 log("Error: URL cannot be created")
                 return
@@ -43,45 +43,6 @@ extension DecisionPackage {
             group.wait()
         }
         log("===================== DONE =====================")
+        print(self.googleImages)
     }
-}
-
-//
-// Getter Functions
-//
-extension DecisionPackage {
-    
-//    func getId() -> Int {
-//        return self.dId!
-//    }
-//
-//    func getImg() -> String {
-//        return self.img!
-//    }
-//
-//    func getDecision() -> String {
-//        return self.str
-//    }
-//
-//    func getSts() -> NSNumber {
-//        return self.sts!
-//    }
-}
-
-//
-// Setter Functions
-//
-extension DecisionPackage {
-    
-//    mutating func setDecision(decision: String) -> Void {
-//        self.str = decision
-//    }
-//
-//    mutating func setDecisionID(id: Int) -> Void {
-//        self.dId = id + 1
-//    }
-//
-//    mutating func setDecisionImg(decision: Decision) {
-//
-//    }
 }
