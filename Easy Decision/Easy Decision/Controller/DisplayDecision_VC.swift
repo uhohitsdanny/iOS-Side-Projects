@@ -13,7 +13,6 @@ class DisplayDecision_VC: UIViewController {
     @IBOutlet weak var imgView:UIImageView?
     
     var googleImg:GoogleImage?
-    var img:UIImage?
     
     override func viewWillAppear(_ animated: Bool) {
         moduleInit()
@@ -31,10 +30,18 @@ class DisplayDecision_VC: UIViewController {
             if googleImg?.items != nil {
                 //Create URL Session Data Task and retrieve the image data
                 //with provided image link from Decisions_VC.
-                let imgUrl = URL(string: (googleImg?.items![0].link)!)
-                GoogleImage.retrieveImage(with: imgUrl!, completion: { (image) in
-                    self.imgView?.image = image as? UIImage
-                })
+                let group = DispatchGroup()
+                group.enter()
+                
+                DispatchQueue.global().async {
+                    let imgUrl = URL(string: (googleImg?.items![0].link)!)
+                    GoogleImage.retrieveImage(with: imgUrl!, completion: { (validData) in
+                        let image = UIImage(data: validData)
+                        self.imgView?.image = image
+                        group.leave()
+                    })
+                }
+                group.wait()
             }
         }
         else {

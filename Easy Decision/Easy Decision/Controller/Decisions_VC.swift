@@ -81,7 +81,8 @@ extension Decisions_VC {
             if let destinationVC = segue.destination as? DisplayDecision_VC {
                 
                 let rndmIndex = Int(arc4random_uniform(UInt32(self.decision_list.count)))
-                destinationVC.googleImg = self.decisionPackage!.googleImages[rndmIndex]                
+                destinationVC.googleImg = self.decisionPackage!.googleImages[0]
+                
             }
         }
     }

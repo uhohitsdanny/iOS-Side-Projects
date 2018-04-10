@@ -75,7 +75,7 @@ extension GoogleImage {
     
     //Perform data task url session again, but this time with the link
     //that was received from the google search
-    static func retrieveImage(with img_url:URL, completion:@escaping (Any?) -> Void){
+    static func retrieveImage(with img_url:URL, completion:@escaping (Data) -> Void){
         
         log("Retrieving image from \(img_url.absoluteURL)")
         let urlSession = URLSession(configuration: .default)
@@ -92,6 +92,6 @@ extension GoogleImage {
             }
             
             completion(validData)
-        }
+        }.resume()
     }
 }
