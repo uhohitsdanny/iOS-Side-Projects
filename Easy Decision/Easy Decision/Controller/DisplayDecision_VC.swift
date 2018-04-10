@@ -33,8 +33,9 @@ class DisplayDecision_VC: UIViewController {
                 let group = DispatchGroup()
                 group.enter()
                 
-                DispatchQueue.global().async {
+
                     let imgUrl = URL(string: (googleImg?.items![0].link)!)
+                    DispatchQueue.global().async {
                     GoogleImage.retrieveImage(with: imgUrl!, completion: { (validData) in
                         let image = UIImage(data: validData)
                         self.imgView?.image = image
