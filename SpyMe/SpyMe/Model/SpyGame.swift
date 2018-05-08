@@ -36,4 +36,10 @@ class SpyGame: NSObject {
     func chckRmSts() -> RoomStatus { return .pending}
     func pickSpy() -> Bool { return false }
     func startTimer() {}
+    func isFinished() -> Bool {
+        if status == .done {
+            return true
+        }
+        return false
+    }
 }

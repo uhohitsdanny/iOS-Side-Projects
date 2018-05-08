@@ -30,5 +30,4 @@ struct Locations {
     let loc18 = ""
     let loc19 = ""
     let loc20 = ""
-
 }

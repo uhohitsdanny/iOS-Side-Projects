@@ -15,14 +15,18 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     // MARK: GameRoomViewModel protocol
     var role: String
     var time: Int
-    var locs: [String]
+    var locs: Locations
     var selectedLoc: String
     
     var isFinished: Bool
     
     // MARK: Init
-    init(game:SpyGame){
+    init(game:SpyGame, selLoc:String){
         self.spygame = game
-        self.role =
+        self.selectedLoc = selLoc
+        self.role = game.player.role
+        self.time = 480
+        self.locs = game.locations
+        self.isFinished = game.isFinished()
     }
 }
