@@ -17,14 +17,12 @@
 		30689127209BF16C001F4EB5 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689126209BF16C001F4EB5 /* Room.swift */; };
 		30689129209BF41A001F4EB5 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689128209BF41A001F4EB5 /* Locations.swift */; };
 		3068912B209BF4E7001F4EB5 /* SpyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068912A209BF4E7001F4EB5 /* SpyGame.swift */; };
-		3068912D209BFFE6001F4EB5 /* GameRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */; };
-		30A98552209E9562008E09BE /* GameRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A98551209E9562008E09BE /* GameRoomView.xib */; };
 		30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */; };
-		30A98556209EF0F3008E09BE /* GameQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A98555209EF0F3008E09BE /* GameQueueViewController.swift */; };
-		30A9855A209EF156008E09BE /* GameQueueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A98559209EF156008E09BE /* GameQueueView.xib */; };
 		30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855B209EF184008E09BE /* GameQueueViewModel.swift */; };
 		30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */; };
 		30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855F209FD208008E09BE /* GameQueueProtocol.swift */; };
+		30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856220A14090008E09BE /* GameRoomViewController.swift */; };
+		30A9856820A14EB2008E09BE /* GameQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856720A14EB2008E09BE /* GameQueueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +38,12 @@
 		30689126209BF16C001F4EB5 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		30689128209BF41A001F4EB5 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		3068912A209BF4E7001F4EB5 /* SpyGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyGame.swift; sourceTree = "<group>"; };
-		3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewController.swift; sourceTree = "<group>"; };
-		30A98551209E9562008E09BE /* GameRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRoomView.xib; sourceTree = "<group>"; };
 		30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewModel.swift; sourceTree = "<group>"; };
-		30A98555209EF0F3008E09BE /* GameQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewController.swift; sourceTree = "<group>"; };
-		30A98559209EF156008E09BE /* GameQueueView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameQueueView.xib; sourceTree = "<group>"; };
 		30A9855B209EF184008E09BE /* GameQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewModel.swift; sourceTree = "<group>"; };
 		30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomProtocol.swift; sourceTree = "<group>"; };
 		30A9855F209FD208008E09BE /* GameQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueProtocol.swift; sourceTree = "<group>"; };
+		30A9856220A14090008E09BE /* GameRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewController.swift; sourceTree = "<group>"; };
+		30A9856720A14EB2008E09BE /* GameQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				30689118209944B9001F4EB5 /* LaunchScreen.storyboard */,
-				30689110209944B9001F4EB5 /* Main.storyboard */,
 				3068910E209944B9001F4EB5 /* HomeViewController.swift */,
 				3068910C209944B9001F4EB5 /* AppDelegate.swift */,
 				30689116209944B9001F4EB5 /* Assets.xcassets */,
@@ -109,10 +104,7 @@
 		30689123209BDDB1001F4EB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */,
-				30A98555209EF0F3008E09BE /* GameQueueViewController.swift */,
-				30A98551209E9562008E09BE /* GameRoomView.xib */,
-				30A98559209EF156008E09BE /* GameQueueView.xib */,
+				30A9856620A1467D008E09BE /* GameRoom */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +125,16 @@
 				30689128209BF41A001F4EB5 /* Locations.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		30A9856620A1467D008E09BE /* GameRoom */ = {
+			isa = PBXGroup;
+			children = (
+				30689110209944B9001F4EB5 /* Main.storyboard */,
+				30A9856220A14090008E09BE /* GameRoomViewController.swift */,
+				30A9856720A14EB2008E09BE /* GameQueueViewController.swift */,
+			);
+			path = GameRoom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30A9855A209EF156008E09BE /* GameQueueView.xib in Resources */,
 				3068911A209944B9001F4EB5 /* LaunchScreen.storyboard in Resources */,
 				30689117209944B9001F4EB5 /* Assets.xcassets in Resources */,
 				30689112209944B9001F4EB5 /* Main.storyboard in Resources */,
-				30A98552209E9562008E09BE /* GameRoomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +214,11 @@
 				30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */,
 				30689125209BF145001F4EB5 /* Civilian.swift in Sources */,
 				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
-				30A98556209EF0F3008E09BE /* GameQueueViewController.swift in Sources */,
 				30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */,
+				30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */,
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
+				30A9856820A14EB2008E09BE /* GameQueueViewController.swift in Sources */,
 				3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */,
-				3068912D209BFFE6001F4EB5 /* GameRoomViewController.swift in Sources */,
 				3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */,
 				3068912B209BF4E7001F4EB5 /* SpyGame.swift in Sources */,
 				30689127209BF16C001F4EB5 /* Room.swift in Sources */,
