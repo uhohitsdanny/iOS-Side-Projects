@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910C209944B9001F4EB5 /* AppDelegate.swift */; };
+		3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910E209944B9001F4EB5 /* HomeViewController.swift */; };
+		30689112209944B9001F4EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30689110209944B9001F4EB5 /* Main.storyboard */; };
+		30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */; };
+		30689117209944B9001F4EB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30689116209944B9001F4EB5 /* Assets.xcassets */; };
+		3068911A209944B9001F4EB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30689118209944B9001F4EB5 /* LaunchScreen.storyboard */; };
+		30689125209BF145001F4EB5 /* Civilian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689124209BF145001F4EB5 /* Civilian.swift */; };
+		30689127209BF16C001F4EB5 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689126209BF16C001F4EB5 /* Room.swift */; };
+		30689129209BF41A001F4EB5 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689128209BF41A001F4EB5 /* Locations.swift */; };
+		3068912B209BF4E7001F4EB5 /* SpyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068912A209BF4E7001F4EB5 /* SpyGame.swift */; };
+		3068912D209BFFE6001F4EB5 /* GameRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */; };
+		30A98552209E9562008E09BE /* GameRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A98551209E9562008E09BE /* GameRoomView.xib */; };
+		30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */; };
+		30A98556209EF0F3008E09BE /* GameQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A98555209EF0F3008E09BE /* GameQueueViewController.swift */; };
+		30A9855A209EF156008E09BE /* GameQueueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A98559209EF156008E09BE /* GameQueueView.xib */; };
+		30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855B209EF184008E09BE /* GameQueueViewModel.swift */; };
+		30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */; };
+		30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855F209FD208008E09BE /* GameQueueProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30689109209944B9001F4EB5 /* SpyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3068910C209944B9001F4EB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3068910E209944B9001F4EB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		30689111209944B9001F4EB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30689114209944B9001F4EB5 /* SpyMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpyMe.xcdatamodel; sourceTree = "<group>"; };
+		30689116209944B9001F4EB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30689119209944B9001F4EB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3068911B209944B9001F4EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30689124209BF145001F4EB5 /* Civilian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Civilian.swift; sourceTree = "<group>"; };
+		30689126209BF16C001F4EB5 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		30689128209BF41A001F4EB5 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		3068912A209BF4E7001F4EB5 /* SpyGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyGame.swift; sourceTree = "<group>"; };
+		3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewController.swift; sourceTree = "<group>"; };
+		30A98551209E9562008E09BE /* GameRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRoomView.xib; sourceTree = "<group>"; };
+		30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewModel.swift; sourceTree = "<group>"; };
+		30A98555209EF0F3008E09BE /* GameQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewController.swift; sourceTree = "<group>"; };
+		30A98559209EF156008E09BE /* GameQueueView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameQueueView.xib; sourceTree = "<group>"; };
+		30A9855B209EF184008E09BE /* GameQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewModel.swift; sourceTree = "<group>"; };
+		30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomProtocol.swift; sourceTree = "<group>"; };
+		30A9855F209FD208008E09BE /* GameQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30689106209944B9001F4EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30689100209944B9001F4EB5 = {
+			isa = PBXGroup;
+			children = (
+				3068910B209944B9001F4EB5 /* SpyMe */,
+				3068910A209944B9001F4EB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3068910A209944B9001F4EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30689109209944B9001F4EB5 /* SpyMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3068910B209944B9001F4EB5 /* SpyMe */ = {
+			isa = PBXGroup;
+			children = (
+				30689118209944B9001F4EB5 /* LaunchScreen.storyboard */,
+				30689110209944B9001F4EB5 /* Main.storyboard */,
+				3068910E209944B9001F4EB5 /* HomeViewController.swift */,
+				3068910C209944B9001F4EB5 /* AppDelegate.swift */,
+				30689116209944B9001F4EB5 /* Assets.xcassets */,
+				3068911B209944B9001F4EB5 /* Info.plist */,
+				30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */,
+				30A9854E209E91D7008E09BE /* Model */,
+				30689123209BDDB1001F4EB5 /* View */,
+				30689122209BDD70001F4EB5 /* ViewModel */,
+				30A9856120A0EFAC008E09BE /* Resources */,
+			);
+			path = SpyMe;
+			sourceTree = "<group>";
+		};
+		30689122209BDD70001F4EB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */,
+				30A9855B209EF184008E09BE /* GameQueueViewModel.swift */,
+				30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */,
+				30A9855F209FD208008E09BE /* GameQueueProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30689123209BDDB1001F4EB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3068912C209BFFE6001F4EB5 /* GameRoomViewController.swift */,
+				30A98555209EF0F3008E09BE /* GameQueueViewController.swift */,
+				30A98551209E9562008E09BE /* GameRoomView.xib */,
+				30A98559209EF156008E09BE /* GameQueueView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A9854E209E91D7008E09BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30689124209BF145001F4EB5 /* Civilian.swift */,
+				30689126209BF16C001F4EB5 /* Room.swift */,
+				3068912A209BF4E7001F4EB5 /* SpyGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30A9856120A0EFAC008E09BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30689128209BF41A001F4EB5 /* Locations.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30689108209944B9001F4EB5 /* SpyMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3068911E209944B9001F4EB5 /* Build configuration list for PBXNativeTarget "SpyMe" */;
+			buildPhases = (
+				30689105209944B9001F4EB5 /* Sources */,
+				30689106209944B9001F4EB5 /* Frameworks */,
+				30689107209944B9001F4EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpyMe;
+			productName = SpyMe;
+			productReference = 30689109209944B9001F4EB5 /* SpyMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30689101209944B9001F4EB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Danny Navarro";
+				TargetAttributes = {
+					30689108209944B9001F4EB5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 30689104209944B9001F4EB5 /* Build configuration list for PBXProject "SpyMe" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30689100209944B9001F4EB5;
+			productRefGroup = 3068910A209944B9001F4EB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30689108209944B9001F4EB5 /* SpyMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30689107209944B9001F4EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A9855A209EF156008E09BE /* GameQueueView.xib in Resources */,
+				3068911A209944B9001F4EB5 /* LaunchScreen.storyboard in Resources */,
+				30689117209944B9001F4EB5 /* Assets.xcassets in Resources */,
+				30689112209944B9001F4EB5 /* Main.storyboard in Resources */,
+				30A98552209E9562008E09BE /* GameRoomView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30689105209944B9001F4EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */,
+				30689129209BF41A001F4EB5 /* Locations.swift in Sources */,
+				30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */,
+				30689125209BF145001F4EB5 /* Civilian.swift in Sources */,
+				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
+				30A98556209EF0F3008E09BE /* GameQueueViewController.swift in Sources */,
+				30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */,
+				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
+				3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */,
+				3068912D209BFFE6001F4EB5 /* GameRoomViewController.swift in Sources */,
+				3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */,
+				3068912B209BF4E7001F4EB5 /* SpyGame.swift in Sources */,
+				30689127209BF16C001F4EB5 /* Room.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30689110209944B9001F4EB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30689111209944B9001F4EB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30689118209944B9001F4EB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30689119209944B9001F4EB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3068911C209944B9001F4EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3068911D209944B9001F4EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3068911F209944B9001F4EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpyMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DannyNavarro.SpyMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30689120209944B9001F4EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpyMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DannyNavarro.SpyMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30689104209944B9001F4EB5 /* Build configuration list for PBXProject "SpyMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3068911C209944B9001F4EB5 /* Debug */,
+				3068911D209944B9001F4EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3068911E209944B9001F4EB5 /* Build configuration list for PBXNativeTarget "SpyMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3068911F209944B9001F4EB5 /* Debug */,
+				30689120209944B9001F4EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30689114209944B9001F4EB5 /* SpyMe.xcdatamodel */,
+			);
+			currentVersion = 30689114209944B9001F4EB5 /* SpyMe.xcdatamodel */;
+			path = SpyMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 30689101209944B9001F4EB5 /* Project object */;
+}
