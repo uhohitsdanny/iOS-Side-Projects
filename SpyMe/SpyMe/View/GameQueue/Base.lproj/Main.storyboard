@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Light.ttf">
+            <string>Raleway-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570" y="-261"/>
+        </scene>
+        <!--Name CreationVC-->
+        <scene sceneID="sZq-uh-eTR">
+            <objects>
+                <viewController storyboardIdentifier="NameCreation_VC" id="MCb-IF-rX9" customClass="NameCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfz-vh-XGf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your spy name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJX-qr-ygy">
+                                <rect key="frame" x="16" y="201" width="288" height="28"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH">
+                                <rect key="frame" x="35" y="237" width="251" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-g4-1uc">
+                                <rect key="frame" x="119" y="285.5" width="82" height="30"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="HTM-EO-b0N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o9V-8y-8fH" firstAttribute="top" secondItem="dJX-qr-ygy" secondAttribute="bottom" constant="8" id="6LA-oN-cjJ"/>
+                            <constraint firstItem="o9V-8y-8fH" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="35" id="A0e-fe-aHq"/>
+                            <constraint firstItem="Ocg-g4-1uc" firstAttribute="top" secondItem="o9V-8y-8fH" secondAttribute="bottom" constant="18.5" id="DLQ-oi-kfF"/>
+                            <constraint firstItem="Ocg-g4-1uc" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="119" id="KcJ-aZ-6gy"/>
+                            <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="o9V-8y-8fH" secondAttribute="trailing" constant="34" id="MXR-3O-QOh"/>
+                            <constraint firstItem="dJX-qr-ygy" firstAttribute="top" secondItem="BI3-Mc-x5G" secondAttribute="top" constant="181" id="V91-eD-WNW"/>
+                            <constraint firstItem="dJX-qr-ygy" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="16" id="ZT9-05-Wzn"/>
+                            <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="dJX-qr-ygy" secondAttribute="trailing" constant="16" id="bBn-rZ-nHC"/>
+                            <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="Ocg-g4-1uc" secondAttribute="trailing" constant="119" id="ub9-T9-XXF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BI3-Mc-x5G"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="o9V-8y-8fH" id="a8j-cr-Kw5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdN-M2-iuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245.625" y="-263.02816901408448"/>
+        </scene>
+        <!--Join Create RoomVC-->
+        <scene sceneID="Xig-Fg-zpS">
+            <objects>
+                <viewController id="lmO-qu-eNM" customClass="JoinCreateRoom_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fLO-fP-7mg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eFa-sm-4qS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCW-T3-UeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="-260"/>
+        </scene>
+        <!--Room CreationVC-->
+        <scene sceneID="Vn2-ba-I6W">
+            <objects>
+                <viewController id="eAJ-16-hS7" customClass="RoomCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TGy-D6-sic">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OPc-Tn-W2P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQl-2d-YsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="-265"/>
+        </scene>
+        <!--Game QueueVC-->
+        <scene sceneID="OW2-gj-pf7">
+            <objects>
+                <viewController id="yh4-4Q-9M7" customClass="GameQueue_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uuo-Kv-Z7s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Gzn-Vg-YKs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEW-Kz-fqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="-267"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,7 +12,18 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        showGameQueueView()
     }
     
+    
+    fileprivate func showGameQueueView() {
+        if !self.isViewLoaded {
+            return
+        }
+        
+        let vc = UIStoryboard.loadStartingVC()  
+        self.addChildViewController(vc)
+        
+    }
 }
