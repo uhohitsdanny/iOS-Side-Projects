@@ -8,12 +8,13 @@
 
 import UIKit
 
+
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        showGameQueueView()
+        log("HomeViewController")
     }
     
     
@@ -22,8 +23,13 @@ class HomeViewController: UIViewController {
             return
         }
         
-        let vc = UIStoryboard.loadStartingVC()  
+        let vc = UIStoryboard.loadStartingVC()
         self.addChildViewController(vc)
-        
+        self.view.addSubview(vc.view)
+        self.didMove(toParentViewController: self)
+    }
+    
+    @IBAction func beginEspionage() {
+        showGameQueueView()
     }
 }

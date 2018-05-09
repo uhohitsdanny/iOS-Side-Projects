@@ -47,6 +47,8 @@
 		30A9859A20A257FF008E09BE /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858720A257FF008E09BE /* Raleway-Thin.ttf */; };
 		30A9859B20A257FF008E09BE /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858820A257FF008E09BE /* Raleway-Italic.ttf */; };
 		30A9859C20A257FF008E09BE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858920A257FF008E09BE /* Raleway-Bold.ttf */; };
+		30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9859F20A265F8008E09BE /* GlobalFunctions.swift */; };
+		30A985A220A2FA4F008E09BE /* PersistentVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A985A120A2FA4F008E09BE /* PersistentVars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		30A9858720A257FF008E09BE /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		30A9858820A257FF008E09BE /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		30A9858920A257FF008E09BE /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		30A9859F20A265F8008E09BE /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		30A985A120A2FA4F008E09BE /* PersistentVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				30A9854E209E91D7008E09BE /* Model */,
 				30689123209BDDB1001F4EB5 /* View */,
 				30689122209BDD70001F4EB5 /* ViewModel */,
+				30A9859E20A265D7008E09BE /* Globals */,
 				30A9856C20A15F6F008E09BE /* Extensions */,
 				30A9856120A0EFAC008E09BE /* Resources */,
 			);
@@ -241,6 +246,15 @@
 			path = Raleway;
 			sourceTree = "<group>";
 		};
+		30A9859E20A265D7008E09BE /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				30A9859F20A265F8008E09BE /* GlobalFunctions.swift */,
+				30A985A120A2FA4F008E09BE /* PersistentVars.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +355,8 @@
 				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
 				30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */,
 				30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */,
+				30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */,
+				30A985A220A2FA4F008E09BE /* PersistentVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */,
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
 				30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */,

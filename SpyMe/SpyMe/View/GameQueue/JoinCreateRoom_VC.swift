@@ -10,10 +10,12 @@ import UIKit
 
 class JoinCreateRoom_VC: UIViewController {
 
+    var player:Civilian? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        log("JoinCreateRoom ViewController loaded")
+        
     }
 
 }
