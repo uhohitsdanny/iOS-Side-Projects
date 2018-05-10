@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,10 +39,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpyGlassesTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="AzH-uh-ggL">
                                         <rect key="frame" x="8" y="8" width="304" height="61"/>
                                         <rect key="contentStretch" x="0.0" y="0.93000000000000005" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="3Z5-Nq-nrQ"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="2Qw-dQ-SAT"/>
                                     <constraint firstAttribute="bottom" secondItem="AzH-uh-ggL" secondAttribute="bottom" constant="8" id="4Lv-Ns-j8H"/>
                                     <constraint firstItem="AzH-uh-ggL" firstAttribute="leading" secondItem="q6S-aE-VJ3" secondAttribute="leading" constant="8" id="pRK-cq-fIV"/>
                                     <constraint firstAttribute="trailing" secondItem="AzH-uh-ggL" secondAttribute="trailing" constant="8" id="z96-Le-LDR"/>
@@ -61,20 +66,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="q6S-aE-VJ3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="229" id="39Y-2s-dcV"/>
                             <constraint firstItem="yIX-iD-Id6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="5x2-hx-fdF"/>
+                            <constraint firstItem="q6S-aE-VJ3" firstAttribute="top" secondItem="yIX-iD-Id6" secondAttribute="bottom" constant="8" id="9iJ-a8-gCf"/>
                             <constraint firstItem="yIX-iD-Id6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AE7-hF-5UC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ajW-Vh-SFT" secondAttribute="bottom" constant="183" id="HBZ-So-hwF"/>
-                            <constraint firstItem="q6S-aE-VJ3" firstAttribute="leading" secondItem="yIX-iD-Id6" secondAttribute="leading" id="JnK-Ya-nHR"/>
-                            <constraint firstItem="q6S-aE-VJ3" firstAttribute="trailing" secondItem="yIX-iD-Id6" secondAttribute="trailing" id="LaK-Wd-bno"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajW-Vh-SFT" secondAttribute="trailing" constant="16" id="Nh2-QC-SaM"/>
                             <constraint firstItem="q6S-aE-VJ3" firstAttribute="centerX" secondItem="ajW-Vh-SFT" secondAttribute="centerX" id="Qhv-hZ-Bkf"/>
                             <constraint firstAttribute="trailing" secondItem="q6S-aE-VJ3" secondAttribute="trailing" id="dKk-TX-8vS"/>
                             <constraint firstItem="yIX-iD-Id6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ekY-2n-weH"/>
                             <constraint firstItem="ajW-Vh-SFT" firstAttribute="top" secondItem="q6S-aE-VJ3" secondAttribute="bottom" constant="38" id="fIC-1q-6TC"/>
                             <constraint firstItem="q6S-aE-VJ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rsB-g4-xLl"/>
-                            <constraint firstItem="q6S-aE-VJ3" firstAttribute="top" secondItem="yIX-iD-Id6" secondAttribute="bottom" constant="8" symbolic="YES" id="uhe-eI-Loe"/>
-                            <constraint firstAttribute="bottom" secondItem="q6S-aE-VJ3" secondAttribute="bottom" constant="262" id="voe-y2-qq9"/>
                             <constraint firstItem="ajW-Vh-SFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zac-BS-Ult"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -101,6 +100,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-g4-1uc">
                                 <rect key="frame" x="119" y="308" width="82" height="32"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ELP-HP-4sK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,6 +140,7 @@
                             <constraint firstItem="o9V-8y-8fH" firstAttribute="top" secondItem="dJX-qr-ygy" secondAttribute="bottom" constant="7.5" id="Rtk-fZ-afg"/>
                             <constraint firstItem="Ocg-g4-1uc" firstAttribute="top" secondItem="o9V-8y-8fH" secondAttribute="bottom" constant="14" id="UY1-Au-wfY"/>
                             <constraint firstItem="o9V-8y-8fH" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="35" id="UZE-Qn-PKN"/>
+                            <constraint firstItem="BI3-Mc-x5G" firstAttribute="bottom" secondItem="Ocg-g4-1uc" secondAttribute="bottom" constant="228" id="Vtv-hr-f5r"/>
                             <constraint firstItem="Ocg-g4-1uc" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="119" id="Xxa-5K-wyr"/>
                             <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="Ocg-g4-1uc" secondAttribute="trailing" constant="119" id="gC9-ND-L7n"/>
                             <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="o9V-8y-8fH" secondAttribute="trailing" constant="34" id="hAj-Ud-a0t"/>
@@ -166,6 +169,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-zU-hBb">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RBv-p5-9Iq"/>
+                                            <constraint firstAttribute="width" secondItem="hSY-zU-hBb" secondAttribute="height" multiplier="5:1" id="r26-n4-e81"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
                                         <state key="normal" title="Join a room">
                                             <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -182,6 +189,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxC-qy-4Ls">
                                         <rect key="frame" x="0.0" y="80" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WxC-qy-4Ls" secondAttribute="height" multiplier="5:1" id="UIl-lC-16C"/>
+                                            <constraint firstAttribute="height" constant="30" id="Vv9-6A-dce"/>
+                                        </constraints>
                                         <state key="normal" title="Create a room">
                                             <color key="titleColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
