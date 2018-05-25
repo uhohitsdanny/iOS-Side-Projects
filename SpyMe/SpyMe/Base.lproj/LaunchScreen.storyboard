@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +15,35 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPP-Ls-E6k" userLabel="LogoView">
+                                <rect key="frame" x="0.0" y="215.5" width="320" height="77"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpyGlassesTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="Cel-xP-vcL">
+                                        <rect key="frame" x="8" y="8" width="304" height="61"/>
+                                        <rect key="contentStretch" x="0.0" y="0.93000000000000005" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="Fum-29-6MY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Cel-xP-vcL" firstAttribute="leading" secondItem="qPP-Ls-E6k" secondAttribute="leading" constant="8" id="M1V-s9-oGr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cel-xP-vcL" secondAttribute="trailing" constant="8" id="Mvv-6I-tJQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cel-xP-vcL" secondAttribute="bottom" constant="8" id="SaV-N8-5tg"/>
+                                    <constraint firstItem="Cel-xP-vcL" firstAttribute="top" secondItem="qPP-Ls-E6k" secondAttribute="top" constant="8" id="vB0-VC-fQa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qPP-Ls-E6k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YTF-QP-5u0"/>
+                            <constraint firstItem="qPP-Ls-E6k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dqx-Ho-hbh"/>
+                            <constraint firstItem="qPP-Ls-E6k" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-30" id="lCe-DN-pu7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SpyGlassesTransparent" width="682" height="682"/>
+    </resources>
 </document>

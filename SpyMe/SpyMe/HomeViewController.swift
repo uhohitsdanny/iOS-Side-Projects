@@ -17,19 +17,4 @@ class HomeViewController: UIViewController {
         log("HomeViewController")
     }
     
-    
-    fileprivate func showGameQueueView() {
-        if !self.isViewLoaded {
-            return
-        }
-        
-        let vc = UIStoryboard.loadStartingVC()
-        self.addChildViewController(vc)
-        self.view.addSubview(vc.view)
-        self.didMove(toParentViewController: self)
-    }
-    
-    @IBAction func beginEspionage() {
-        showGameQueueView()
-    }
 }

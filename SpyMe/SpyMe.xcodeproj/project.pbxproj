@@ -49,6 +49,7 @@
 		30A9859C20A257FF008E09BE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858920A257FF008E09BE /* Raleway-Bold.ttf */; };
 		30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9859F20A265F8008E09BE /* GlobalFunctions.swift */; };
 		30A985A220A2FA4F008E09BE /* PersistentVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A985A120A2FA4F008E09BE /* PersistentVars.swift */; };
+		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		30A9858920A257FF008E09BE /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		30A9859F20A265F8008E09BE /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		30A985A120A2FA4F008E09BE /* PersistentVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentVars.swift; sourceTree = "<group>"; };
+		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +140,7 @@
 				30689123209BDDB1001F4EB5 /* View */,
 				30689122209BDD70001F4EB5 /* ViewModel */,
 				30A9859E20A265D7008E09BE /* Globals */,
-				30A9856C20A15F6F008E09BE /* Extensions */,
+				30A9856C20A15F6F008E09BE /* Extensions+Custom */,
 				30A9856120A0EFAC008E09BE /* Resources */,
 			);
 			path = SpyMe;
@@ -204,12 +206,13 @@
 			path = GameQueue;
 			sourceTree = "<group>";
 		};
-		30A9856C20A15F6F008E09BE /* Extensions */ = {
+		30A9856C20A15F6F008E09BE /* Extensions+Custom */ = {
 			isa = PBXGroup;
 			children = (
 				30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */,
+				30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */,
 			);
-			path = Extensions;
+			path = "Extensions+Custom";
 			sourceTree = "<group>";
 		};
 		30A9857520A25726008E09BE /* Fonts */ = {
@@ -359,6 +362,7 @@
 				30A985A220A2FA4F008E09BE /* PersistentVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */,
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
+				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,
 				30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */,
 				3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */,
 				30A9857220A1630C008E09BE /* JoinCreateRoom_VC.swift in Sources */,
@@ -505,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DannyNavarro.SpyMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,7 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DannyNavarro.SpyMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
