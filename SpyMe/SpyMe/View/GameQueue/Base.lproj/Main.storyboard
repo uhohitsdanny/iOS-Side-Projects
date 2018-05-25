@@ -123,10 +123,10 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="HTM-EO-b0N"/>
-                                    <segue destination="lmO-qu-eNM" kind="presentation" identifier="roomSegue" modalTransitionStyle="crossDissolve" id="yxL-BH-o3Y"/>
+                                    <segue destination="lmO-qu-eNM" kind="presentation" identifier="jcRmSegue" modalTransitionStyle="crossDissolve" id="yxL-BH-o3Y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH" userLabel="NameTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
                                 <rect key="frame" x="35" y="265" width="251" height="29"/>
                                 <color key="tintColor" red="0.28983160621761661" green="0.28983160621761661" blue="0.28983160621761661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="245.625" y="-263.02816901408448"/>
         </scene>
-        <!--Join Create RoomVC-->
+        <!--JoinCreateRoom_VC-->
         <scene sceneID="Xig-Fg-zpS">
             <objects>
-                <viewController id="lmO-qu-eNM" customClass="JoinCreateRoom_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JoinCreateRoom_VC" id="lmO-qu-eNM" customClass="JoinCreateRoom_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fLO-fP-7mg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FdH-Td-FIs">
                                 <rect key="frame" x="85" y="229" width="150" height="110"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-zU-hBb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-zU-hBb" userLabel="JoinRmBtn">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -190,10 +190,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="eAJ-16-hS7" kind="presentation" identifier="joinRoomSegue" id="Z7c-oO-qm2"/>
+                                            <segue destination="eAJ-16-hS7" kind="presentation" identifier="connRmSegue" modalTransitionStyle="crossDissolve" id="Z7c-oO-qm2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxC-qy-4Ls">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxC-qy-4Ls" userLabel="CreateRmBtn">
                                         <rect key="frame" x="0.0" y="80" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -208,7 +208,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="eAJ-16-hS7" kind="presentation" identifier="createRoomSegue" id="c0r-wL-5sv"/>
+                                            <segue destination="yh4-4Q-9M7" kind="presentation" identifier="createRmSegue" modalTransitionStyle="crossDissolve" id="zDN-UW-bxb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,41 +236,228 @@
             </objects>
             <point key="canvasLocation" x="1003" y="-260"/>
         </scene>
-        <!--Room CreationVC-->
+        <!--JoinRoomVC-->
         <scene sceneID="Vn2-ba-I6W">
             <objects>
-                <viewController id="eAJ-16-hS7" customClass="RoomCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="joinRoom_VC" title="JoinRoomVC" id="eAJ-16-hS7" customClass="RoomCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGy-D6-sic">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-p6-Q8v">
+                                <rect key="frame" x="16" y="229.5" width="288" height="29"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-YA-s0w" userLabel="joinRmBtn">
+                                <rect key="frame" x="119" y="310" width="82" height="32"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="meb-29-8np"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Join">
+                                    <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="3zp-70-zOb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-8m-QF8" userLabel="joinRmTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="267" width="251" height="29"/>
+                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dbo-YA-s0w" firstAttribute="centerX" secondItem="TGy-D6-sic" secondAttribute="centerX" id="2BK-ZA-EIK"/>
+                            <constraint firstItem="dbo-YA-s0w" firstAttribute="top" secondItem="JlH-8m-QF8" secondAttribute="bottom" constant="14" id="Q5F-NV-VAY"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="N6R-p6-Q8v" secondAttribute="trailing" constant="16" id="VWE-E5-JKx"/>
+                            <constraint firstItem="JlH-8m-QF8" firstAttribute="top" secondItem="N6R-p6-Q8v" secondAttribute="bottom" constant="8.5" id="c2E-QW-6DZ"/>
+                            <constraint firstItem="N6R-p6-Q8v" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="16" id="cDf-mt-e3q"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="JlH-8m-QF8" secondAttribute="trailing" constant="34" id="f1G-3P-zvP"/>
+                            <constraint firstItem="N6R-p6-Q8v" firstAttribute="centerY" secondItem="TGy-D6-sic" secondAttribute="centerY" constant="-40" id="nrD-uW-W2d"/>
+                            <constraint firstItem="JlH-8m-QF8" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="35" id="yK1-c4-2Y0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OPc-Tn-W2P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQl-2d-YsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="-263"/>
+            <point key="canvasLocation" x="1926" y="-598"/>
         </scene>
         <!--Game QueueVC-->
-        <scene sceneID="OW2-gj-pf7">
+        <scene sceneID="Gtv-se-WEH">
             <objects>
-                <viewController id="yh4-4Q-9M7" customClass="GameQueue_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uuo-Kv-Z7s">
+                <viewController storyboardIdentifier="GameQueue_VC" id="i5g-EK-slx" customClass="GameQueue_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZd-X4-X72">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Smj-D8-npf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1M-8u-kWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="-287"/>
+        </scene>
+        <!--Game RoomVC-->
+        <scene sceneID="PIb-FC-s9v">
+            <objects>
+                <viewController storyboardIdentifier="GameRoom_VC" id="apI-SK-14x" customClass="GameRoom_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHq-uZ-ktS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hov-Q6-ut8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLW-nK-ZH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3801" y="-287"/>
+        </scene>
+        <!--CreateRoomVC-->
+        <scene sceneID="OW2-gj-pf7">
+            <objects>
+                <viewController storyboardIdentifier="createRoom_VC" title="CreateRoomVC" id="yh4-4Q-9M7" customClass="RoomCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uuo-Kv-Z7s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Ui-mob">
+                                <rect key="frame" x="16" y="149.5" width="288" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-vt-1ge" userLabel="createRmTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="187" width="251" height="29"/>
+                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the amount of time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-7x-vzl">
+                                <rect key="frame" x="16" y="246" width="288" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-JB-Lau" userLabel="Time Stack View">
+                                <rect key="frame" x="47.5" y="282" width="225" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhQ-Zp-ef8">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OC8-r8-4OQ"/>
+                                            <constraint firstAttribute="width" constant="30" id="btz-JS-eE5"/>
+                                        </constraints>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq9-L2-ErT">
+                                        <rect key="frame" x="65" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I83-hr-ThT">
+                                        <rect key="frame" x="130" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8U-Ih-cMX">
+                                        <rect key="frame" x="195" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="15">
+                                            <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="I83-hr-ThT" firstAttribute="height" secondItem="Sq9-L2-ErT" secondAttribute="height" id="5dF-I3-fT6"/>
+                                    <constraint firstItem="s8U-Ih-cMX" firstAttribute="height" secondItem="I83-hr-ThT" secondAttribute="height" id="IZi-qa-ikA"/>
+                                    <constraint firstItem="Sq9-L2-ErT" firstAttribute="height" secondItem="vhQ-Zp-ef8" secondAttribute="height" id="ZuJ-Bi-8r7"/>
+                                    <constraint firstItem="I83-hr-ThT" firstAttribute="width" secondItem="Sq9-L2-ErT" secondAttribute="width" id="dbM-bG-8Bu"/>
+                                    <constraint firstItem="s8U-Ih-cMX" firstAttribute="width" secondItem="I83-hr-ThT" secondAttribute="width" id="skg-qv-4Um"/>
+                                    <constraint firstItem="Sq9-L2-ErT" firstAttribute="width" secondItem="vhQ-Zp-ef8" secondAttribute="width" id="twG-gA-0IC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-iD-CqN" userLabel="joinRmBtn">
+                                <rect key="frame" x="119" y="355" width="82" height="32"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="wGF-NX-JcO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="rcK-Fr-Grl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cyS-Ui-mob" firstAttribute="centerY" secondItem="uuo-Kv-Z7s" secondAttribute="centerY" constant="-120" id="5g4-h3-gKy"/>
+                            <constraint firstItem="cyS-Ui-mob" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="E8I-4H-M6s"/>
+                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="35" id="TO6-YN-H3J"/>
+                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="top" secondItem="cyS-Ui-mob" secondAttribute="bottom" constant="8.5" id="Txc-Lh-jIK"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="3hT-7x-vzl" secondAttribute="trailing" constant="16" id="URv-uf-o4n"/>
+                            <constraint firstItem="SzT-JB-Lau" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="ahF-BL-pyU"/>
+                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="beD-H0-NVD"/>
+                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="top" secondItem="SzT-JB-Lau" secondAttribute="bottom" constant="43" id="flm-sa-e4K"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="cyS-Ui-mob" secondAttribute="trailing" constant="16" id="iQA-pf-aeD"/>
+                            <constraint firstItem="SzT-JB-Lau" firstAttribute="top" secondItem="3hT-7x-vzl" secondAttribute="bottom" constant="7.5" id="moX-XE-dYD"/>
+                            <constraint firstItem="3hT-7x-vzl" firstAttribute="top" secondItem="Zmu-vt-1ge" secondAttribute="bottom" constant="30" id="n0v-7e-KVG"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="Zmu-vt-1ge" secondAttribute="trailing" constant="34" id="nTw-al-ktm"/>
+                            <constraint firstItem="3hT-7x-vzl" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="wVj-5S-gkA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gzn-Vg-YKs"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEW-Kz-fqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="-267"/>
+            <point key="canvasLocation" x="1926" y="96"/>
         </scene>
     </scenes>
     <resources>
         <image name="SpyGlassesTransparent" width="682" height="682"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Z7c-oO-qm2"/>
-    </inferredMetricsTieBreakers>
 </document>

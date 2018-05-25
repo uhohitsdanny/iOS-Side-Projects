@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameRoomViewController: UIViewController {
+class GameRoom_VC: UIViewController {
     
     var gameroom_VM: GameRoomViewModel? {
         didSet {

@@ -23,7 +23,7 @@ class NameCreation_VC: UIViewController {
     @IBAction func submitSpyName(){
         let name = nameTextField?.text
         player = Civilian(name: name!)
-        performSegue(withIdentifier: "roomSegue", sender: self)
+        performSegue(withIdentifier: "jcRmSegue", sender: self)
     }
 
 }
@@ -31,7 +31,7 @@ class NameCreation_VC: UIViewController {
 // MARK: Segue Actions
 extension NameCreation_VC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "roomSegue" {
+        if segue.identifier == "jcRmSegue" {
             if let destinationVC = segue.destination as? JoinCreateRoom_VC {
                 destinationVC.player = player
             }

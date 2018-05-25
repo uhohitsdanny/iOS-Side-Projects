@@ -21,9 +21,8 @@
 		30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855B209EF184008E09BE /* GameQueueViewModel.swift */; };
 		30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */; };
 		30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855F209FD208008E09BE /* GameQueueProtocol.swift */; };
-		30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856220A14090008E09BE /* GameRoomViewController.swift */; };
+		30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856220A14090008E09BE /* GameRoom_VC.swift */; };
 		30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856720A14EB2008E09BE /* GameQueue_VC.swift */; };
-		30A9856B20A1589A008E09BE /* GameView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9856A20A1589A008E09BE /* GameView.storyboard */; };
 		30A9856E20A15F88008E09BE /* UIStoryboard+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */; };
 		30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856F20A16225008E09BE /* NameCreation_VC.swift */; };
 		30A9857220A1630C008E09BE /* JoinCreateRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9857120A1630C008E09BE /* JoinCreateRoom_VC.swift */; };
@@ -69,9 +68,8 @@
 		30A9855B209EF184008E09BE /* GameQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewModel.swift; sourceTree = "<group>"; };
 		30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomProtocol.swift; sourceTree = "<group>"; };
 		30A9855F209FD208008E09BE /* GameQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueProtocol.swift; sourceTree = "<group>"; };
-		30A9856220A14090008E09BE /* GameRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewController.swift; sourceTree = "<group>"; };
+		30A9856220A14090008E09BE /* GameRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoom_VC.swift; sourceTree = "<group>"; };
 		30A9856720A14EB2008E09BE /* GameQueue_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueue_VC.swift; sourceTree = "<group>"; };
-		30A9856A20A1589A008E09BE /* GameView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameView.storyboard; sourceTree = "<group>"; };
 		30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Loader.swift"; sourceTree = "<group>"; };
 		30A9856F20A16225008E09BE /* NameCreation_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCreation_VC.swift; sourceTree = "<group>"; };
 		30A9857120A1630C008E09BE /* JoinCreateRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCreateRoom_VC.swift; sourceTree = "<group>"; };
@@ -188,8 +186,7 @@
 		30A9856620A1467D008E09BE /* GameRoom */ = {
 			isa = PBXGroup;
 			children = (
-				30A9856220A14090008E09BE /* GameRoomViewController.swift */,
-				30A9856A20A1589A008E09BE /* GameView.storyboard */,
+				30A9856220A14090008E09BE /* GameRoom_VC.swift */,
 			);
 			path = GameRoom;
 			sourceTree = "<group>";
@@ -285,7 +282,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Danny Navarro";
 				TargetAttributes = {
 					30689108209944B9001F4EB5 = {
@@ -332,7 +329,6 @@
 				30A9858C20A257FF008E09BE /* Raleway-ThinItalic.ttf in Resources */,
 				30689112209944B9001F4EB5 /* Main.storyboard in Resources */,
 				30A9859120A257FF008E09BE /* Raleway-ExtraBoldItalic.ttf in Resources */,
-				30A9856B20A1589A008E09BE /* GameView.storyboard in Resources */,
 				30A9859720A257FF008E09BE /* OFL.txt in Resources */,
 				30A9859220A257FF008E09BE /* Raleway-Regular.ttf in Resources */,
 				30A9859620A257FF008E09BE /* Raleway-Black.ttf in Resources */,
@@ -360,7 +356,7 @@
 				30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */,
 				30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */,
 				30A985A220A2FA4F008E09BE /* PersistentVars.swift in Sources */,
-				30A9856320A14090008E09BE /* GameRoomViewController.swift in Sources */,
+				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
 				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,
 				30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */,
@@ -409,6 +405,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -416,6 +413,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -443,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -466,6 +464,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -473,6 +472,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -494,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
