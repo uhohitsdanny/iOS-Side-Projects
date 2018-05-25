@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,7 +69,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MCb-IF-rX9" kind="presentation" identifier="nameCreation" id="6jM-wo-B33"/>
+                                    <segue destination="MCb-IF-rX9" kind="presentation" identifier="nameCreation" modalTransitionStyle="crossDissolve" id="6jM-wo-B33"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,7 +123,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="HTM-EO-b0N"/>
-                                    <segue destination="lmO-qu-eNM" kind="presentation" identifier="roomSegue" id="yxL-BH-o3Y"/>
+                                    <segue destination="lmO-qu-eNM" kind="presentation" identifier="roomSegue" modalTransitionStyle="crossDissolve" id="yxL-BH-o3Y"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
@@ -179,8 +178,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="RBv-p5-9Iq"/>
-                                            <constraint firstAttribute="width" secondItem="hSY-zU-hBb" secondAttribute="height" multiplier="5:1" id="r26-n4-e81"/>
+                                            <constraint firstAttribute="height" constant="30" id="dOl-hR-RiL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
                                         <state key="normal" title="Join a room">
@@ -199,8 +197,7 @@
                                         <rect key="frame" x="0.0" y="80" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="WxC-qy-4Ls" secondAttribute="height" multiplier="5:1" id="UIl-lC-16C"/>
-                                            <constraint firstAttribute="height" constant="30" id="Vv9-6A-dce"/>
+                                            <constraint firstAttribute="height" constant="30" id="Anx-hy-dp3"/>
                                         </constraints>
                                         <state key="normal" title="Create a room">
                                             <color key="titleColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,14 +212,22 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WxC-qy-4Ls" secondAttribute="bottom" id="3c5-6t-kdG"/>
+                                    <constraint firstAttribute="trailing" secondItem="WxC-qy-4Ls" secondAttribute="trailing" id="Kl0-4c-E1A"/>
+                                    <constraint firstItem="hSY-zU-hBb" firstAttribute="top" secondItem="FdH-Td-FIs" secondAttribute="top" id="OMB-LZ-0ch"/>
+                                    <constraint firstAttribute="width" constant="150" id="UqG-Rd-QjD"/>
+                                    <constraint firstAttribute="height" constant="110" id="WvX-f7-DDT"/>
+                                    <constraint firstItem="WxC-qy-4Ls" firstAttribute="leading" secondItem="FdH-Td-FIs" secondAttribute="leading" id="a53-ml-OMr"/>
+                                    <constraint firstAttribute="trailing" secondItem="hSY-zU-hBb" secondAttribute="trailing" id="wD5-lI-Slk"/>
+                                    <constraint firstItem="hSY-zU-hBb" firstAttribute="leading" secondItem="FdH-Td-FIs" secondAttribute="leading" id="y5d-U8-Ffm"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FdH-Td-FIs" firstAttribute="top" secondItem="eFa-sm-4qS" secondAttribute="top" constant="209" id="6qw-Ps-Dbr"/>
-                            <constraint firstItem="eFa-sm-4qS" firstAttribute="bottom" secondItem="FdH-Td-FIs" secondAttribute="bottom" constant="229" id="OxT-mv-obv"/>
-                            <constraint firstItem="FdH-Td-FIs" firstAttribute="leading" secondItem="eFa-sm-4qS" secondAttribute="leading" constant="85" id="hDz-4i-uXF"/>
-                            <constraint firstItem="eFa-sm-4qS" firstAttribute="trailing" secondItem="FdH-Td-FIs" secondAttribute="trailing" constant="85" id="yOC-j3-bOo"/>
+                            <constraint firstItem="FdH-Td-FIs" firstAttribute="centerX" secondItem="fLO-fP-7mg" secondAttribute="centerX" id="LuD-8a-dUz"/>
+                            <constraint firstItem="FdH-Td-FIs" firstAttribute="centerY" secondItem="fLO-fP-7mg" secondAttribute="centerY" id="m0R-52-2jI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eFa-sm-4qS"/>
                     </view>
