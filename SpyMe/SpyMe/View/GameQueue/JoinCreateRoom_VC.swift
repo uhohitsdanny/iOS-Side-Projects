@@ -15,7 +15,6 @@ class JoinCreateRoom_VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         log("JoinCreateRoom ViewController loaded")
-        
     }
 
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class NameCreation_VC: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField?
+    @IBOutlet weak var nameTextField: TextFieldCustom?
     
     var player:Civilian? = nil
     
@@ -19,7 +19,6 @@ class NameCreation_VC: UIViewController {
         // Do any additional setup after loading the view.
         log("NameCreation_VC is loaded")
     }
-    
     
     @IBAction func submitSpyName(){
         let name = nameTextField?.text
