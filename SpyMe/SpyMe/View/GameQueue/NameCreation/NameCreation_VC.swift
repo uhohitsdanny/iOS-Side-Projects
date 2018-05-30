@@ -12,27 +12,26 @@ import CoreData
 class NameCreation_VC: UIViewController {
     
     @IBOutlet weak var nameTextField: TextFieldCustom?
+    @IBOutlet weak var maxCharsLabel: UILabel?
     
     var player:Civilian? = nil
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         log("NameCreation_VC is loaded")
-        
+        nameTextField?.delegate = self
     }
     
     @IBAction func submitSpyName(){
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Users", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
         let name = nameTextField?.text
-        
-        newUser.setValue(name, forKey: "spyname")
-        player = Civilian(name: name!)
-        
-        performSegue(withIdentifier: "jcRmSegue", sender: self)
+        if name!.count > MAX_CHARACTERS{
+            
+            return
+        }else{
+            player = Civilian(name: name!)
+            performSegue(withIdentifier: "jcRmSegue", sender: self)
+        }
     }
 
 }

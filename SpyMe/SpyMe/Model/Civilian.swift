@@ -8,16 +8,25 @@
 
 import Foundation
 
+
+enum PlayerStatus {
+    case ingame
+    case standby
+}
+
 class Civilian: NSObject {
     
     let name: String
     var role: String
     var spy: Bool
+    var status: PlayerStatus
+    
     
     init(name:String){
         self.name = name
         self.role = "Civilian"
         self.spy = false
+        self.status = .standby
     }
     
     func convertToSpy() {

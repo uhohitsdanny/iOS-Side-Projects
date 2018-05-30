@@ -106,6 +106,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH" userLabel="NameTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="265" width="251" height="29"/>
+                                <color key="tintColor" red="0.28983160621761661" green="0.28983160621761661" blue="0.28983160621761661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-g4-1uc">
                                 <rect key="frame" x="119" y="308" width="82" height="32"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,21 +141,15 @@
                                     <segue destination="lmO-qu-eNM" kind="presentation" identifier="jcRmSegue" modalTransitionStyle="crossDissolve" id="yxL-BH-o3Y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-8y-8fH" userLabel="NameTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="265" width="251" height="29"/>
-                                <color key="tintColor" red="0.28983160621761661" green="0.28983160621761661" blue="0.28983160621761661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max 25 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-Ax-Wvb">
+                                <rect key="frame" x="97" y="354" width="127" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="dfg-dQ-MiZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.20157928461686847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -151,11 +160,14 @@
                             <constraint firstItem="o9V-8y-8fH" firstAttribute="top" secondItem="dJX-qr-ygy" secondAttribute="bottom" constant="12" id="Lix-J0-TEj"/>
                             <constraint firstItem="o9V-8y-8fH" firstAttribute="leading" secondItem="BI3-Mc-x5G" secondAttribute="leading" constant="35" id="UA2-KE-Yhs"/>
                             <constraint firstItem="BI3-Mc-x5G" firstAttribute="trailing" secondItem="o9V-8y-8fH" secondAttribute="trailing" constant="34" id="XR3-vM-bmo"/>
+                            <constraint firstItem="r5Z-Ax-Wvb" firstAttribute="top" secondItem="Ocg-g4-1uc" secondAttribute="bottom" constant="14" id="cmd-5n-B4r"/>
+                            <constraint firstItem="r5Z-Ax-Wvb" firstAttribute="centerX" secondItem="hfz-vh-XGf" secondAttribute="centerX" id="dNq-SA-QfX"/>
                             <constraint firstItem="Ocg-g4-1uc" firstAttribute="centerX" secondItem="hfz-vh-XGf" secondAttribute="centerX" id="udb-Na-6g5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BI3-Mc-x5G"/>
                     </view>
                     <connections>
+                        <outlet property="maxCharsLabel" destination="r5Z-Ax-Wvb" id="0sm-vs-yCl"/>
                         <outlet property="nameTextField" destination="o9V-8y-8fH" id="Rwp-xK-MJs"/>
                     </connections>
                 </viewController>
@@ -326,7 +338,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="38" id="Vfx-mq-xH0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="38" id="Vfx-mq-xH0">
                                         <rect key="frame" x="0.0" y="28" width="240" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vfx-mq-xH0" id="H07-o2-Y2K">

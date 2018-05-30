@@ -11,7 +11,7 @@ import Foundation
 enum GameStatus {
     case waiting
     case ready
-    case inProgress
+    case inprogress
     case done
 }
 

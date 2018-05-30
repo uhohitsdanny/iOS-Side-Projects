@@ -8,4 +8,4 @@
 
 import Foundation
 
-
+let MAX_CHARACTERS:Int = 15
