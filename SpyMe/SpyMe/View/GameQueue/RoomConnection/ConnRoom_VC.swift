@@ -14,7 +14,15 @@ class ConnRoom_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        log("ConnRoom View Controller loaded")
+    }
+}
+
+extension ConnRoom_VC {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "joinGameQueue" {
+            return true
+        }
+        return false
     }
 }

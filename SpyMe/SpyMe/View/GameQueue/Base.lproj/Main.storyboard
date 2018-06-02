@@ -278,6 +278,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="3zp-70-zOb"/>
+                                    <segue destination="i5g-EK-slx" kind="presentation" identifier="joinGameQueue" id="tyk-RB-PNO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-8m-QF8" userLabel="joinRmTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
@@ -491,6 +492,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="rcK-Fr-Grl"/>
+                                    <segue destination="i5g-EK-slx" kind="presentation" identifier="createGameQueue" id="Fdx-HJ-GaO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -521,4 +523,7 @@
     <resources>
         <image name="SpyGlassesTransparent" width="682" height="682"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tyk-RB-PNO"/>
+    </inferredMetricsTieBreakers>
 </document>

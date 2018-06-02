@@ -20,6 +20,8 @@ class NameCreation_VC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         log("NameCreation_VC is loaded")
+        
+        nameTextField?.delegate = self
     }
 }
 
@@ -38,13 +40,7 @@ extension NameCreation_VC {
             
             let name = nameTextField?.text
             
-            if name!.count > CHARACTER_LIMIT{
-                warningLabel?.isHidden = false
-                warningLabel?.text = "Max 25 characters"
-                return false
-            }
-            
-            else if name!.isEmpty {
+            if name!.isEmpty {
                 warningLabel?.isHidden = false
                 warningLabel?.text = "A name is required"
                 return false
