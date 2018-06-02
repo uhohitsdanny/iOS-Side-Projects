@@ -15,11 +15,13 @@ enum RoomStatus {
 }
 
 class Room: NSObject {
-    let roomId: Int
+    var id: String
+    var pw: String
     var status: RoomStatus
     
-    init(id:Int){
-        self.roomId = id
+    init(id:String){
+        self.id = id
+        self.pw = ""
         self.status = .pending
     }
     

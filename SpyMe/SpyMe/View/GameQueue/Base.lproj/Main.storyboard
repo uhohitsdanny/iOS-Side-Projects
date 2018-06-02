@@ -250,39 +250,19 @@
         <!--JoinRoomVC-->
         <scene sceneID="Vn2-ba-I6W">
             <objects>
-                <viewController storyboardIdentifier="joinRoom_VC" title="JoinRoomVC" id="eAJ-16-hS7" customClass="RoomCreation_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="joinRoom_VC" title="JoinRoomVC" id="eAJ-16-hS7" customClass="ConnRoom_VC" customModule="SpyMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGy-D6-sic">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-p6-Q8v">
-                                <rect key="frame" x="16" y="229.5" width="288" height="29"/>
+                                <rect key="frame" x="16" y="193" width="288" height="29"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-YA-s0w" userLabel="joinRmBtn">
-                                <rect key="frame" x="119" y="310" width="82" height="32"/>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="meb-29-8np"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                <state key="normal" title="Join">
-                                    <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="3zp-70-zOb"/>
-                                    <segue destination="i5g-EK-slx" kind="presentation" identifier="joinGameQueue" id="tyk-RB-PNO"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-8m-QF8" userLabel="joinRmTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="267" width="251" height="29"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-8m-QF8" userLabel="idTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="231" width="250" height="29"/>
                                 <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
@@ -296,20 +276,71 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1w-Lb-qES">
+                                <rect key="frame" x="16" y="269.5" width="288" height="29"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55P-y4-J7v" userLabel="pwTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="306" width="250" height="29"/>
+                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-YA-s0w" userLabel="joinRmBtn">
+                                <rect key="frame" x="119" y="343" width="82" height="32"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="tbZ-Dz-34k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Join">
+                                    <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="joinRoom" destination="eAJ-16-hS7" eventType="touchUpInside" id="pWf-Br-bPp"/>
+                                    <segue destination="i5g-EK-slx" kind="presentation" identifier="joinGameQueue" id="tyk-RB-PNO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dbo-YA-s0w" firstAttribute="centerX" secondItem="TGy-D6-sic" secondAttribute="centerX" id="2BK-ZA-EIK"/>
-                            <constraint firstItem="dbo-YA-s0w" firstAttribute="top" secondItem="JlH-8m-QF8" secondAttribute="bottom" constant="14" id="Q5F-NV-VAY"/>
-                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="N6R-p6-Q8v" secondAttribute="trailing" constant="16" id="VWE-E5-JKx"/>
-                            <constraint firstItem="JlH-8m-QF8" firstAttribute="top" secondItem="N6R-p6-Q8v" secondAttribute="bottom" constant="8.5" id="c2E-QW-6DZ"/>
-                            <constraint firstItem="N6R-p6-Q8v" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="16" id="cDf-mt-e3q"/>
-                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="JlH-8m-QF8" secondAttribute="trailing" constant="34" id="f1G-3P-zvP"/>
-                            <constraint firstItem="N6R-p6-Q8v" firstAttribute="centerY" secondItem="TGy-D6-sic" secondAttribute="centerY" constant="-40" id="nrD-uW-W2d"/>
-                            <constraint firstItem="JlH-8m-QF8" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="35" id="yK1-c4-2Y0"/>
+                            <constraint firstItem="dbo-YA-s0w" firstAttribute="top" secondItem="55P-y4-J7v" secondAttribute="bottom" constant="8" id="02g-Eh-OLp"/>
+                            <constraint firstItem="JlH-8m-QF8" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="35" id="8Dh-YP-RUL"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="N6R-p6-Q8v" secondAttribute="trailing" constant="16" id="8iF-5K-nSd"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="55P-y4-J7v" secondAttribute="trailing" constant="35" id="Axd-ex-gJG"/>
+                            <constraint firstItem="A1w-Lb-qES" firstAttribute="top" secondItem="JlH-8m-QF8" secondAttribute="bottom" constant="9.5" id="BzF-6l-00H"/>
+                            <constraint firstItem="55P-y4-J7v" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="35" id="GPC-Jc-HqY"/>
+                            <constraint firstItem="A1w-Lb-qES" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="16" id="Ko7-va-Tna"/>
+                            <constraint firstItem="55P-y4-J7v" firstAttribute="top" secondItem="A1w-Lb-qES" secondAttribute="bottom" constant="7.5" id="aKx-m1-Pnp"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="A1w-Lb-qES" secondAttribute="trailing" constant="16" id="axl-cp-Y0Z"/>
+                            <constraint firstItem="dbo-YA-s0w" firstAttribute="centerX" secondItem="TGy-D6-sic" secondAttribute="centerX" id="ehb-L2-xp2"/>
+                            <constraint firstItem="OPc-Tn-W2P" firstAttribute="trailing" secondItem="JlH-8m-QF8" secondAttribute="trailing" constant="35" id="j09-b2-wBy"/>
+                            <constraint firstItem="A1w-Lb-qES" firstAttribute="centerY" secondItem="TGy-D6-sic" secondAttribute="centerY" id="vuM-od-Uli"/>
+                            <constraint firstItem="JlH-8m-QF8" firstAttribute="top" secondItem="N6R-p6-Q8v" secondAttribute="bottom" constant="9" id="yq0-jb-2Zs"/>
+                            <constraint firstItem="N6R-p6-Q8v" firstAttribute="leading" secondItem="OPc-Tn-W2P" secondAttribute="leading" constant="16" id="zZN-uk-xto"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OPc-Tn-W2P"/>
                     </view>
+                    <connections>
+                        <outlet property="pwTextField" destination="55P-y4-J7v" id="JEC-Ba-NeW"/>
+                        <outlet property="roomIdTextField" destination="JlH-8m-QF8" id="FN5-yB-Bvq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQl-2d-YsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1M-8u-kWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2827.5" y="-287.32394366197184"/>
+            <point key="canvasLocation" x="3373" y="-287"/>
         </scene>
         <!--Game RoomVC-->
         <scene sceneID="PIb-FC-s9v">
@@ -393,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLW-nK-ZH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3801" y="-287"/>
+            <point key="canvasLocation" x="4061" y="-287"/>
         </scene>
         <!--CreateRoomVC-->
         <scene sceneID="OW2-gj-pf7">
@@ -403,35 +434,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Ui-mob">
-                                <rect key="frame" x="16" y="149.5" width="288" height="28.5"/>
-                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-vt-1ge" userLabel="createRmTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="187" width="251" height="29"/>
-                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the amount of time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-7x-vzl">
-                                <rect key="frame" x="16" y="246" width="288" height="28.5"/>
+                                <rect key="frame" x="16" y="270" width="288" height="28.5"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-JB-Lau" userLabel="Time Stack View">
-                                <rect key="frame" x="47.5" y="282" width="225" height="30"/>
+                                <rect key="frame" x="48" y="316" width="225" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhQ-Zp-ef8">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -476,10 +486,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dJ-iD-CqN" userLabel="joinRmBtn">
-                                <rect key="frame" x="119" y="355" width="82" height="32"/>
+                                <rect key="frame" x="119" y="385" width="82" height="32"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="wGF-NX-JcO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="RJW-cb-pyT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <state key="normal" title="Create">
@@ -491,29 +501,81 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="rcK-Fr-Grl"/>
+                                    <action selector="createRoom" destination="yh4-4Q-9M7" eventType="touchUpInside" id="02W-5L-c0X"/>
                                     <segue destination="i5g-EK-slx" kind="presentation" identifier="createGameQueue" id="Fdx-HJ-GaO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Ui-mob">
+                                <rect key="frame" x="16" y="118" width="288" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-vt-1ge" userLabel="idTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="156" width="250" height="29"/>
+                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0R-u3-X3F">
+                                <rect key="frame" x="15" y="196.5" width="290" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-lR-7rW" userLabel="pwTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="233" width="250" height="29"/>
+                                <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cyS-Ui-mob" firstAttribute="centerY" secondItem="uuo-Kv-Z7s" secondAttribute="centerY" constant="-120" id="5g4-h3-gKy"/>
-                            <constraint firstItem="cyS-Ui-mob" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="E8I-4H-M6s"/>
-                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="35" id="TO6-YN-H3J"/>
-                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="top" secondItem="cyS-Ui-mob" secondAttribute="bottom" constant="8.5" id="Txc-Lh-jIK"/>
-                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="3hT-7x-vzl" secondAttribute="trailing" constant="16" id="URv-uf-o4n"/>
-                            <constraint firstItem="SzT-JB-Lau" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="ahF-BL-pyU"/>
-                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="beD-H0-NVD"/>
-                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="top" secondItem="SzT-JB-Lau" secondAttribute="bottom" constant="43" id="flm-sa-e4K"/>
-                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="cyS-Ui-mob" secondAttribute="trailing" constant="16" id="iQA-pf-aeD"/>
-                            <constraint firstItem="SzT-JB-Lau" firstAttribute="top" secondItem="3hT-7x-vzl" secondAttribute="bottom" constant="7.5" id="moX-XE-dYD"/>
-                            <constraint firstItem="3hT-7x-vzl" firstAttribute="top" secondItem="Zmu-vt-1ge" secondAttribute="bottom" constant="30" id="n0v-7e-KVG"/>
-                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="Zmu-vt-1ge" secondAttribute="trailing" constant="34" id="nTw-al-ktm"/>
-                            <constraint firstItem="3hT-7x-vzl" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="wVj-5S-gkA"/>
+                            <constraint firstItem="3hT-7x-vzl" firstAttribute="centerY" secondItem="uuo-Kv-Z7s" secondAttribute="centerY" id="7uf-gv-ahN"/>
+                            <constraint firstItem="W0R-u3-X3F" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="15" id="A0L-h1-nqQ"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="cyS-Ui-mob" secondAttribute="trailing" constant="16" id="BWx-Cu-H6F"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="W0R-u3-X3F" secondAttribute="trailing" constant="15" id="Bza-sb-mKp"/>
+                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="Irt-hl-a27"/>
+                            <constraint firstItem="SzT-JB-Lau" firstAttribute="centerX" secondItem="uuo-Kv-Z7s" secondAttribute="centerX" id="K9F-h2-ZPM"/>
+                            <constraint firstItem="Jgb-lR-7rW" firstAttribute="top" secondItem="W0R-u3-X3F" secondAttribute="bottom" constant="8" id="KPg-td-h30"/>
+                            <constraint firstItem="SzT-JB-Lau" firstAttribute="top" secondItem="3hT-7x-vzl" secondAttribute="bottom" constant="17.5" id="Lmu-kM-ZyQ"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="Jgb-lR-7rW" secondAttribute="trailing" constant="35" id="MLl-jb-hMb"/>
+                            <constraint firstItem="3hT-7x-vzl" firstAttribute="top" secondItem="Jgb-lR-7rW" secondAttribute="bottom" constant="8" id="Xv0-VY-SaO"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="3hT-7x-vzl" secondAttribute="trailing" constant="16" id="YH1-dQ-kSx"/>
+                            <constraint firstItem="Gzn-Vg-YKs" firstAttribute="trailing" secondItem="Zmu-vt-1ge" secondAttribute="trailing" constant="35" id="Zib-1N-FaW"/>
+                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="top" secondItem="cyS-Ui-mob" secondAttribute="bottom" constant="9.5" id="ieU-Dp-yFz"/>
+                            <constraint firstItem="4dJ-iD-CqN" firstAttribute="top" secondItem="SzT-JB-Lau" secondAttribute="bottom" constant="39" id="k1E-T2-ypA"/>
+                            <constraint firstItem="Jgb-lR-7rW" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="35" id="mCd-sv-wfO"/>
+                            <constraint firstItem="W0R-u3-X3F" firstAttribute="top" secondItem="Zmu-vt-1ge" secondAttribute="bottom" constant="11.5" id="q4U-mM-2ow"/>
+                            <constraint firstItem="Zmu-vt-1ge" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="35" id="qmq-H9-COM"/>
+                            <constraint firstItem="cyS-Ui-mob" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="sdi-Jk-MCu"/>
+                            <constraint firstItem="3hT-7x-vzl" firstAttribute="leading" secondItem="Gzn-Vg-YKs" secondAttribute="leading" constant="16" id="uur-ER-QUo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gzn-Vg-YKs"/>
                     </view>
+                    <connections>
+                        <outlet property="pwTextField" destination="Jgb-lR-7rW" id="jsF-ae-hZ1"/>
+                        <outlet property="roomIdTextField" destination="Zmu-vt-1ge" id="cWk-9I-O8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEW-Kz-fqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

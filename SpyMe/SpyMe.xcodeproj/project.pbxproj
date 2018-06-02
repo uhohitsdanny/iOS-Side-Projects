@@ -50,6 +50,7 @@
 		30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A985A120A2FA4F008E09BE /* GlobalVars.swift */; };
 		30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */; };
 		30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */; };
+		30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */; };
 		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		30A985A120A2FA4F008E09BE /* GlobalVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnRoom_VC.swift; sourceTree = "<group>"; };
 		30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCreation+UITextField.swift"; sourceTree = "<group>"; };
+		30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+UITextField.swift"; sourceTree = "<group>"; };
 		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 				30A9857120A1630C008E09BE /* JoinCreateRoom_VC.swift */,
 				30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */,
 				30A9857320A1638C008E09BE /* RoomCreation_VC.swift */,
+				30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */,
 			);
 			path = RoomConnection;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
 				30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */,
 				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,
+				30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */,
 				30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */,
 				3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */,
 				30A9857220A1630C008E09BE /* JoinCreateRoom_VC.swift in Sources */,

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-            timestampString = "549623071.562528"
+            timestampString = "549632626.10851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "RoomCreation_VC"
             landmarkType = "3">
             <Locations>
@@ -84,20 +84,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/View/GameQueue/RoomConnection/ConnRoom_VC.swift"
-            timestampString = "549623071.56363"
+            timestampString = "549632626.1088901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "ConnRoom_VC"
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SpyMe.ConnRoom_VC.player.getter : Swift.Optional&lt;SpyMe.Civilian&gt;"
@@ -112,7 +112,7 @@
                   offsetFromSymbolStart = "109">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SpyMe.ConnRoom_VC.player.setter : Swift.Optional&lt;SpyMe.Civilian&gt;"
@@ -127,7 +127,7 @@
                   offsetFromSymbolStart = "112">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SpyMe.ConnRoom_VC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SpyMe.ConnRoom_VC"
@@ -142,7 +142,7 @@
                   offsetFromSymbolStart = "73">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SpyMe.ConnRoom_VC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SpyMe.ConnRoom_VC&gt;"
