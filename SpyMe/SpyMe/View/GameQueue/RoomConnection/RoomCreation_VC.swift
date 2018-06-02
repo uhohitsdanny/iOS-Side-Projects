@@ -1,5 +1,5 @@
 //
-//  SpyRoom_VC.swift
+//  RoomCreation_VC.swift
 //  SpyMe
 //
 //  Created by Danny Navarro on 5/7/18.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class JoinCreateRoom_VC: UIViewController {
+class RoomCreation_VC: UIViewController {
 
-    var player:Civilian? = nil
+    var player: Civilian? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        log("JoinCreateRoom ViewController loaded")
-    }
 
+        // Do any additional setup after loading the view.
+    }
 }

@@ -137,7 +137,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="submitSpyName" destination="MCb-IF-rX9" eventType="touchUpInside" id="HTM-EO-b0N"/>
                                     <segue destination="lmO-qu-eNM" kind="presentation" identifier="jcRmSegue" modalTransitionStyle="crossDissolve" id="yxL-BH-o3Y"/>
                                 </connections>
                             </button>
@@ -167,8 +166,8 @@
                         <viewLayoutGuide key="safeArea" id="BI3-Mc-x5G"/>
                     </view>
                     <connections>
-                        <outlet property="maxCharsLabel" destination="r5Z-Ax-Wvb" id="0sm-vs-yCl"/>
                         <outlet property="nameTextField" destination="o9V-8y-8fH" id="Rwp-xK-MJs"/>
+                        <outlet property="warningLabel" destination="r5Z-Ax-Wvb" id="aOl-Lp-CiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdN-M2-iuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
