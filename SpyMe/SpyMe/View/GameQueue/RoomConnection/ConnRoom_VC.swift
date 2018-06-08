@@ -37,7 +37,7 @@ extension ConnRoom_VC {
             if roomId!.isEmpty || pw!.isEmpty{
                 return false
             } else {
-                if self.room?.status == .success {
+                if self.player!.status == .joinsuccess {
                     return true
                 }
                 return false

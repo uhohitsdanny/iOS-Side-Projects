@@ -8,6 +8,6 @@
 
 import Foundation
 
-func log(_ statement:String) {
+func log(_ statement:Any) {
     print(statement)
 }

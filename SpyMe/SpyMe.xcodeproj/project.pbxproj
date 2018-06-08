@@ -52,6 +52,7 @@
 		30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */; };
 		30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */; };
 		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
+		9F4B911B153C87A812A23A51 /* Pods_SpyMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +102,12 @@
 		30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnRoom_VC.swift; sourceTree = "<group>"; };
 		30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCreation+UITextField.swift"; sourceTree = "<group>"; };
 		30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+UITextField.swift"; sourceTree = "<group>"; };
+		30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpyMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		30AAB67D20C49DDB001A9B45 /* SpyMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpyMe.entitlements; sourceTree = "<group>"; };
 		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
+		4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpyMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe.debug.xcconfig"; sourceTree = "<group>"; };
+		52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpyMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6116FA91700DE9739E304DE1 /* Pods-SpyMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpyMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,17 +115,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4B911B153C87A812A23A51 /* Pods_SpyMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13430994C5E8F4CF50EDEC96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */,
+				6116FA91700DE9739E304DE1 /* Pods-SpyMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		30689100209944B9001F4EB5 = {
 			isa = PBXGroup;
 			children = (
 				3068910B209944B9001F4EB5 /* SpyMe */,
 				3068910A209944B9001F4EB5 /* Products */,
+				13430994C5E8F4CF50EDEC96 /* Pods */,
+				375A017BBA830323A5DC722F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +152,7 @@
 		3068910B209944B9001F4EB5 /* SpyMe */ = {
 			isa = PBXGroup;
 			children = (
+				30AAB67D20C49DDB001A9B45 /* SpyMe.entitlements */,
 				30689118209944B9001F4EB5 /* LaunchScreen.storyboard */,
 				3068910E209944B9001F4EB5 /* HomeViewController.swift */,
 				3068910C209944B9001F4EB5 /* AppDelegate.swift */,
@@ -146,6 +165,7 @@
 				30A9859E20A265D7008E09BE /* Globals */,
 				30A9856C20A15F6F008E09BE /* Extensions+Custom */,
 				30A9856120A0EFAC008E09BE /* Resources */,
+				30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */,
 			);
 			path = SpyMe;
 			sourceTree = "<group>";
@@ -272,6 +292,14 @@
 			path = RoomConnection;
 			sourceTree = "<group>";
 		};
+		375A017BBA830323A5DC722F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3068911E209944B9001F4EB5 /* Build configuration list for PBXNativeTarget "SpyMe" */;
 			buildPhases = (
+				330053158F8E48D75E2D00AE /* [CP] Check Pods Manifest.lock */,
 				30689105209944B9001F4EB5 /* Sources */,
 				30689106209944B9001F4EB5 /* Frameworks */,
 				30689107209944B9001F4EB5 /* Resources */,
+				6215AEF84AD0C0118B7D009E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,7 +334,13 @@
 				TargetAttributes = {
 					30689108209944B9001F4EB5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -357,6 +393,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		330053158F8E48D75E2D00AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpyMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6215AEF84AD0C0118B7D009E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30689105209944B9001F4EB5 /* Sources */ = {
@@ -524,13 +601,19 @@
 		};
 		3068911F209944B9001F4EB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpyMe/SpyMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H23PX874P;
 				INFOPLIST_FILE = SpyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SpyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpyMe/SpyMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -538,13 +621,18 @@
 		};
 		30689120209944B9001F4EB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6116FA91700DE9739E304DE1 /* Pods-SpyMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpyMe/SpyMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6H23PX874P;
 				INFOPLIST_FILE = SpyMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SpyMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpyMe/SpyMe-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

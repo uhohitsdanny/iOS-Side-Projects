@@ -10,8 +10,9 @@ import Foundation
 
 
 enum PlayerStatus {
-    case ingame
+    case joinsuccess
     case standby
+    case ingame
 }
 
 class Civilian: NSObject {

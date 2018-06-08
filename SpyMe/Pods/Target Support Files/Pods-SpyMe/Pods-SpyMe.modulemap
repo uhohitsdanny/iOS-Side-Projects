@@ -1,0 +1,6 @@
+framework module Pods_SpyMe {
+  umbrella header "Pods-SpyMe-umbrella.h"
+
+  export *
+  module * { export * }
+}

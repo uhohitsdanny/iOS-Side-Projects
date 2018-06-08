@@ -9,9 +9,9 @@
 import Foundation
 
 enum RoomStatus {
-    case pending
-    case success
-    case fail
+    case standby
+    case ready
+    case ingame
 }
 
 class Room: NSObject {
@@ -22,7 +22,7 @@ class Room: NSObject {
     init(id:String){
         self.id = id
         self.pw = ""
-        self.status = .pending
+        self.status = .standby
     }
     
     // MARK: Bluetooth interactions

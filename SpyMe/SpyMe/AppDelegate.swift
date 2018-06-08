@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 import CoreData
 
 @UIApplicationMain
@@ -14,9 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "spyme1029384756"
+            $0.server = "https://spyme.herokuapp.com/parse"
+        }
+        Parse.initialize(with: configuration)
+        
         return true
     }
 

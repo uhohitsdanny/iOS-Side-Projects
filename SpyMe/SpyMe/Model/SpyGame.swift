@@ -9,8 +9,7 @@
 import Foundation
 
 enum GameStatus {
-    case waiting
-    case ready
+    case standby
     case inprogress
     case done
 }
@@ -23,7 +22,7 @@ class SpyGame: NSObject {
     var civs: [Civilian]
     
     var time: TimeInterval = 0.0
-    var status: GameStatus = .waiting
+    var status: GameStatus = .standby
     
     
     init(room:Room, player:Civilian){
@@ -34,7 +33,7 @@ class SpyGame: NSObject {
     }
     
     func startGame() -> Bool { return false }
-    func chckRmSts() -> RoomStatus { return .pending}
+    func chckRmSts() -> RoomStatus { return .standby}
     func pickSpy() -> Bool { return false }
 
     func isFinished() -> Bool {
