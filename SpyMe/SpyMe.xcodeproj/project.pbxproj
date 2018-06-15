@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */; };
 		3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910C209944B9001F4EB5 /* AppDelegate.swift */; };
 		3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910E209944B9001F4EB5 /* HomeViewController.swift */; };
 		30689112209944B9001F4EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30689110209944B9001F4EB5 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Custom.swift"; sourceTree = "<group>"; };
 		30689109209944B9001F4EB5 /* SpyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3068910C209944B9001F4EB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3068910E209944B9001F4EB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3020B87120D3621A00B17F6B /* NameCreation */ = {
+			isa = PBXGroup;
+			children = (
+				30A9856F20A16225008E09BE /* NameCreation_VC.swift */,
+				30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */,
+			);
+			path = NameCreation;
+			sourceTree = "<group>";
+		};
 		30689100209944B9001F4EB5 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +195,7 @@
 		30689123209BDDB1001F4EB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30689110209944B9001F4EB5 /* Main.storyboard */,
 				30A9856920A15868008E09BE /* GameQueue */,
 				30A9856620A1467D008E09BE /* GameRoom */,
 			);
@@ -220,9 +232,7 @@
 		30A9856920A15868008E09BE /* GameQueue */ = {
 			isa = PBXGroup;
 			children = (
-				30689110209944B9001F4EB5 /* Main.storyboard */,
-				30A9856F20A16225008E09BE /* NameCreation_VC.swift */,
-				30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */,
+				3020B87120D3621A00B17F6B /* NameCreation */,
 				30AAB67420C1FE2A001A9B45 /* RoomConnection */,
 				30A9856720A14EB2008E09BE /* GameQueue_VC.swift */,
 			);
@@ -234,6 +244,7 @@
 			children = (
 				30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */,
 				30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */,
+				3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */,
 			);
 			path = "Extensions+Custom";
 			sourceTree = "<group>";
@@ -443,6 +454,7 @@
 				30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */,
 				30A9856E20A15F88008E09BE /* UIStoryboard+Loader.swift in Sources */,
 				30689129209BF41A001F4EB5 /* Locations.swift in Sources */,
+				3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */,
 				30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */,
 				30689125209BF145001F4EB5 /* Civilian.swift in Sources */,
 				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
