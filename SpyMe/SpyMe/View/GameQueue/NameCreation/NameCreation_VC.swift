@@ -20,8 +20,12 @@ class NameCreation_VC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         log("NameCreation_VC is loaded")
-        
+        setupKeyboardType()
+    }
+    
+    func setupKeyboardType(){
         nameTextField?.delegate = self
+        nameTextField?.returnKeyType = .done
     }
 }
 
@@ -39,14 +43,11 @@ extension NameCreation_VC {
         if identifier == "jcRmSegue"{
             
             let name = nameTextField?.text
-            
             if name!.isEmpty {
                 warningLabel?.isHidden = false
                 warningLabel?.text = "A name is required"
                 return false
-            }
-                
-            else{
+            }else{
                 player = Civilian(name: name!)
                 performSegue(withIdentifier: "jcRmSegue", sender: self)
                 warningLabel?.isHidden = true

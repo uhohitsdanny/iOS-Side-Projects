@@ -19,13 +19,22 @@ class ConnRoom_VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         log("ConnRoom View Controller loaded")
-        roomIdTextField?.delegate = self
+        //roomIdTextField?.delegate = self
+        setupKeyboardType()
     }
     
     @IBAction func joinRoom(){
         // Query DB for the room
         room?.id = (roomIdTextField?.text)!
         room?.pw = (pwTextField?.text)!
+    }
+    
+    func setupKeyboardType(){
+        roomIdTextField?.delegate = self
+        pwTextField?.delegate = self
+        
+        roomIdTextField?.returnKeyType = .done
+        pwTextField?.returnKeyType = .done
     }
 }
 

@@ -20,6 +20,7 @@ class Civilian: NSObject {
     let name: String
     var role: String
     var spy: Bool
+    var roomid: String?
     var status: PlayerStatus
     
     
@@ -27,6 +28,7 @@ class Civilian: NSObject {
         self.name = name
         self.role = "Civilian"
         self.spy = false
+        self.roomid = nil
         self.status = .standby
     }
     

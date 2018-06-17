@@ -15,13 +15,26 @@ extension ConnRoom_VC: UITextFieldDelegate {
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= CHARACTER_LIMIT
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        roomIdTextField?.resignFirstResponder()
+        pwTextField?.resignFirstResponder()
+        return true
+    }
 }
 
 extension RoomCreation_VC: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= CHARACTER_LIMIT
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        roomIdTextField?.resignFirstResponder()
+        pwTextField?.resignFirstResponder()
+        return true
     }
 }

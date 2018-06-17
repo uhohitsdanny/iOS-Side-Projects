@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */; };
+		305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BF2A320D5BECC003307F7 /* Helpers.swift */; };
 		3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910C209944B9001F4EB5 /* AppDelegate.swift */; };
 		3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910E209944B9001F4EB5 /* HomeViewController.swift */; };
 		30689112209944B9001F4EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30689110209944B9001F4EB5 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Custom.swift"; sourceTree = "<group>"; };
+		305BF2A320D5BECC003307F7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		30689109209944B9001F4EB5 /* SpyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3068910C209944B9001F4EB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3068910E209944B9001F4EB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = NameCreation;
 			sourceTree = "<group>";
 		};
+		305BF2A220D5BEA4003307F7 /* Helper Methods */ = {
+			isa = PBXGroup;
+			children = (
+				305BF2A320D5BECC003307F7 /* Helpers.swift */,
+			);
+			path = "Helper Methods";
+			sourceTree = "<group>";
+		};
 		30689100209944B9001F4EB5 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 				30689123209BDDB1001F4EB5 /* View */,
 				30689122209BDD70001F4EB5 /* ViewModel */,
 				30A9859E20A265D7008E09BE /* Globals */,
+				305BF2A220D5BEA4003307F7 /* Helper Methods */,
 				30A9856C20A15F6F008E09BE /* Extensions+Custom */,
 				30A9856120A0EFAC008E09BE /* Resources */,
 				30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */,
@@ -464,6 +475,7 @@
 				30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */,
 				30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,
+				305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */,
 				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
 				30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */,
 				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,

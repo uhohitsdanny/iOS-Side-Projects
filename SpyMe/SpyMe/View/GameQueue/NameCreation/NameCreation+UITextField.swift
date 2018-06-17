@@ -16,4 +16,9 @@ extension NameCreation_VC: UITextFieldDelegate {
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= CHARACTER_LIMIT
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField?.resignFirstResponder()
+        return true
+    }
 }

@@ -8,25 +8,26 @@
 
 import UIKit
 
-
 class RoomCreation_VC: UIViewController {
 
     @IBOutlet weak var roomIdTextField: UITextField?
     @IBOutlet weak var pwTextField: UITextField?
-    @IBOutlet weak var timeBtn: UIButton?
     
-    
-    var player: Civilian? = nil
-    var room: Room? = nil
+    var player: Civilian?
+    var seconds: Int = DEFAULT_TIME
     
     override func viewDidLoad() {
         super.viewDidLoad()
         log("RoomCreation View Controller loaded")
-        roomIdTextField?.delegate = self
+        setupKeyboard()
     }
     
-    @IBAction func createRoom(){
+    func setupKeyboard(){
+        roomIdTextField?.delegate = self
+        pwTextField?.delegate = self
         
+        roomIdTextField?.returnKeyType = .done
+        pwTextField?.returnKeyType = .done
     }
 }
 
@@ -46,9 +47,12 @@ extension RoomCreation_VC {
         }
     }
     
-    func registerTimer(with time:String) {
-        
-        
+    @IBAction func registerTimer(_ sender: UIButton) {
+        if let minute = Int(sender.currentTitle!) {
+            self.seconds = minute * 60
+        } else {
+            self.seconds = DEFAULT_TIME
+        }
     }
 }
 
@@ -62,8 +66,19 @@ extension RoomCreation_VC {
             // If not alert the user to enter a valid password
             if checkText(text: (roomIdTextField?.text)!) && checkText(text: (pwTextField?.text)!) {
                 
-                room?.id = (roomIdTextField?.text)!
-                room?.pw = (pwTextField?.text)!
+                let room = Room(id: (roomIdTextField?.text)!)
+                room.pw = (pwTextField?.text)!
+                
+                player?.roomid = room.id
+                
+                room.createRoom(room: room) { (success) in
+                    if success {
+                        log("Successfully created room: " + (room.id))
+                    } else {
+                        log("Failed to create room: " + (room.id))
+
+                    }
+                }
                 
                 if self.player!.status == .joinsuccess {
                     return true

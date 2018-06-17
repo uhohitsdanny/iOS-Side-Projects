@@ -9,86 +9,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-            timestampString = "550732120.289215"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "RoomCreation_VC"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.RoomCreation_VC.player.getter : Swift.Optional&lt;SpyMe.Civilian&gt;"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-                  timestampString = "549587340.66589"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "109">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.RoomCreation_VC.player.setter : Swift.Optional&lt;SpyMe.Civilian&gt;"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-                  timestampString = "549587340.674907"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.RoomCreation_VC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SpyMe.RoomCreation_VC"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-                  timestampString = "549587340.682165"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "73">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.RoomCreation_VC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SpyMe.RoomCreation_VC&gt;"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/GameQueue/RoomConnection/RoomCreation_VC.swift"
-                  timestampString = "549587340.6850801"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "42">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SpyMe/View/GameQueue/RoomConnection/ConnRoom_VC.swift"
-            timestampString = "549754782.769595"
+            timestampString = "550890094.372561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"

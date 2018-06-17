@@ -491,6 +491,9 @@
                                         <state key="normal" title="4">
                                             <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerTimer:" destination="yh4-4Q-9M7" eventType="touchUpInside" id="L0p-WP-wHN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq9-L2-ErT">
                                         <rect key="frame" x="65" y="0.0" width="30" height="30"/>
@@ -498,6 +501,9 @@
                                         <state key="normal" title="7">
                                             <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerTimer:" destination="yh4-4Q-9M7" eventType="touchUpInside" id="iLz-Hg-1GP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I83-hr-ThT">
                                         <rect key="frame" x="130" y="0.0" width="30" height="30"/>
@@ -505,13 +511,19 @@
                                         <state key="normal" title="10">
                                             <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerTimer:" destination="yh4-4Q-9M7" eventType="touchUpInside" id="03i-nf-aeE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8U-Ih-cMX">
                                         <rect key="frame" x="195" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="15">
+                                        <state key="normal" title="13">
                                             <color key="titleColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerTimer:" destination="yh4-4Q-9M7" eventType="touchUpInside" id="ihV-0w-VcA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -539,7 +551,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="createRoom" destination="yh4-4Q-9M7" eventType="touchUpInside" id="02W-5L-c0X"/>
                                     <segue destination="i5g-EK-slx" kind="presentation" identifier="createGameQueue" id="Fdx-HJ-GaO"/>
                                 </connections>
                             </button>
@@ -624,6 +635,6 @@
         <image name="SpyGlassesTransparent" width="682" height="682"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tyk-RB-PNO"/>
+        <segue reference="Fdx-HJ-GaO"/>
     </inferredMetricsTieBreakers>
 </document>
