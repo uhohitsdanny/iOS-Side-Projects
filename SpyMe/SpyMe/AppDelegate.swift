@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let configuration = ParseClientConfiguration {
             $0.applicationId = "spyme1029384756"
-            //$0.clientKey = "sdp12#djfkd@0101!"
+            $0.clientKey = "sdp12#djfkd@0101!"
             $0.server = "https://spy-me.herokuapp.com/parse"
         }
         Parse.initialize(with: configuration)

@@ -19,8 +19,11 @@ class NameCreation_VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        log("NameCreation_VC is loaded")
         setupKeyboardType()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        log("**** NameCreation_VC is loaded ****")
     }
     
     func setupKeyboardType(){

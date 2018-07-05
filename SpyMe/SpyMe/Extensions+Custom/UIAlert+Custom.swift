@@ -11,15 +11,29 @@ import UIKit
 
 extension UIAlertController {
     
-    static func PasswordValidityAlert() -> UIAlertController{
-        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+    static func PasswordValidityAlert() -> UIAlertController
+    {
         let title : String = "Invalid Password"
-        let message: String = "Please input a valid password\n"
-            + "(no whitespaces or empty passwords)"
+        let message: String = "Please input a valid password"
+
+        return generateCustomAlert(title, message)
+    }
+    
+    static func RoomExistenceAlert() -> UIAlertController
+    {
+        let title : String = "Room ID already exists"
+        let message: String = "Please try a different room ID"
+        
+        return generateCustomAlert(title, message)
+    }
+    
+    fileprivate static func generateCustomAlert(_ title:String,_ message:String) -> UIAlertController
+    {
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
         
         // Create attributed fonts
         let titleFont:[NSAttributedStringKey : AnyObject] = [ NSAttributedStringKey.font : UIFont(name: "Raleway", size: 18)! ]
-        let messageFont:[NSAttributedStringKey : AnyObject] = [ NSAttributedStringKey.font : UIFont(name: "Raleway", size: 11)! ]
+        let messageFont:[NSAttributedStringKey : AnyObject] = [ NSAttributedStringKey.font : UIFont(name: "Raleway", size: 11)!]
         
         // Create title and message with the attributed fonts
         let attributedTitle = NSMutableAttributedString(string: title, attributes: titleFont)
@@ -40,8 +54,6 @@ extension UIAlertController {
         
         return alert
     }
-    
-    
 }
 
 

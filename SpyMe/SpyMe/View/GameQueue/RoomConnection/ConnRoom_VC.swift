@@ -18,17 +18,11 @@ class ConnRoom_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        log("ConnRoom View Controller loaded")
+        log("**** ConnRoom ViewController loaded ****")
         //roomIdTextField?.delegate = self
         setupKeyboardType()
     }
-    
-    @IBAction func joinRoom(){
-        // Query DB for the room
-        room?.id = (roomIdTextField?.text)!
-        room?.pw = (pwTextField?.text)!
-    }
-    
+
     func setupKeyboardType(){
         roomIdTextField?.delegate = self
         pwTextField?.delegate = self
@@ -37,6 +31,25 @@ class ConnRoom_VC: UIViewController {
         pwTextField?.returnKeyType = .done
     }
 }
+
+// MARK: - Button Functions
+
+extension ConnRoom_VC {
+    @IBAction func joinRoom(){
+        // Query DB for the room
+        room?.id = (roomIdTextField?.text)!
+        room?.pw = (pwTextField?.text)!
+    }
+    
+    @IBAction func dismissViewController()
+    {
+        self.dismiss(animated: true) {
+            log("**** ConnRoom ViewController dismissed ****")
+        }
+    }
+}
+
+// MARK: - Segue Actions
 
 extension ConnRoom_VC {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

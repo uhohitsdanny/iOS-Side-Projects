@@ -14,11 +14,26 @@ class JoinCreateRoom_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        log("JoinCreateRoom ViewController loaded")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        log("**** JoinCreateRoom ViewController loaded ****")
     }
 }
 
-// MARK: Segue Actions
+// MARK: - Button Functions
+
+extension JoinCreateRoom_VC {
+    
+    @IBAction func dismissViewController()
+    {
+        self.dismiss(animated: true) {
+            log("**** JoinCreateRoom ViewController dismissed ****")
+        }
+    }
+}
+
+// MARK: - Segue Actions
 extension JoinCreateRoom_VC {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
