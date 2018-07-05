@@ -21,7 +21,6 @@ enum Status: NSNumber {
 let recentDecisionList: [Decision] = [Decision()]
 
 //Global Functions
-// I like logs:D
 func log(_ statement:String){
     print(statement)
 }

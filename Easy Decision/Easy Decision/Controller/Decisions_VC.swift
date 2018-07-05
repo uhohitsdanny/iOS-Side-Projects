@@ -39,6 +39,7 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         let cell = tableView.dequeueReusableCell(withIdentifier: "decision_cell", for: indexPath) as! TextInputCell
         cell.textField.delegate = self
         cell.textField.placeholder = "Write Decision..."
+        cell.textField.adjustsFontSizeToFitWidth = true
         cell.selectionStyle = UITableViewCellSelectionStyle.none
 
         return cell
