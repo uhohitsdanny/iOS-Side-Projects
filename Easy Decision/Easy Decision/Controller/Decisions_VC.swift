@@ -40,6 +40,8 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         cell.textField.delegate = self
         cell.textField.placeholder = "Write Decision..."
         cell.textField.adjustsFontSizeToFitWidth = true
+        cell.textField.returnKeyType = .done
+        cell.textField.autocorrectionType = .no
         cell.selectionStyle = UITableViewCellSelectionStyle.none
 
         return cell
@@ -47,6 +49,11 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         log("Done editing at indexpath \(indexPath?.row ?? 0)")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setupView() {
