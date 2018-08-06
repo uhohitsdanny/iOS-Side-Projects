@@ -10,15 +10,24 @@ import UIKit
 
 class GameQueue_VC: UIViewController {
 
+    var room : Room? = nil {
+        didSet{
+            log("Room \(room?.id ?? "") successfully joined.")
+            mSetup()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        log("**** GameQueue ViewController loaded ****")
         // Do any additional setup after loading the view.
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension GameQueue_VC {
+    
+    func mSetup()
+    {
+        
     }
-
 }

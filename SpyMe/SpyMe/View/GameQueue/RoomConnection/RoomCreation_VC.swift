@@ -21,6 +21,7 @@ class RoomCreation_VC: UIViewController {
     
     var timeButtons:[UIButton] = [UIButton]()
     
+    var room: Room? = nil
     var player: Civilian?
     var seconds: Int = DEFAULT_TIME
     
@@ -46,25 +47,7 @@ class RoomCreation_VC: UIViewController {
     }
 }
 
-// MARK: - Helper Functions
-
-extension RoomCreation_VC {
-    func checkText(text:String) -> Bool {
-        let whitespace = NSCharacterSet.whitespaces
-        
-        let range = text.rangeOfCharacter(from: whitespace)
-        
-        // range will be nil if no whitespace is found
-        if range != nil || text.isEmpty {
-            return false
-        } else {
-            return true
-        }
-    }
-}
-
 // MARK: - Button Functions
-
 extension RoomCreation_VC {
     @IBAction func registerTimer(_ sender: UIButton) {
         if let minute = Int(sender.currentTitle!) {
@@ -110,13 +93,13 @@ extension RoomCreation_VC {
             // If not alert the user to enter a valid password
             if checkText(text: (roomIdTextField?.text)!) && checkText(text: (pwTextField?.text)!) {
                 
-                let room = Room(id: (roomIdTextField?.text)!)
-                room.pw = (pwTextField?.text)!
-                room.seconds = self.seconds
+                let newroom = Room(id: (roomIdTextField?.text)!, pw: (pwTextField?.text)!)
+                newroom.host = (player?.name)!
+                newroom.seconds = self.seconds
+                newroom.players.append((player?.name)!)
+                player?.roomid = newroom.id
                 
-                player?.roomid = room.id
-                
-                room.createRoom(room: room) { (success, exists) in
+                newroom.createRoom(room: newroom) { (success, exists) in
                     if exists
                     {
                         // If room id already exists, alert user to enter a different ID
@@ -128,16 +111,22 @@ extension RoomCreation_VC {
                         // else continue
                         if success
                         {
-                            log("Successfully created room: " + (room.id))
+                            log("Successfully created room: " + (newroom.id))
+                            log("Joining Room: \(newroom.id)")
+                            
+                            self.room = newroom
+                            self.player!.status = .joinsuccess
+                            self.performSegue(withIdentifier: "createGameQueue", sender: self)
                         }
                         else
                         {
-                            log("Failed to create room: " + (room.id))
+                            log("Failed to create room: " + (newroom.id))
                         }
                     }
                 }
                 
-                if self.player!.status == .joinsuccess {
+                if self.player!.status == .joinsuccess
+                {
                     return true
                 }
                 return false
@@ -148,5 +137,16 @@ extension RoomCreation_VC {
             }
         }
         return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "createGameQueue"
+        {
+            if let destinationVC = segue.destination as? GameQueue_VC
+            {
+                destinationVC.room = self.room
+            }
+        }
     }
 }

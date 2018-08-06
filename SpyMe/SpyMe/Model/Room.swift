@@ -17,14 +17,19 @@ enum RoomStatus: String {
 class Room: NSObject {
     var id: String
     var pw: String
+    var host: String
     var status: RoomStatus
     var seconds: Int
-    
-    init(id:String){
+    var startTime: Any?
+    var players:[String]
+
+    init(id:String, pw:String){
         self.id = id
-        self.pw = ""
+        self.pw = pw
+        self.host = ""
         self.status = .standby
         self.seconds = DEFAULT_TIME
+        self.players = []
     }
     
     // MARK: Parse
@@ -39,7 +44,7 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
-                    log("\(objects?.description ?? "test test")")
+                    log("\(objects?.description ?? "")")
                     let roomid = objects![0].object(forKey: "roomid") as! String
                     log("Parse query was successful")
                     log("Room ID " + roomid + " already exists")
@@ -52,8 +57,10 @@ class Room: NSObject {
                 let newRoomObj = PFObject(className: "Room")
                 newRoomObj["roomid"] = room!.id
                 newRoomObj["pw"] = room!.pw
+                newRoomObj["host"] = room!.host
                 newRoomObj["status"] = room!.status.rawValue
                 newRoomObj["time"] = room!.seconds
+                newRoomObj["players"] = room!.players
                 
                 newRoomObj.saveInBackground(block: { (success, error) in
                     if error == nil
@@ -78,5 +85,66 @@ class Room: NSObject {
             }
         }
     }
-    func joinRoom() {}
+    func joinRoom(player:String,completion:@escaping (Bool?,Bool,Room?)->Void)
+    {
+        let validPassword = true
+        let joined = true
+        
+        let room = Room(id: self.id, pw: self.pw)
+        
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: room.id)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    log("\(objects?.description ?? "")")
+                    log("Parse query was successful")
+                    
+                    // Check if password matches
+                    let password = objects![0].object(forKey: "pw") as! String
+                    
+                    if room.pw == password
+                    {
+                        room.host = objects![0].object(forKey: "host") as! String
+                        room.status =  RoomStatus(rawValue: objects![0].object(forKey: "status") as! String)!
+                        room.seconds = objects![0].object(forKey: "time") as! Int
+                        room.players = objects![0].object(forKey: "players") as! [String]
+                        
+                        room.players.append(player)
+                        
+                        // After querying the room, we must update it with the new player list
+                        let newRoomObj = objects![0]
+                        newRoomObj["players"] = room.players
+                        newRoomObj.saveInBackground(block: { (success, error) in
+                            if error == nil
+                            {
+                                log("Successfully updated with new player list: " + room.players.description)
+                            }
+                            else
+                            {
+                                log("\(String(describing: error))")
+                            }
+                        })
+                        
+                        completion(validPassword,joined,room)
+                    }
+                    
+                    else
+                    {
+                        completion(!validPassword,!joined,room)
+                    }
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                
+                completion(nil,!joined,nil)
+            }
+        }
+    }
 }

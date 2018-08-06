@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B82B92117088300F31DD1 /* ParseCloudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B82B82117088300F31DD1 /* ParseCloudFunctions.swift */; };
 		3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */; };
 		305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BF2A320D5BECC003307F7 /* Helpers.swift */; };
 		3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910C209944B9001F4EB5 /* AppDelegate.swift */; };
@@ -48,7 +49,6 @@
 		30A9859A20A257FF008E09BE /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858720A257FF008E09BE /* Raleway-Thin.ttf */; };
 		30A9859B20A257FF008E09BE /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858820A257FF008E09BE /* Raleway-Italic.ttf */; };
 		30A9859C20A257FF008E09BE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30A9858920A257FF008E09BE /* Raleway-Bold.ttf */; };
-		30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9859F20A265F8008E09BE /* GlobalFunctions.swift */; };
 		30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A985A120A2FA4F008E09BE /* GlobalVars.swift */; };
 		30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */; };
 		30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */; };
@@ -58,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300B82B82117088300F31DD1 /* ParseCloudFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCloudFunctions.swift; sourceTree = "<group>"; };
 		3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Custom.swift"; sourceTree = "<group>"; };
 		305BF2A320D5BECC003307F7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		30689109209944B9001F4EB5 /* SpyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +102,6 @@
 		30A9858720A257FF008E09BE /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		30A9858820A257FF008E09BE /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		30A9858920A257FF008E09BE /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
-		30A9859F20A265F8008E09BE /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		30A985A120A2FA4F008E09BE /* GlobalVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnRoom_VC.swift; sourceTree = "<group>"; };
 		30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameCreation+UITextField.swift"; sourceTree = "<group>"; };
@@ -135,6 +135,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		300B82B72117085100F31DD1 /* Parse Functions */ = {
+			isa = PBXGroup;
+			children = (
+				300B82B82117088300F31DD1 /* ParseCloudFunctions.swift */,
+			);
+			path = "Parse Functions";
+			sourceTree = "<group>";
+		};
+		300B82BA2117B5EC00F31DD1 /* GameRoomViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */,
+				30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */,
+			);
+			path = GameRoomViewModel;
+			sourceTree = "<group>";
+		};
+		300B82BB2117B5F800F31DD1 /* GameQueueViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A9855B209EF184008E09BE /* GameQueueViewModel.swift */,
+				30A9855F209FD208008E09BE /* GameQueueProtocol.swift */,
+			);
+			path = GameQueueViewModel;
+			sourceTree = "<group>";
+		};
 		3020B87120D3621A00B17F6B /* NameCreation */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,14 +168,6 @@
 				30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */,
 			);
 			path = NameCreation;
-			sourceTree = "<group>";
-		};
-		305BF2A220D5BEA4003307F7 /* Helper Methods */ = {
-			isa = PBXGroup;
-			children = (
-				305BF2A320D5BECC003307F7 /* Helpers.swift */,
-			);
-			path = "Helper Methods";
 			sourceTree = "<group>";
 		};
 		30689100209944B9001F4EB5 = {
@@ -180,11 +198,11 @@
 				30689116209944B9001F4EB5 /* Assets.xcassets */,
 				3068911B209944B9001F4EB5 /* Info.plist */,
 				30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */,
+				300B82B72117085100F31DD1 /* Parse Functions */,
 				30A9854E209E91D7008E09BE /* Model */,
 				30689123209BDDB1001F4EB5 /* View */,
 				30689122209BDD70001F4EB5 /* ViewModel */,
 				30A9859E20A265D7008E09BE /* Globals */,
-				305BF2A220D5BEA4003307F7 /* Helper Methods */,
 				30A9856C20A15F6F008E09BE /* Extensions+Custom */,
 				30A9856120A0EFAC008E09BE /* Resources */,
 				30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */,
@@ -195,10 +213,8 @@
 		30689122209BDD70001F4EB5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */,
-				30A9855B209EF184008E09BE /* GameQueueViewModel.swift */,
-				30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */,
-				30A9855F209FD208008E09BE /* GameQueueProtocol.swift */,
+				300B82BB2117B5F800F31DD1 /* GameQueueViewModel */,
+				300B82BA2117B5EC00F31DD1 /* GameRoomViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,7 +313,7 @@
 		30A9859E20A265D7008E09BE /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				30A9859F20A265F8008E09BE /* GlobalFunctions.swift */,
+				305BF2A320D5BECC003307F7 /* Helpers.swift */,
 				30A985A120A2FA4F008E09BE /* GlobalVars.swift */,
 			);
 			path = Globals;
@@ -471,7 +487,7 @@
 				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
 				30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */,
 				30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */,
-				30A985A020A265F8008E09BE /* GlobalFunctions.swift in Sources */,
+				300B82B92117088300F31DD1 /* ParseCloudFunctions.swift in Sources */,
 				30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */,
 				30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,

@@ -36,14 +36,16 @@ extension JoinCreateRoom_VC {
 // MARK: - Segue Actions
 extension JoinCreateRoom_VC {
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
+    {
         if player != nil {
             return true
         }
         return false
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         if segue.identifier == "connRmSegue" {
             if let destinationVC = segue.destination as? ConnRoom_VC {
                 destinationVC.player = player

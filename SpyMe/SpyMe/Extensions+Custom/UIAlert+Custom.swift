@@ -11,6 +11,7 @@ import UIKit
 
 extension UIAlertController {
     
+    // Alert for invalid password format
     static func PasswordValidityAlert() -> UIAlertController
     {
         let title : String = "Invalid Password"
@@ -19,10 +20,30 @@ extension UIAlertController {
         return generateCustomAlert(title, message)
     }
     
+    // Alert for wrong password
+    static func WrongPasswordAlert() -> UIAlertController
+    {
+        let title : String = "Wrong Password"
+        let message: String = "The password inputted is incorrect"
+        
+        return generateCustomAlert(title, message)
+    }
+    
+    // Alert for existence of a room
     static func RoomExistenceAlert() -> UIAlertController
     {
         let title : String = "Room ID already exists"
         let message: String = "Please try a different room ID"
+        
+        return generateCustomAlert(title, message)
+    }
+    
+    // Alert if room was not joined successfully
+    static func RoomNotFoundAlert() -> UIAlertController
+    {
+        let title : String = "Room not found"
+        let message: String = "The room either does not exist or there was an error in the system\n"
+                            + "Please try again or check the room id again"
         
         return generateCustomAlert(title, message)
     }
