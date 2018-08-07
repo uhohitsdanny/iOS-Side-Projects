@@ -48,6 +48,15 @@ extension UIAlertController {
         return generateCustomAlert(title, message)
     }
     
+    // Room in game alert
+    static func RoomBusy() -> UIAlertController
+    {
+        let title : String = "Room is busy"
+        let message: String = "The room is currently ingame."
+        
+        return generateCustomAlert(title, message)
+    }
+    
     fileprivate static func generateCustomAlert(_ title:String,_ message:String) -> UIAlertController
     {
         let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)

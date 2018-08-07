@@ -57,11 +57,20 @@ extension ConnRoom_VC {
                     {
                         if let joinedRoom = room
                         {
-                            log("Joining Room: \(joinedRoom.id)")
-                            self.room = joinedRoom
-                            self.player!.roomid = joinedRoom.id
-                            self.player!.status = .joinsuccess
-                            self.performSegue(withIdentifier: "joinGameQueue", sender: self)
+                            if joinedRoom.status == .standby
+                            {
+                                log("Joining Room: \(joinedRoom.id)")
+                                self.room = joinedRoom
+                                self.player!.roomid = joinedRoom.id
+                                self.player!.status = .joinsuccess
+                                self.performSegue(withIdentifier: "joinGameQueue", sender: self)
+                            }
+                            else if joinedRoom.status == .ingame
+                            {
+                                log("The room is currently ingame.")
+                                let validityAlert = UIAlertController.RoomBusy()
+                                self.present(validityAlert, animated: false, completion: nil)
+                            }
                         }
                     }
                     else

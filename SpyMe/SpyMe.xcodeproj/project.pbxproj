@@ -53,6 +53,8 @@
 		30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67220C1FE1D001A9B45 /* ConnRoom_VC.swift */; };
 		30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67520C29028001A9B45 /* NameCreation+UITextField.swift */; };
 		30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */; };
+		30BD89AC21191179001E6921 /* GameQueue+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89AB21191179001E6921 /* GameQueue+UITableView.swift */; };
+		30BD89AF2119123A001E6921 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89AE2119123A001E6921 /* PlayerCell.swift */; };
 		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
 		9F4B911B153C87A812A23A51 /* Pods_SpyMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+UITextField.swift"; sourceTree = "<group>"; };
 		30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpyMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		30AAB67D20C49DDB001A9B45 /* SpyMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpyMe.entitlements; sourceTree = "<group>"; };
+		30BD89AB21191179001E6921 /* GameQueue+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameQueue+UITableView.swift"; sourceTree = "<group>"; };
+		30BD89AE2119123A001E6921 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
 		4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpyMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe.debug.xcconfig"; sourceTree = "<group>"; };
 		52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpyMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,18 +197,18 @@
 			children = (
 				30AAB67D20C49DDB001A9B45 /* SpyMe.entitlements */,
 				30689118209944B9001F4EB5 /* LaunchScreen.storyboard */,
-				3068910E209944B9001F4EB5 /* HomeViewController.swift */,
 				3068910C209944B9001F4EB5 /* AppDelegate.swift */,
-				30689116209944B9001F4EB5 /* Assets.xcassets */,
-				3068911B209944B9001F4EB5 /* Info.plist */,
-				30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */,
-				300B82B72117085100F31DD1 /* Parse Functions */,
+				3068910E209944B9001F4EB5 /* HomeViewController.swift */,
 				30A9854E209E91D7008E09BE /* Model */,
 				30689123209BDDB1001F4EB5 /* View */,
 				30689122209BDD70001F4EB5 /* ViewModel */,
 				30A9859E20A265D7008E09BE /* Globals */,
+				300B82B72117085100F31DD1 /* Parse Functions */,
 				30A9856C20A15F6F008E09BE /* Extensions+Custom */,
 				30A9856120A0EFAC008E09BE /* Resources */,
+				30689116209944B9001F4EB5 /* Assets.xcassets */,
+				3068911B209944B9001F4EB5 /* Info.plist */,
+				30689113209944B9001F4EB5 /* SpyMe.xcdatamodeld */,
 				30AAB67920C4768A001A9B45 /* SpyMe-Bridging-Header.h */,
 			);
 			path = SpyMe;
@@ -223,8 +227,11 @@
 			isa = PBXGroup;
 			children = (
 				30689110209944B9001F4EB5 /* Main.storyboard */,
+				3020B87120D3621A00B17F6B /* NameCreation */,
+				30AAB67420C1FE2A001A9B45 /* RoomConnection */,
 				30A9856920A15868008E09BE /* GameQueue */,
 				30A9856620A1467D008E09BE /* GameRoom */,
+				30BD89AD2119122A001E6921 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,8 +249,8 @@
 		30A9856120A0EFAC008E09BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30BD89B0211A196E001E6921 /* Locations For Game */,
 				30A9857520A25726008E09BE /* Fonts */,
-				30689128209BF41A001F4EB5 /* Locations.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -259,9 +266,8 @@
 		30A9856920A15868008E09BE /* GameQueue */ = {
 			isa = PBXGroup;
 			children = (
-				3020B87120D3621A00B17F6B /* NameCreation */,
-				30AAB67420C1FE2A001A9B45 /* RoomConnection */,
 				30A9856720A14EB2008E09BE /* GameQueue_VC.swift */,
+				30BD89AB21191179001E6921 /* GameQueue+UITableView.swift */,
 			);
 			path = GameQueue;
 			sourceTree = "<group>";
@@ -328,6 +334,22 @@
 				30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */,
 			);
 			path = RoomConnection;
+			sourceTree = "<group>";
+		};
+		30BD89AD2119122A001E6921 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30BD89AE2119123A001E6921 /* PlayerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30BD89B0211A196E001E6921 /* Locations For Game */ = {
+			isa = PBXGroup;
+			children = (
+				30689128209BF41A001F4EB5 /* Locations.swift */,
+			);
+			path = "Locations For Game";
 			sourceTree = "<group>";
 		};
 		375A017BBA830323A5DC722F /* Frameworks */ = {
@@ -481,6 +503,7 @@
 				30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */,
 				30A9856E20A15F88008E09BE /* UIStoryboard+Loader.swift in Sources */,
 				30689129209BF41A001F4EB5 /* Locations.swift in Sources */,
+				30BD89AC21191179001E6921 /* GameQueue+UITableView.swift in Sources */,
 				3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */,
 				30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */,
 				30689125209BF145001F4EB5 /* Civilian.swift in Sources */,
@@ -489,6 +512,7 @@
 				30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */,
 				300B82B92117088300F31DD1 /* ParseCloudFunctions.swift in Sources */,
 				30AAB67320C1FE1D001A9B45 /* ConnRoom_VC.swift in Sources */,
+				30BD89AF2119123A001E6921 /* PlayerCell.swift in Sources */,
 				30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,
 				305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */,

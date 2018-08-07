@@ -33,7 +33,8 @@ class Room: NSObject {
     }
     
     // MARK: Parse
-    func createRoom(room:Room?,completion:@escaping (Bool, Bool)->Void) {
+    func createRoom(room:Room?,completion:@escaping (Bool, Bool)->Void)
+    {
         
         let query = PFQuery(className: "Room")
         
@@ -44,7 +45,6 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
-                    log("\(objects?.description ?? "")")
                     let roomid = objects![0].object(forKey: "roomid") as! String
                     log("Parse query was successful")
                     log("Room ID " + roomid + " already exists")
@@ -85,6 +85,7 @@ class Room: NSObject {
             }
         }
     }
+    
     func joinRoom(player:String,completion:@escaping (Bool?,Bool,Room?)->Void)
     {
         let validPassword = true
@@ -99,7 +100,6 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
-                    log("\(objects?.description ?? "")")
                     log("Parse query was successful")
                     
                     // Check if password matches
@@ -144,6 +144,31 @@ class Room: NSObject {
                 print(error ?? "")
                 
                 completion(nil,!joined,nil)
+            }
+        }
+    }
+    
+    func getPlayerList(room:Room?,cb:@escaping (Bool,[String]?)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        
+        query.whereKey("roomid", equalTo: (room?.id)!)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    let playerlist = objects![0].object(forKey: "players") as! [String]
+                    
+                    cb (true,playerlist)
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                cb (false,nil)
             }
         }
     }

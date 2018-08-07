@@ -16,20 +16,38 @@ class HomeViewController: UIViewController {
         log("HomeViewController")
         
         // Test if parse DB is running
-        let query = PFQuery(className: "Room")
-        query.whereKey("roomid", equalTo: "testid")
-        query.findObjectsInBackground { (objects, error) in
-            if error == nil {
-                let roomid = objects![0].object(forKey: "roomid") as! String
-                log("Parse query was successful")
-                log("Found room ID " + roomid)
-            }
-            else {
-                log("Querying Room objects failed")
-                log("----------------------------")
-                print(error ?? "")
-            }
-        }
+//        let query = PFQuery(className: "Room")
+//        query.whereKey("roomid", equalTo: "testid")
+//        query.findObjectsInBackground { (objects, error) in
+//            if error == nil {
+//                let roomid = objects![0].object(forKey: "roomid") as! String
+//                log("Parse query was successful")
+//                log("Found room ID " + roomid)
+//            }
+//            else {
+//                log("Querying Room objects failed")
+//                log("----------------------------")
+//                print(error ?? "")
+//            }
+//        }
     }
     
+}
+
+extension HomeViewController {
+    // TODO: Need a method to check if player can rejoin a game after disconnecting
+    func checkIfDisconnectedFromAGame()
+    {
+        
+    }
+    
+    func rejoinGame()
+    {
+        
+    }
+    
+    func mSetup()
+    {
+        
+    }
 }
