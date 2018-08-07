@@ -19,7 +19,7 @@ class SpyGame: NSObject {
     let room: Room
     let locations: Locations
     let player: Civilian
-    var civs: [Civilian]
+    var playernames: [String]
     
     var time: TimeInterval = 0.0
     var status: GameStatus = .standby
@@ -29,13 +29,9 @@ class SpyGame: NSObject {
         self.room = room
         self.locations = Locations()
         self.player = player
-        self.civs = []
+        self.playernames = room.players
     }
     
-    func startGame() -> Bool { return false }
-    func chckRmSts() -> RoomStatus { return .standby}
-    func pickSpy() -> Bool { return false }
-
     func isFinished() -> Bool {
         if status == .done {
             return true

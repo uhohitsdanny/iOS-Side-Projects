@@ -12,7 +12,6 @@ protocol GameRoomProtocol{
     var role:String         { get }
     var time:String         { get }
     var locs:Locations      { get }
-    var selectedLoc:String  { get }
     
     var isFinished:Bool     { get }
 }

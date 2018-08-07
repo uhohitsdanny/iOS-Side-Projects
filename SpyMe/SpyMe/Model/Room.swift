@@ -10,7 +10,6 @@ import Parse
 
 enum RoomStatus: String {
     case standby = "standby"
-    case ready = "ready"
     case ingame = "ingame"
 }
 
@@ -20,8 +19,11 @@ class Room: NSObject {
     var host: String
     var status: RoomStatus
     var seconds: Int
-    var startTime: Any?
+    var startTime: [Int?]
     var players:[String]
+    
+    var spy:String
+    var location:String
 
     init(id:String, pw:String){
         self.id = id
@@ -29,7 +31,11 @@ class Room: NSObject {
         self.host = ""
         self.status = .standby
         self.seconds = DEFAULT_TIME
+        self.startTime = []
         self.players = []
+        
+        self.spy = ""
+        self.location = ""
     }
     
     // MARK: Parse
@@ -121,14 +127,14 @@ class Room: NSObject {
                             if error == nil
                             {
                                 log("Successfully updated with new player list: " + room.players.description)
+                                completion(validPassword,joined,room)
                             }
                             else
                             {
-                                log("\(String(describing: error))")
+                                log("Could not join room")
                             }
                         })
                         
-                        completion(validPassword,joined,room)
                     }
                     
                     else
@@ -148,19 +154,38 @@ class Room: NSObject {
         }
     }
     
-    func getPlayerList(room:Room?,cb:@escaping (Bool,[String]?)->Void)
+    // MARK: - Update Functions
+    
+    func updateSpyAndLocation(room:Room?,cb:@escaping (Bool)->Void)
     {
         let query = PFQuery(className: "Room")
-        
         query.whereKey("roomid", equalTo: (room?.id)!)
         query.findObjectsInBackground { (objects, error) in
             if error == nil
             {
                 if !(objects?.isEmpty)!
                 {
-                    let playerlist = objects![0].object(forKey: "players") as! [String]
-                    
-                    cb (true,playerlist)
+                    let newRoomObj = objects![0]
+                    newRoomObj["spy"] = room?.spy
+                    newRoomObj["location"] = room?.location
+                    newRoomObj.saveInBackground(block: { (success, error) in
+                        if error != nil
+                        {
+                            if success
+                            {
+                                cb(true)
+                            }
+                            else
+                            {
+                                cb (false)
+                            }
+                        }
+                        else
+                        {
+                            log("Error: could not update chosen spy and location")
+                            cb (false)
+                        }
+                    })
                 }
             }
             else
@@ -168,8 +193,116 @@ class Room: NSObject {
                 log("Querying Room objects failed")
                 log("----------------------------")
                 print(error ?? "")
-                cb (false,nil)
+                cb (false)
             }
         }
+    }
+    
+    func updateStartTimeForRoom(room:Room?,cb:@escaping (Bool)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: (room?.id)!)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    let newRoomObj = objects![0]
+                    newRoomObj["starttime"] = room?.startTime
+                    newRoomObj["status"] = room?.status
+                    newRoomObj.saveInBackground(block: { (success, error) in
+                        if error != nil
+                        {
+                            if success
+                            {
+                                cb(true)
+                            }
+                            else
+                            {
+                                cb (false)
+                            }
+                        }
+                        else
+                        {
+                            log("Error: could not update start time.")
+                            cb (false)
+                        }
+                    })
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                cb (false)
+            }
+        }
+    }
+    
+    // MARK: - Get Functions
+    
+    func getSpyAndLocation(room:Room?,cb:@escaping (Bool,String?,String?)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: (room?.id)!)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    let chosen_spy = objects![0].object(forKey: "spy") as! String
+                    let chosen_location = objects![0].object(forKey: "location") as! String
+
+                    cb (true,chosen_spy,chosen_location)
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                cb (false,nil,nil)
+            }
+        }
+    }
+    
+    func getUpdatedRoom(room:Room?,cb:@escaping (Bool,[String]?,RoomStatus?,[Int?]?)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: (room?.id)!)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    let playerlist = objects![0].object(forKey: "players") as! [String]
+                    let gamestatus = RoomStatus(rawValue: objects![0].object(forKey: "status") as! String)!
+                    let starttime = objects![0].object(forKey: "starttime") as! [Int?]
+                    
+                    cb (true,playerlist,gamestatus,starttime)
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                cb (false,nil,nil,nil)
+            }
+        }
+    }
+    
+    // MARK: - Picking Functions
+    
+    func pickSpy() -> String
+    {
+        let randomIndex = Int(arc4random_uniform(UInt32(self.players.count)))
+        return self.players[randomIndex]
+    }
+    
+    func pickLocation() -> String
+    {
+        return Locations().getRandomLocation()
     }
 }

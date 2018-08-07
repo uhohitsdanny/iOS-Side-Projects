@@ -92,7 +92,6 @@ extension RoomCreation_VC {
             // Check if password field is empty or contains whitespaces
             // If not alert the user to enter a valid password
             if checkText(text: (roomIdTextField?.text)!) && checkText(text: (pwTextField?.text)!) {
-                
                 let newroom = Room(id: (roomIdTextField?.text)!, pw: (pwTextField?.text)!)
                 newroom.host = (player?.name)!
                 newroom.seconds = self.seconds

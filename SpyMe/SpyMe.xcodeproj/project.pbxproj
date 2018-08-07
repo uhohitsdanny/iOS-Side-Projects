@@ -21,9 +21,7 @@
 		30689129209BF41A001F4EB5 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30689128209BF41A001F4EB5 /* Locations.swift */; };
 		3068912B209BF4E7001F4EB5 /* SpyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068912A209BF4E7001F4EB5 /* SpyGame.swift */; };
 		30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */; };
-		30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855B209EF184008E09BE /* GameQueueViewModel.swift */; };
 		30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */; };
-		30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9855F209FD208008E09BE /* GameQueueProtocol.swift */; };
 		30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856220A14090008E09BE /* GameRoom_VC.swift */; };
 		30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856720A14EB2008E09BE /* GameQueue_VC.swift */; };
 		30A9856E20A15F88008E09BE /* UIStoryboard+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */; };
@@ -55,6 +53,8 @@
 		30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAB67720C29CE2001A9B45 /* Room+UITextField.swift */; };
 		30BD89AC21191179001E6921 /* GameQueue+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89AB21191179001E6921 /* GameQueue+UITableView.swift */; };
 		30BD89AF2119123A001E6921 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89AE2119123A001E6921 /* PlayerCell.swift */; };
+		30BD89B2211A496D001E6921 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89B1211A496D001E6921 /* LocationCell.swift */; };
+		30BD89B4211A5319001E6921 /* GameRoom+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89B3211A5319001E6921 /* GameRoom+UITableView.swift */; };
 		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
 		9F4B911B153C87A812A23A51 /* Pods_SpyMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */; };
 /* End PBXBuildFile section */
@@ -76,9 +76,7 @@
 		30689128209BF41A001F4EB5 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		3068912A209BF4E7001F4EB5 /* SpyGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyGame.swift; sourceTree = "<group>"; };
 		30A98553209E9BF5008E09BE /* GameRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomViewModel.swift; sourceTree = "<group>"; };
-		30A9855B209EF184008E09BE /* GameQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueViewModel.swift; sourceTree = "<group>"; };
 		30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoomProtocol.swift; sourceTree = "<group>"; };
-		30A9855F209FD208008E09BE /* GameQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueueProtocol.swift; sourceTree = "<group>"; };
 		30A9856220A14090008E09BE /* GameRoom_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoom_VC.swift; sourceTree = "<group>"; };
 		30A9856720A14EB2008E09BE /* GameQueue_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameQueue_VC.swift; sourceTree = "<group>"; };
 		30A9856D20A15F88008E09BE /* UIStoryboard+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Loader.swift"; sourceTree = "<group>"; };
@@ -112,6 +110,8 @@
 		30AAB67D20C49DDB001A9B45 /* SpyMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpyMe.entitlements; sourceTree = "<group>"; };
 		30BD89AB21191179001E6921 /* GameQueue+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameQueue+UITableView.swift"; sourceTree = "<group>"; };
 		30BD89AE2119123A001E6921 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		30BD89B1211A496D001E6921 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		30BD89B3211A5319001E6921 /* GameRoom+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameRoom+UITableView.swift"; sourceTree = "<group>"; };
 		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
 		4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpyMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe.debug.xcconfig"; sourceTree = "<group>"; };
 		52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpyMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,15 +154,6 @@
 				30A9855D209FD1EA008E09BE /* GameRoomProtocol.swift */,
 			);
 			path = GameRoomViewModel;
-			sourceTree = "<group>";
-		};
-		300B82BB2117B5F800F31DD1 /* GameQueueViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				30A9855B209EF184008E09BE /* GameQueueViewModel.swift */,
-				30A9855F209FD208008E09BE /* GameQueueProtocol.swift */,
-			);
-			path = GameQueueViewModel;
 			sourceTree = "<group>";
 		};
 		3020B87120D3621A00B17F6B /* NameCreation */ = {
@@ -217,7 +208,6 @@
 		30689122209BDD70001F4EB5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				300B82BB2117B5F800F31DD1 /* GameQueueViewModel */,
 				300B82BA2117B5EC00F31DD1 /* GameRoomViewModel */,
 			);
 			path = ViewModel;
@@ -259,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				30A9856220A14090008E09BE /* GameRoom_VC.swift */,
+				30BD89B3211A5319001E6921 /* GameRoom+UITableView.swift */,
 			);
 			path = GameRoom;
 			sourceTree = "<group>";
@@ -340,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				30BD89AE2119123A001E6921 /* PlayerCell.swift */,
+				30BD89B1211A496D001E6921 /* LocationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -500,7 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30A9855C209EF184008E09BE /* GameQueueViewModel.swift in Sources */,
+				30BD89B4211A5319001E6921 /* GameRoom+UITableView.swift in Sources */,
 				30A9856E20A15F88008E09BE /* UIStoryboard+Loader.swift in Sources */,
 				30689129209BF41A001F4EB5 /* Locations.swift in Sources */,
 				30BD89AC21191179001E6921 /* GameQueue+UITableView.swift in Sources */,
@@ -516,8 +508,8 @@
 				30A985A220A2FA4F008E09BE /* GlobalVars.swift in Sources */,
 				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,
 				305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */,
-				30A98560209FD208008E09BE /* GameQueueProtocol.swift in Sources */,
 				30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */,
+				30BD89B2211A496D001E6921 /* LocationCell.swift in Sources */,
 				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,
 				30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */,
 				30A9856820A14EB2008E09BE /* GameQueue_VC.swift in Sources */,
