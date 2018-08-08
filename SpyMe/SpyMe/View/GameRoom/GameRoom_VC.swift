@@ -28,6 +28,7 @@ class GameRoom_VC: UIViewController {
         }
         
         guard gameroom_VM != nil else { return }
+        
     }
 
 }

@@ -17,19 +17,24 @@ enum GameStatus {
 
 class SpyGame: NSObject {
     let room: Room
-    let locations: Locations
+    let locations: [String]
     let player: Civilian
     var playernames: [String]
-    
+    let chosen_loc: String
+    let chosen_spy: String
     var time: TimeInterval = 0.0
-    var status: GameStatus = .standby
+    var status: GameStatus
     
     
     init(room:Room, player:Civilian){
         self.room = room
-        self.locations = Locations()
+        self.locations = Locations().locations
         self.player = player
         self.playernames = room.players
+        self.status = .standby
+        
+        self.chosen_loc = room.location
+        self.chosen_spy = room.spy
     }
     
     func isFinished() -> Bool {

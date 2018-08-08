@@ -10,11 +10,13 @@ import Foundation
 
 extension GameRoom_VC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return (self.gameroom_VM?.locs.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
+        
+        cell.locationLabel.text = self.gameroom_VM?.locs[indexPath.row]
         
         return cell
     }

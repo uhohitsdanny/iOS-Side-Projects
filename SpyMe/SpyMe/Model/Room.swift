@@ -66,6 +66,7 @@ class Room: NSObject {
                 newRoomObj["host"] = room!.host
                 newRoomObj["status"] = room!.status.rawValue
                 newRoomObj["time"] = room!.seconds
+                newRoomObj["starttime"] = room!.startTime
                 newRoomObj["players"] = room!.players
                 
                 newRoomObj.saveInBackground(block: { (success, error) in
@@ -116,6 +117,7 @@ class Room: NSObject {
                         room.host = objects![0].object(forKey: "host") as! String
                         room.status =  RoomStatus(rawValue: objects![0].object(forKey: "status") as! String)!
                         room.seconds = objects![0].object(forKey: "time") as! Int
+                        room.startTime = objects![0].object(forKey: "starttime") as! [Int?]
                         room.players = objects![0].object(forKey: "players") as! [String]
                         
                         room.players.append(player)
@@ -156,7 +158,7 @@ class Room: NSObject {
     
     // MARK: - Update Functions
     
-    func updateSpyAndLocation(room:Room?,cb:@escaping (Bool)->Void)
+    func updateSpyGameInfo(room:Room?,cb:@escaping (Bool)->Void)
     {
         let query = PFQuery(className: "Room")
         query.whereKey("roomid", equalTo: (room?.id)!)
@@ -168,11 +170,13 @@ class Room: NSObject {
                     let newRoomObj = objects![0]
                     newRoomObj["spy"] = room?.spy
                     newRoomObj["location"] = room?.location
+                    newRoomObj["status"] = room?.status.rawValue
                     newRoomObj.saveInBackground(block: { (success, error) in
-                        if error != nil
+                        if error == nil
                         {
                             if success
                             {
+                                log("Successfully updated spygame information")
                                 cb(true)
                             }
                             else
@@ -183,6 +187,7 @@ class Room: NSObject {
                         else
                         {
                             log("Error: could not update chosen spy and location")
+                            log("\(String(describing: error))")
                             cb (false)
                         }
                     })
@@ -209,12 +214,13 @@ class Room: NSObject {
                 {
                     let newRoomObj = objects![0]
                     newRoomObj["starttime"] = room?.startTime
-                    newRoomObj["status"] = room?.status
                     newRoomObj.saveInBackground(block: { (success, error) in
-                        if error != nil
+                        if error == nil
                         {
                             if success
                             {
+                                log("Successfully updated start time")
+                                
                                 cb(true)
                             }
                             else
@@ -242,7 +248,7 @@ class Room: NSObject {
     
     // MARK: - Get Functions
     
-    func getSpyAndLocation(room:Room?,cb:@escaping (Bool,String?,String?)->Void)
+    func getSpyGameInfo(room:Room?,cb:@escaping (Bool,String?,String?,[Int?]?)->Void)
     {
         let query = PFQuery(className: "Room")
         query.whereKey("roomid", equalTo: (room?.id)!)
@@ -251,10 +257,13 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
+                    log("Successfully queried spygame information")
+
                     let chosen_spy = objects![0].object(forKey: "spy") as! String
                     let chosen_location = objects![0].object(forKey: "location") as! String
-
-                    cb (true,chosen_spy,chosen_location)
+                    let starttime = objects![0].object(forKey: "starttime") as! [Int?]
+                    
+                    cb (true,chosen_spy,chosen_location,starttime)
                 }
             }
             else
@@ -262,12 +271,12 @@ class Room: NSObject {
                 log("Querying Room objects failed")
                 log("----------------------------")
                 print(error ?? "")
-                cb (false,nil,nil)
+                cb (false,nil,nil,nil)
             }
         }
     }
     
-    func getUpdatedRoom(room:Room?,cb:@escaping (Bool,[String]?,RoomStatus?,[Int?]?)->Void)
+    func getUpdatedRoom(room:Room?,cb:@escaping (Bool,[String]?,RoomStatus?)->Void)
     {
         let query = PFQuery(className: "Room")
         query.whereKey("roomid", equalTo: (room?.id)!)
@@ -278,9 +287,8 @@ class Room: NSObject {
                 {
                     let playerlist = objects![0].object(forKey: "players") as! [String]
                     let gamestatus = RoomStatus(rawValue: objects![0].object(forKey: "status") as! String)!
-                    let starttime = objects![0].object(forKey: "starttime") as! [Int?]
                     
-                    cb (true,playerlist,gamestatus,starttime)
+                    cb (true,playerlist,gamestatus)
                 }
             }
             else
@@ -288,7 +296,7 @@ class Room: NSObject {
                 log("Querying Room objects failed")
                 log("----------------------------")
                 print(error ?? "")
-                cb (false,nil,nil,nil)
+                cb (false,nil,nil)
             }
         }
     }

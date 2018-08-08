@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpyMe/View/GameQueue/GameQueue_VC.swift"
-            timestampString = "555363397.554098"
+            filePath = "SpyMe/Model/Room.swift"
+            timestampString = "555453101.8639669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "refreshGameSts()"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "updateSpyGameInfo(room:cb:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

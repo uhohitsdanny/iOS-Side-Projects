@@ -15,7 +15,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     // MARK: GameRoomViewModel protocol
     var role: String
     var time: String
-    var locs: Locations
+    var locs: [String]
     
     var isFinished: Bool
     

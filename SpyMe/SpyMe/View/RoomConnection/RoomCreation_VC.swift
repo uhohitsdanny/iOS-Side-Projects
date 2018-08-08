@@ -144,6 +144,7 @@ extension RoomCreation_VC {
         {
             if let destinationVC = segue.destination as? GameQueue_VC
             {
+                destinationVC.player = self.player
                 destinationVC.room = self.room
             }
         }
