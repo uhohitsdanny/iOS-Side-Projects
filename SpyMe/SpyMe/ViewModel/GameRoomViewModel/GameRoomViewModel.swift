@@ -14,11 +14,11 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     
     // MARK: GameRoomViewModel protocol
     var role: String
-    var time: String
+    var time: Dynamic<String>
     var loc: String
     var locs: [String]
     
-    var isFinished: Bool
+    var isFinished: Dynamic<Bool>
     
     // MARK: Init
     init(game:SpyGame){
@@ -27,11 +27,11 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         
         // sync timer from current time - start time
         game.time = GameRoomViewModel.syncTimer(startTime: game.room.startTime, time: game.room.seconds)
-        self.time = GameRoomViewModel.timeRemaining(for: game)
+        self.time = Dynamic(GameRoomViewModel.timeRemaining(for: game))
         
-        self.loc = game.chosen_loc
+        self.loc = GameRoomViewModel.getLocation(location: game.chosen_loc, spyname: game.chosen_spy, playername: game.player.name)
         self.locs = game.locations
-        self.isFinished = game.isFinished()
+        self.isFinished = Dynamic(game.isFinished())
     }
     
     // MARK: Private
@@ -48,7 +48,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
             if self.spygame.time == 0
             {
                 self.pauseTimer()
-                self.time = GameRoomViewModel.timeRemaining(for: self.spygame)
+                self.time.value = GameRoomViewModel.timeRemaining(for: self.spygame)
             }
             else if self.spygame.time <= 0
             {
@@ -56,7 +56,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
             }
             else
             {
-                self.time = GameRoomViewModel.timeRemaining(for: self.spygame)
+                self.time.value = GameRoomViewModel.timeRemaining(for: self.spygame)
             }
         })
     }
@@ -108,6 +108,18 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         else
         {
             return "You are NOT the spy!"
+        }
+    }
+    
+    fileprivate static func getLocation(location:String,spyname:String, playername:String) -> String
+    {
+        if spyname == playername
+        {
+            return ""
+        }
+        else
+        {
+            return "\" \(location) \""
         }
     }
 }

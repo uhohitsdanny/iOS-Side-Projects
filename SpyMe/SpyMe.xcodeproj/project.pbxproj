@@ -55,6 +55,7 @@
 		30BD89AF2119123A001E6921 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89AE2119123A001E6921 /* PlayerCell.swift */; };
 		30BD89B2211A496D001E6921 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89B1211A496D001E6921 /* LocationCell.swift */; };
 		30BD89B4211A5319001E6921 /* GameRoom+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD89B3211A5319001E6921 /* GameRoom+UITableView.swift */; };
+		30E7266A211BABFC00BC94A3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E72669211BABFC00BC94A3 /* Dynamic.swift */; };
 		30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */; };
 		9F4B911B153C87A812A23A51 /* Pods_SpyMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		30BD89AE2119123A001E6921 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		30BD89B1211A496D001E6921 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		30BD89B3211A5319001E6921 /* GameRoom+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameRoom+UITableView.swift"; sourceTree = "<group>"; };
+		30E72669211BABFC00BC94A3 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		30F7766020B8070D00DD29D0 /* UITextField+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Custom.swift"; sourceTree = "<group>"; };
 		4BD0F8C11AA203B44A031CA7 /* Pods-SpyMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpyMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpyMe/Pods-SpyMe.debug.xcconfig"; sourceTree = "<group>"; };
 		52853931B4746B97C78BCE01 /* Pods_SpyMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpyMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				300B82BA2117B5EC00F31DD1 /* GameRoomViewModel */,
+				30E72669211BABFC00BC94A3 /* Dynamic.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				30A9856320A14090008E09BE /* GameRoom_VC.swift in Sources */,
 				305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */,
 				30AAB67620C29028001A9B45 /* NameCreation+UITextField.swift in Sources */,
+				30E7266A211BABFC00BC94A3 /* Dynamic.swift in Sources */,
 				30BD89B2211A496D001E6921 /* LocationCell.swift in Sources */,
 				30F7766120B8070D00DD29D0 /* UITextField+Custom.swift in Sources */,
 				30AAB67820C29CE2001A9B45 /* Room+UITextField.swift in Sources */,

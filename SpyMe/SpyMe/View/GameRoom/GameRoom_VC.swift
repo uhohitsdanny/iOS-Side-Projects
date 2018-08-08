@@ -34,16 +34,11 @@ class GameRoom_VC: UIViewController {
         
         guard gameroom_VM != nil else { return }
         
-        self.timeLabel.text = gameroom_VM?.time
+        gameroom_VM?.time.bindAndFire({ [unowned self] in self.timeLabel.text = $0})
+        
         self.locationLabel.text = gameroom_VM?.loc
         self.roleLabel.text = gameroom_VM?.role
         
-        startTimer()
-    }
-    
-    fileprivate func startTimer()
-    {
         gameroom_VM?.startTimer()
     }
-
 }

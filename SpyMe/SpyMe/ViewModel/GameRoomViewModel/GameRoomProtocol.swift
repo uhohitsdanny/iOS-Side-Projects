@@ -9,10 +9,10 @@
 import Foundation
 
 protocol GameRoomProtocol{
-    var role:String         { get }
-    var time:String         { get }
-    var loc:String          { get }
-    var locs:[String]       { get }
+    var role:String                 { get }
+    var time:Dynamic<String>        { get }
+    var loc:String                  { get }
+    var locs:[String]               { get }
     
-    var isFinished:Bool     { get }
+    var isFinished:Dynamic<Bool>    { get }
 }
