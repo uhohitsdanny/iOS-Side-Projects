@@ -501,6 +501,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hov-Q6-ut8"/>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="MDi-ZY-dx4" id="OPu-NW-Z4B"/>
+                        <outlet property="roleLabel" destination="0Zy-3U-tdP" id="BKa-ru-ldL"/>
+                        <outlet property="timeLabel" destination="NHS-bK-yGv" id="KVQ-XZ-0fB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLW-nK-ZH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

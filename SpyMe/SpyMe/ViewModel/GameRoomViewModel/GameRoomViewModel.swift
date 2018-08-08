@@ -15,6 +15,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     // MARK: GameRoomViewModel protocol
     var role: String
     var time: String
+    var loc: String
     var locs: [String]
     
     var isFinished: Bool
@@ -22,8 +23,13 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     // MARK: Init
     init(game:SpyGame){
         self.spygame = game
-        self.role = game.player.role
+        self.role = GameRoomViewModel.getRole(spyname: game.chosen_spy, playername: game.player.name)
+        
+        // sync timer from current time - start time
+        game.time = GameRoomViewModel.syncTimer(startTime: game.room.startTime, time: game.room.seconds)
         self.time = GameRoomViewModel.timeRemaining(for: game)
+        
+        self.loc = game.chosen_loc
         self.locs = game.locations
         self.isFinished = game.isFinished()
     }
@@ -31,12 +37,33 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     // MARK: Private
     fileprivate var gameTimer: Timer?
     
-    fileprivate func startTimer() {
+    func startTimer() {
         let interval: TimeInterval = 0.001
+        
+        log("*** Starting Game Timer ***")
         gameTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { (timer) in
-            self.spygame.time += interval
-            self.time = GameRoomViewModel.timeRemaining(for: self.spygame)
+            self.spygame.time -= interval
+            
+
+            if self.spygame.time == 0
+            {
+                self.pauseTimer()
+                self.time = GameRoomViewModel.timeRemaining(for: self.spygame)
+            }
+            else if self.spygame.time <= 0
+            {
+                self.pauseTimer()
+            }
+            else
+            {
+                self.time = GameRoomViewModel.timeRemaining(for: self.spygame)
+            }
         })
+    }
+    
+    fileprivate func pauseTimer() {
+        gameTimer?.invalidate()
+        gameTimer = nil
     }
     
     fileprivate static func timeFormatted(totalMillis: Int) -> String {
@@ -51,5 +78,36 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     
     fileprivate static func timeRemaining(for game: SpyGame) -> String{
         return timeFormatted(totalMillis: Int(game.time * 1000))
+    }
+    
+    fileprivate static func syncTimer(startTime:[Int?], time:Int) -> TimeInterval
+    {
+        // Get current time
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour,.minute,.second], from: date)
+        
+        // Get difference between time (The hour is calculated in 24-hour system)
+        let dHour = components.hour! - startTime[0]!
+        let dMinute = components.minute! - startTime[1]!
+        let dSeconds = components.second! - startTime[2]!
+        
+        // Convert to seconds
+        let convertedSeconds = (dHour * 3600) + (dMinute * 60) + dSeconds
+        
+        // Subtract the converted seconds from the timer's seconds and return
+        return Double((time - convertedSeconds))
+    }
+    
+    fileprivate static func getRole(spyname:String, playername:String) -> String
+    {
+        if spyname == playername
+        {
+            return "You are the SPY!"
+        }
+        else
+        {
+            return "You are NOT the spy!"
+        }
     }
 }
