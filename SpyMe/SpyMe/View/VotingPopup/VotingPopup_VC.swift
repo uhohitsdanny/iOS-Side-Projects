@@ -51,19 +51,28 @@ extension VotingPopup_VC {
             // Update voted spy in db
             
             // Remove room
-            
-            // Dismiss view and go back to beginning of the storyboard
-            self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-                log("*** Dismissing to root viewcontroller ****")
+            self.room?.deleteRoom(room: self.room, cb: { (success) in
+                if success
+                {
+                    // Dismiss view and go back to beginning of the storyboard
+                    self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+                        log("*** Dismissing to root viewcontroller ****")
+                    })
+                }
             })
+
         }
         else if sendBtn.tag == 2
         {
             // Remove room
-            
-            // Dismiss view and go back to beginning of the storyboard
-            self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-                log("*** Dismissing to root viewcontroller ****")
+            self.room?.deleteRoom(room: self.room, cb: { (success) in
+                if success
+                {
+                    // Dismiss view and go back to beginning of the storyboard
+                    self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+                        log("*** Dismissing to root viewcontroller ****")
+                    })
+                }
             })
         }
         

@@ -156,7 +156,7 @@ class Room: NSObject {
         }
     }
     
-    func deleteRoom(room:Room?,cb:@escaping (Bool?)->Void)
+    func deleteRoom(room:Room?,cb:@escaping (Bool)->Void)
     {
         let query = PFQuery(className: "Room")
         query.whereKey("roomid", equalTo: (room?.id)!)
@@ -165,7 +165,29 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
-                    
+                    log("Parse query was successful")
+                    log("Attempting to delete object")
+                    let objToDelete = objects![0]
+                    objToDelete.deleteInBackground(block: { (success, error) in
+                        if error == nil
+                        {
+                            if success
+                            {
+                                log("Deleted object successfully")
+                                cb (true)
+                            }
+                            else
+                            {
+                                log("Deleted object unsuccessfully")
+                                cb (false)
+                            }
+                        }
+                        else
+                        {
+                            log("Deleted object unsuccessfully")
+                            cb (false)
+                        }
+                    })
                 }
                 else
                 {
@@ -182,7 +204,7 @@ class Room: NSObject {
                 log("----------------------------")
                 print(error ?? "")
                 
-                cb (nil)
+                cb (false)
             }
         }
     }
