@@ -31,7 +31,8 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         
         self.loc = GameRoomViewModel.getLocation(location: game.chosen_loc, spyname: game.chosen_spy, playername: game.player.name)
         self.locs = game.locations
-        self.isFinished = Dynamic(game.isFinished())
+        
+        self.isFinished = Dynamic(GameRoomViewModel.Finished(timeRemaining: game.time * 1000))
     }
     
     // MARK: Private
@@ -42,17 +43,30 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         
         log("*** Starting Game Timer ***")
         gameTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { (timer) in
-            self.spygame.time -= interval
             
+            let state = UIApplication.shared.applicationState
+            
+            if state == .background {
+                // background
+                // sync the timer while in the background ("keeps the timer going")
+                self.spygame.time = GameRoomViewModel.syncTimer(startTime: self.spygame.room.startTime, time: self.spygame.room.seconds)
+            }
+            else if (state == .active) {
+                // foreground
+            }
+            
+            self.spygame.time -= interval
 
             if self.spygame.time == 0
             {
                 self.pauseTimer()
                 self.time.value = GameRoomViewModel.timeRemaining(for: self.spygame)
+                self.isFinished.value = GameRoomViewModel.Finished(timeRemaining: self.spygame.time)
             }
             else if self.spygame.time <= 0
             {
                 self.pauseTimer()
+                self.isFinished.value = GameRoomViewModel.Finished(timeRemaining: self.spygame.time)
             }
             else
             {
@@ -64,9 +78,20 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     fileprivate func pauseTimer() {
         gameTimer?.invalidate()
         gameTimer = nil
+        
     }
     
-    fileprivate static func timeFormatted(totalMillis: Int) -> String {
+    fileprivate static func Finished(timeRemaining:TimeInterval) -> Bool
+    {
+        if timeRemaining <= 0
+        {
+            return true
+        }
+        return false
+    }
+    
+    fileprivate static func timeFormatted(totalMillis: Int) -> String
+    {
         let millis: Int = totalMillis % 1000 / 100 // "/ 100" <- because we want only 1 digit
         let totalSeconds: Int = totalMillis / 1000
         
@@ -76,7 +101,8 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         return String(format: "%02d:%02d.%d", minutes, seconds, millis)
     }
     
-    fileprivate static func timeRemaining(for game: SpyGame) -> String{
+    fileprivate static func timeRemaining(for game: SpyGame) -> String
+    {
         return timeFormatted(totalMillis: Int(game.time * 1000))
     }
     
@@ -115,7 +141,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     {
         if spyname == playername
         {
-            return ""
+            return "Guess the location!"
         }
         else
         {

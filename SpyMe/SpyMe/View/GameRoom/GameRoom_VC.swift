@@ -22,7 +22,6 @@ class GameRoom_VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupGameUI()
     }
     
@@ -34,11 +33,33 @@ class GameRoom_VC: UIViewController {
         
         guard gameroom_VM != nil else { return }
         
-        gameroom_VM?.time.bindAndFire({ [unowned self] in self.timeLabel.text = $0})
+        gameroom_VM?.time.bindAndFire({ [unowned self] in self.timeLabel.text = $0 })
+        gameroom_VM?.isFinished.bindAndFire({ [unowned self] in self.goToVotingVC($0) })
         
         self.locationLabel.text = gameroom_VM?.loc
         self.roleLabel.text = gameroom_VM?.role
         
         gameroom_VM?.startTimer()
     }
+    
+    fileprivate func goToVotingVC(_ finished:Bool)
+    {
+        if finished
+        {
+            // Pop up voting vc
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let popupVC = storyboard.instantiateViewController(withIdentifier: "VotingPopup_VC") as! VotingPopup_VC
+            popupVC.players = (self.gameroom_VM?.spygame.playernames)!
+            
+            self.addChildViewController(popupVC)
+            popupVC.view.frame = self.view.frame
+            self.view.addSubview(popupVC.view)
+            popupVC.didMove(toParentViewController: self)
+        }
+
+        
+        
+        // After pop up is done, delete game room from DB
+    }
+    
 }

@@ -11,5 +11,5 @@ import Foundation
 class LocationCell: UITableViewCell {
     
     @IBOutlet weak var locationLabel: UILabel!
-    
+    @IBOutlet weak var locationLabel2: UILabel!
 }
