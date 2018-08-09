@@ -20,7 +20,8 @@ struct Locations {
                                 "Castle",
                                 "Church",
                                 "Circus",
-                                "Dentist Office"]
+                                "Dentist Office",
+                                "Zoo"]
     
     func getRandomLocation() -> String
     {

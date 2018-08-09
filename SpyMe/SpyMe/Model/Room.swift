@@ -156,6 +156,37 @@ class Room: NSObject {
         }
     }
     
+    func deleteRoom(room:Room?,cb:@escaping (Bool?)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: (room?.id)!)
+        query.findObjectsInBackground { (objects, error) in
+            if error == nil
+            {
+                if !(objects?.isEmpty)!
+                {
+                    
+                }
+                else
+                {
+                    log("Queried objects is empty.")
+                    log("----------------------------")
+                    print(error ?? "")
+                    
+                    cb (false)
+                }
+            }
+            else
+            {
+                log("Querying Room objects failed")
+                log("----------------------------")
+                print(error ?? "")
+                
+                cb (nil)
+            }
+        }
+    }
+    
     // MARK: - Update Functions
     
     func updateSpyGameInfo(room:Room?,cb:@escaping (Bool)->Void)
@@ -244,6 +275,12 @@ class Room: NSObject {
                 cb (false)
             }
         }
+    }
+    
+    func updateVotedSpy(room:Room?,cb:@escaping (Bool)->Void)
+    {
+        let query = PFQuery(className: "Room")
+        query.whereKey("roomid", equalTo: (room?.id)!)
     }
     
     // MARK: - Get Functions
