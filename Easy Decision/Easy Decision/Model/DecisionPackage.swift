@@ -29,7 +29,7 @@ extension DecisionPackage {
             group.enter()
             
             query = self.decision_list[input].str
-            let url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image&imgSize=huge&num=1"
+            let url = "https://www.googleapis.com/customsearch/v1?key=\(api_key)&cx=\(se_key)&q=\(query)&searchType=image&imgSize=huge&num=10"
             guard let url_request = URL(string: url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!) else {
                 log("Error: URL cannot be created")
                 return

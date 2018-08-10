@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Easy Decision/Model/DecisionPackage.swift"
-            timestampString = "552526694.493224"
+            timestampString = "555551820.169037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -96,22 +96,6 @@
             startingLineNumber = "90"
             endingLineNumber = "90"
             landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Easy Decision/Model/GoogleImage.swift"
-            timestampString = "545038848.719641"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "retrieveImage(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
