@@ -35,7 +35,15 @@ class DisplayDecision_VC: UIViewController {
                 let group = DispatchGroup()
                 group.enter()
                 
-                let imgUrl = URL(string: (googleImg?.items![0].link)!)
+                // Select a random image from the image array of the chosen decision
+                // else default on the first image
+                var rndmIndex = 0
+                if let items = self.googleImg?.items
+                {
+                     rndmIndex = Int(arc4random_uniform(UInt32(items.count)))
+                }
+                
+                let imgUrl = URL(string: (googleImg?.items![rndmIndex].link)!)
                 DispatchQueue.global().async {
                     GoogleImage.retrieveImage(with: imgUrl!, completion: { (validData) in
                         image = UIImage(data: validData)

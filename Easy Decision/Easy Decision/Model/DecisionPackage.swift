@@ -43,6 +43,6 @@ extension DecisionPackage {
             group.wait()
         }
         log("===================== DONE =====================")
-        print(self.googleImages)
+        //print(self.googleImages)
     }
 }

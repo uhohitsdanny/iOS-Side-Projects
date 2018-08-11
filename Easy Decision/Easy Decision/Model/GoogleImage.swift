@@ -64,8 +64,9 @@ extension GoogleImage {
             //Get the data
             let json_decoder = JSONDecoder()
             do {
-                let googleImage = try json_decoder.decode(GoogleImage.self, from: validData)
-                completion(googleImage)
+                let googleImages = try json_decoder.decode(GoogleImage.self, from: validData)
+                
+                completion(googleImages)
             } catch {
                 log("Error:parsing data into JSON failed")
             }
