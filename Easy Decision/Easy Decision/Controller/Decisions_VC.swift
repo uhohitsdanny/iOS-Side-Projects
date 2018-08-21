@@ -16,6 +16,7 @@ class Decisions_VC: UIViewController {
     let limit: Int = 6
 
     @IBOutlet weak var tableView: UITableView?
+    var inputActive: UITextField!
 //    @IBOutlet weak var addBtn: UIButton?
     
     override func viewDidLoad() {
@@ -56,6 +57,11 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
         return true
     }
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        self.inputActive = textField
+        return true
+    }
+    
     func setupView() {
         self.tableView!.tableFooterView = UIView(frame: .zero)
         self.tableView!.delegate = self
@@ -71,6 +77,36 @@ extension Decisions_VC: UITableViewDelegate, UITableViewDataSource, UITextFieldD
     
     @IBAction func clearDecisions() -> Void {
         resetTableViewCells(rowsize: limit)
+    }
+    
+    func registerNotifications()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        var userInfo = notification.userInfo!
+        if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            // Get my height size
+            let myheight = tableView?.frame.height
+            // Get the top Y point where the keyboard will finish on the view
+            let keyboardEndPoint = myheight! - keyboardFrame.height
+            // Get the the bottom Y point of the textInput and transform it to the currentView coordinates.
+            if let pointInTable = inputActive.superview?.convert(inputActive.frame.origin, to: tableView) {
+                let textFieldBottomPoint = pointInTable.y + inputActive.frame.size.height + 20
+                // Finally check if the keyboard will cover the textInput
+                if keyboardEndPoint <= textFieldBottomPoint {
+                    tableView?.contentOffset.y = textFieldBottomPoint - keyboardEndPoint
+                } else {
+                    tableView?.contentOffset.y = 0
+                }
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        tableView?.contentOffset.y = 0
     }
 }
 

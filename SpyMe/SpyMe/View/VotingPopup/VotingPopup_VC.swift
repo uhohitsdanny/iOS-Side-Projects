@@ -37,7 +37,8 @@ extension VotingPopup_VC {
         }
         else
         {
-            self.sendBtn.setTitle("Send Vote", for: .normal)
+            // Change back to Send Vote, when voting API is implemented
+            self.sendBtn.setTitle("End Game", for: .normal)
             self.sendBtn.tag = 1
         }
     }

@@ -75,10 +75,12 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         })
     }
     
-    fileprivate func pauseTimer() {
-        gameTimer?.invalidate()
-        gameTimer = nil
-        
+    func pauseTimer() {
+        if gameTimer != nil
+        {
+            gameTimer?.invalidate()
+            gameTimer = nil
+        }
     }
     
     fileprivate static func Finished(timeRemaining:TimeInterval) -> Bool
