@@ -55,13 +55,13 @@ extension VotingPopup_VC {
             self.room?.deleteRoom(room: self.room, cb: { (success) in
                 if success
                 {
-                    // Dismiss view and go back to beginning of the storyboard
-                    self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-                        log("*** Dismissing to root viewcontroller ****")
-                    })
+                    log("Successfully deleted room")
                 }
             })
-
+            // Dismiss view and go back to beginning of the storyboard
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+                log("*** Dismissing to root viewcontroller ****")
+            })
         }
         else if sendBtn.tag == 2
         {
@@ -69,11 +69,12 @@ extension VotingPopup_VC {
             self.room?.deleteRoom(room: self.room, cb: { (success) in
                 if success
                 {
-                    // Dismiss view and go back to beginning of the storyboard
-                    self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-                        log("*** Dismissing to root viewcontroller ****")
-                    })
+                    log("Successfully deleted room")
                 }
+            })
+            // Dismiss view and go back to beginning of the storyboard
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+                log("*** Dismissing to root viewcontroller ****")
             })
         }
         
