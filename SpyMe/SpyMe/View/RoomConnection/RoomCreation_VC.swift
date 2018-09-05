@@ -19,6 +19,7 @@ class RoomCreation_VC: UIViewController {
     @IBOutlet weak var tenMinBtn: UIButton?
     @IBOutlet weak var thirteenMinBtn: UIButton?
     
+    var busyScreen:BusyScreen? = nil
     var timeButtons:[UIButton] = [UIButton]()
     
     var room: Room? = nil
@@ -98,31 +99,41 @@ extension RoomCreation_VC {
                 newroom.players.append((player?.name)!)
                 player?.roomid = newroom.id
                 
-                newroom.createRoom(room: newroom) { (success, exists) in
-                    if exists
-                    {
-                        // If room id already exists, alert user to enter a different ID
-                        let existenceAlert = UIAlertController.RoomExistenceAlert()
-                        self.present(existenceAlert, animated: false, completion: nil)
-                    }
-                    else
-                    {
-                        // else continue
-                        if success
+                // Initiate busy screen
+                busyScreen?.show(pView: self.view, cb: { (sts, view) in
+                    newroom.createRoom(room: newroom) { (success, exists) in
+                        if exists
                         {
-                            log("Successfully created room: " + (newroom.id))
-                            log("Joining Room: \(newroom.id)")
-                            
-                            self.room = newroom
-                            self.player!.status = .joinsuccess
-                            self.performSegue(withIdentifier: "createGameQueue", sender: self)
+                            // If room id already exists, alert user to enter a different ID
+                            let existenceAlert = UIAlertController.RoomExistenceAlert()
+                            self.present(existenceAlert, animated: false, completion: nil)
                         }
                         else
                         {
-                            log("Failed to create room: " + (newroom.id))
+                            // else continue
+                            if success
+                            {
+                                // Save to app delegate, so if app is terminated after room creation
+                                // The app delegate will take care of cleaning the database
+                                appDelegate.room = newroom
+                                
+                                self.busyScreen?.remove(busyView: view!, cb: { (sts) in
+                                    // Perform segue
+                                    log("Successfully created room: " + (newroom.id))
+                                    log("Joining Room: \(newroom.id)")
+                                    
+                                    self.room = newroom
+                                    self.player!.status = .joinsuccess
+                                    self.performSegue(withIdentifier: "createGameQueue", sender: self)
+                                })
+                            }
+                            else
+                            {
+                                log("Failed to create room: " + (newroom.id))
+                            }
                         }
                     }
-                }
+                })
                 
                 if self.player!.status == .joinsuccess
                 {

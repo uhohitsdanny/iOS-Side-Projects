@@ -19,3 +19,6 @@ let backtoforeground: Bool = false
 
 // Bool for when app is in the background state
 let bkgngState: Bool = false
+
+
+let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate

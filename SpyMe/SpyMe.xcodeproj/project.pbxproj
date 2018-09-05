@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		300B82B92117088300F31DD1 /* ParseCloudFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B82B82117088300F31DD1 /* ParseCloudFunctions.swift */; };
 		3020B87320D36F8D00B17F6B /* UIAlert+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */; };
+		3047F24D213F8C7C00F5B689 /* BusyScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3047F24C213F8C7C00F5B689 /* BusyScreen.xib */; };
+		3047F24F213FA2FC00F5B689 /* BusyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3047F24E213FA2FC00F5B689 /* BusyScreen.swift */; };
 		305BF2A420D5BECC003307F7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BF2A320D5BECC003307F7 /* Helpers.swift */; };
 		3068910D209944B9001F4EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910C209944B9001F4EB5 /* AppDelegate.swift */; };
 		3068910F209944B9001F4EB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3068910E209944B9001F4EB5 /* HomeViewController.swift */; };
@@ -65,6 +67,8 @@
 /* Begin PBXFileReference section */
 		300B82B82117088300F31DD1 /* ParseCloudFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCloudFunctions.swift; sourceTree = "<group>"; };
 		3020B87220D36F8D00B17F6B /* UIAlert+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Custom.swift"; sourceTree = "<group>"; };
+		3047F24C213F8C7C00F5B689 /* BusyScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusyScreen.xib; sourceTree = "<group>"; };
+		3047F24E213FA2FC00F5B689 /* BusyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyScreen.swift; sourceTree = "<group>"; };
 		305BF2A320D5BECC003307F7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		30689109209944B9001F4EB5 /* SpyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3068910C209944B9001F4EB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,23 @@
 			path = NameCreation;
 			sourceTree = "<group>";
 		};
+		3047F24B213F8C6200F5B689 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3047F250213FA30000F5B689 /* BusyScreen */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3047F250213FA30000F5B689 /* BusyScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3047F24C213F8C7C00F5B689 /* BusyScreen.xib */,
+				3047F24E213FA2FC00F5B689 /* BusyScreen.swift */,
+			);
+			path = BusyScreen;
+			sourceTree = "<group>";
+		};
 		30689100209944B9001F4EB5 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +268,7 @@
 		30A9856120A0EFAC008E09BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3047F24B213F8C6200F5B689 /* Utilities */,
 				30BD89B0211A196E001E6921 /* Locations For Game */,
 				30A9857520A25726008E09BE /* Fonts */,
 			);
@@ -406,6 +428,9 @@
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 0;
 							};
@@ -455,6 +480,7 @@
 				30A9859220A257FF008E09BE /* Raleway-Regular.ttf in Resources */,
 				30A9859620A257FF008E09BE /* Raleway-Black.ttf in Resources */,
 				30A9858F20A257FF008E09BE /* Raleway-SemiBold.ttf in Resources */,
+				3047F24D213F8C7C00F5B689 /* BusyScreen.xib in Resources */,
 				30A9859320A257FF008E09BE /* Raleway-ExtraLightItalic.ttf in Resources */,
 				30A9859C20A257FF008E09BE /* Raleway-Bold.ttf in Resources */,
 				30A9859020A257FF008E09BE /* Raleway-ExtraBold.ttf in Resources */,
@@ -519,6 +545,7 @@
 				30A9855E209FD1EA008E09BE /* GameRoomProtocol.swift in Sources */,
 				30689125209BF145001F4EB5 /* Civilian.swift in Sources */,
 				30A98554209E9BF5008E09BE /* GameRoomViewModel.swift in Sources */,
+				3047F24F213FA2FC00F5B689 /* BusyScreen.swift in Sources */,
 				30689115209944B9001F4EB5 /* SpyMe.xcdatamodeld in Sources */,
 				30A9857020A16225008E09BE /* NameCreation_VC.swift in Sources */,
 				300B82B92117088300F31DD1 /* ParseCloudFunctions.swift in Sources */,

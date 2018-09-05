@@ -14,16 +14,21 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var room: Room?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Configure Parse
         let configuration = ParseClientConfiguration {
             $0.applicationId = "spyme1029384756"
             $0.clientKey = "sdp12#djfkd@0101!"
             $0.server = "https://spy-me.herokuapp.com/parse"
         }
         Parse.initialize(with: configuration)
+        
+        // This will be used to clean database if host terminates the app in anyway
+        // application.setMinimumBackgroundFetchInterval(60)
         
         return true
     }
@@ -50,6 +55,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+        
+        // Clean the room from the database if you are the host
+        self.deleteRoom()
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        // If app delegate's room has a value, then the user is a host
+        if self.room != nil
+        {
+            self.deleteRoom()
+        }
     }
 
     // MARK: - Core Data stack
@@ -96,6 +113,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    func deleteRoom()
+    {
+        // The logic is that if the room is created, that means you are the host,
+        // so the host will be the only person that has assigned a value to the variable 'room'
+        // All other users will be segueing to another view controller where their app delegates
+        // will contain nil for the variable 'room'
+        if self.room != nil
+        {
+            // Use Parse cloud code
+            PFCloud.callFunction(inBackground: "deleteRoom", withParameters: ["roomid" : self.room!.id])
+        }
+    }
 }
 

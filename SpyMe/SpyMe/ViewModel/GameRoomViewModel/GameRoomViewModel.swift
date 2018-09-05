@@ -40,7 +40,7 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
     
     func startTimer() {
         let interval: TimeInterval = 0.001
-        //let timeBeforeBkgnd: Int = 0
+        var fromBkgnd: Bool = false
         
         log("*** Starting Game Timer ***")
         gameTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { (timer) in
@@ -49,12 +49,18 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
             
             if state == .background {
                 // background
-
+                fromBkgnd = true
             }
             else if (state == .active) {
                 // foreground
                 // sync the timer when coming back from the background ("keeps the timer going")
-                self.spygame.time = GameRoomViewModel.syncTimer(startTime: self.spygame.room.startTime, time: self.spygame.room.seconds)
+                
+                if fromBkgnd
+                {
+                    self.spygame.time = GameRoomViewModel.syncTimer(startTime: self.spygame.room.startTime, time: self.spygame.room.seconds)
+                    
+                    fromBkgnd = false
+                }
             }
             
             self.spygame.time -= interval
@@ -118,9 +124,9 @@ class GameRoomViewModel: NSObject, GameRoomProtocol {
         let components = calendar.dateComponents([.hour,.minute,.second], from: date)
         
         // Get difference between time (The hour is calculated in 24-hour system)
-        let dHour = startTime[0]! - components.hour!
-        let dMinute = startTime[1]! - components.minute!
-        let dSeconds = startTime[2]! - components.second!
+        let dHour = components.hour! - startTime[0]!
+        let dMinute = components.minute! - startTime[1]!
+        let dSeconds = components.second! - startTime[2]!
         
         // Convert to seconds
         let convertedSeconds = (dHour * 3600) + (dMinute * 60) + dSeconds

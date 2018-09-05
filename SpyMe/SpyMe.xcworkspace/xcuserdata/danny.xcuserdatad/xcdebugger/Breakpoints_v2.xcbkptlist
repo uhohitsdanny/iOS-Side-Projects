@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/Model/Room.swift"
-            timestampString = "555551124.08081"
+            timestampString = "557796392.7491781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "243"
             endingLineNumber = "243"
-            landmarkName = "deleteRoom(room:cb:)"
+            landmarkName = "updateSpyGameInfo(room:cb:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -49,6 +49,102 @@
             endingLineNumber = "49"
             landmarkName = "sendVote()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+            timestampString = "557829541.655159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpyMe.RoomCreation_VC.shouldPerformSegue(withIdentifier: Swift.String, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Bool"
+                  moduleName = "SpyMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+                  timestampString = "557829541.9191591"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "2944">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SpyMe.DataStatus, Swift.Optional&lt;SpyMe.BusyScreen&gt;) -&gt; () in SpyMe.RoomCreation_VC.shouldPerformSegue(withIdentifier: Swift.String, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Bool"
+                  moduleName = "SpyMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+                  timestampString = "557829541.921239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+            timestampString = "557829541.655256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SpyMe.DataStatus, Swift.Optional&lt;SpyMe.BusyScreen&gt;) -&gt; () in SpyMe.RoomCreation_VC.shouldPerformSegue(withIdentifier: Swift.String, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Bool"
+                  moduleName = "SpyMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+                  timestampString = "557829541.938988"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Bool) -&gt; () in closure #1 (SpyMe.DataStatus, Swift.Optional&lt;SpyMe.BusyScreen&gt;) -&gt; () in SpyMe.RoomCreation_VC.shouldPerformSegue(withIdentifier: Swift.String, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Bool"
+                  moduleName = "SpyMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/View/RoomConnection/RoomCreation_VC.swift"
+                  timestampString = "557829541.940578"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
