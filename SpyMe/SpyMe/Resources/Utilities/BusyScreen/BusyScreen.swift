@@ -17,18 +17,17 @@ class BusyScreen:UIView
 {
     var isBusyViewOn:Bool = false
     
-    func show (pView:UIView,cb:@escaping (_ sts:DataStatus,_ view:BusyScreen?) -> Void  )
+    func show(pView:UIView,cb:@escaping (_ sts:DataStatus,_ view:BusyScreen?) -> Void  )
     {
         self.isBusyViewOn = true
-        let nib = UINib(nibName: "BusyView", bundle: Bundle.main)
+        let nib = UINib(nibName: "BusyScreen", bundle: Bundle.main)
         let busyScreen = nib.instantiate(withOwner: nil, options: nil)[0] as! BusyScreen
         
         busyScreen.frame = pView.bounds
-        busyScreen.alpha = 0.4
+        busyScreen.alpha = 0.0
         pView.addSubview(busyScreen)
         
-        UIView.animate(withDuration: 0.5, animations: {busyScreen.alpha = 0.4 }, completion:
-            { (done)->Void in
+        UIView.animate(withDuration: 0.5, animations: {busyScreen.alpha = 1.0 }, completion: { (done) in
                 DispatchQueue.main.async
                 {
                         cb(.done,busyScreen)

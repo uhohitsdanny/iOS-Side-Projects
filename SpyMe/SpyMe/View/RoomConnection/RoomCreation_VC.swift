@@ -36,6 +36,8 @@ class RoomCreation_VC: UIViewController {
     func setupVars()
     {
         timeButtons = [fourMinBtn!, sevenMinBtn!, tenMinBtn!, thirteenMinBtn!]
+        
+        busyScreen = BusyScreen()
     }
     
     func setupKeyboard()

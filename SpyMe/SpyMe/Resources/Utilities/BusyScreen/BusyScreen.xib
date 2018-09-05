@@ -17,12 +17,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.40000000000000002" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view alpha="0.40000000000000002" contentMode="scaleToFill" id="iN0-l3-epB" customClass="BusyScreen" customModule="SpyMe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-qD-pUo">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-qD-pUo">
                     <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creating Room..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MC-Ig-dqI">
                     <rect key="frame" x="130" y="378" width="115" height="19"/>
@@ -36,9 +37,9 @@
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="3MC-Ig-dqI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gpb-FJ-C9o"/>
                 <constraint firstItem="3MC-Ig-dqI" firstAttribute="top" secondItem="gs0-qD-pUo" secondAttribute="bottom" constant="26" id="c1p-zs-v7k"/>
                 <constraint firstItem="gs0-qD-pUo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ceF-lb-fAH"/>
-                <constraint firstItem="3MC-Ig-dqI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="130" id="dlL-oG-8eo"/>
                 <constraint firstItem="gs0-qD-pUo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ld6-U9-1tV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
