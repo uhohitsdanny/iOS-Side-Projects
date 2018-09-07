@@ -140,7 +140,7 @@
                                                     <constraint firstAttribute="width" constant="240" id="Qt0-ck-kwF"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="Easy Decision Maker">
+                                                    <fragment content="Easy Decision">
                                                         <attributes>
                                                             <font key="NSFont" size="22" name="Avenir-Light"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
