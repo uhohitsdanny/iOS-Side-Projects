@@ -51,6 +51,66 @@ class Room: NSObject {
             {
                 if !(objects?.isEmpty)!
                 {
+                    // Room exists, check if it's outdated (over 60 mins old),
+                    // if so, delete the room
+                    // We do this because of the case when the user
+                    // force-terminates the app after room creation without starting the game
+                    // Get current time and time of room creation
+                    let date = Date()
+                    let calendar = Calendar.current
+                    let components = calendar.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+                    
+                    let roomdate = objects![0].createdAt
+                    let roomcomponents = calendar.dateComponents([.year,.month,.day,.hour,.minute,.second], from: roomdate!)
+                    
+                    // short-circuit evaluation will catch this in order (conditions are read left to right)
+                    if (roomcomponents.year! < components.year!) || (roomcomponents.month! < components.month!) || (roomcomponents.day! < components.day!)
+                    {
+                        // Room is too old, delete
+                        objects![0].deleteInBackground(block: { (success, error) in
+                            if error == nil
+                            {
+                                if success { log("Deleted object successfully") }
+                                else { log("Deleted object unsuccessfully") }
+                            }
+                            else
+                            {
+                                log("Deleted object unsuccessfully")
+                            }
+                        })
+                    }
+                    else
+                    {
+                        // this else statement means, the room was created on the same day
+                        // now we check if it has surpassed 60 minutes, if so then delete
+                        // Get difference between time (The hour is calculated in 24-hour system)
+                        let oldRoomSeconds = (roomcomponents.hour! * 60 * 60) + (roomcomponents.minute! * 60) + roomcomponents.second!
+                        
+                        let currentSeconds = (components.hour! * 60 * 60) + (components.minute! * 60) + components.second!
+                        
+                        if (abs(currentSeconds) - abs(oldRoomSeconds)) > (60 * 60)
+                        {
+                            // Room is too old, delete
+                            objects![0].deleteInBackground(block: { (success, error) in
+                                if error == nil
+                                {
+                                    if success
+                                    {
+                                        log("Deleted object successfully")
+                                    }
+                                    else
+                                    {
+                                        log("Deleted object unsuccessfully")
+                                    }
+                                }
+                                else
+                                {
+                                    log("Deleted object unsuccessfully")
+                                }
+                            })
+                        }
+                    }
+                    
                     let roomid = objects![0].object(forKey: "roomid") as! String
                     log("Parse query was successful")
                     log("Room ID " + roomid + " already exists")
@@ -92,6 +152,7 @@ class Room: NSObject {
             }
         }
     }
+    
     
     func joinRoom(player:String,completion:@escaping (Bool?,Bool,Room?)->Void)
     {

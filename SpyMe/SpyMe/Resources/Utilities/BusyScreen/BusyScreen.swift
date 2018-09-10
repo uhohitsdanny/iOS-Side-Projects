@@ -35,15 +35,19 @@ class BusyScreen:UIView
         })
     }
     
-    func remove(busyView:BusyScreen , cb: @escaping (_ sts:DataStatus) -> Void )
+    func remove(busyView:BusyScreen, cb: ((_ sts:DataStatus) -> Void)? )
     {
         UIView.animate(withDuration: 0.5, animations: {busyView.alpha = 0.0 }, completion:
             { (done)->Void in
                 DispatchQueue.main.async
                 {
-                        busyView.removeFromSuperview()
-                        cb(.done)
-                        self.isBusyViewOn = false
+                    busyView.removeFromSuperview()
+                    
+                    if cb != nil
+                    {
+                        cb!(.done)
+                    }
+                    self.isBusyViewOn = false
                 }
         })
     }

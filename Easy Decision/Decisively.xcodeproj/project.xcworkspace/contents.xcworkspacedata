@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Easy Decision.xcodeproj">
+      location = "self:/Users/danny/Documents/GitHub/iOS-Side-Projects/Easy Decision/Decisively.xcodeproj">
    </FileRef>
 </Workspace>

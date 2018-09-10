@@ -14,7 +14,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var room: Room?
+    var roomId: String?
+    var roomExists: Bool?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,10 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://spy-me.herokuapp.com/parse"
         }
         Parse.initialize(with: configuration)
+
+        roomId = UserDefaults.standard.string(forKey: "roomid")
+        roomExists = UserDefaults.standard.bool(forKey: "roomExists")
         
-        // This will be used to clean database if host terminates the app in anyway
-        // application.setMinimumBackgroundFetchInterval(60)
-        
+        if roomExists!
+        {
+            deleteRoom()
+        }
         return true
     }
 
@@ -49,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -57,16 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
         
         // Clean the room from the database if you are the host
-        self.deleteRoom()
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
-        // If app delegate's room has a value, then the user is a host
-        if self.room != nil
-        {
-            self.deleteRoom()
-        }
     }
 
     // MARK: - Core Data stack
@@ -120,10 +120,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // so the host will be the only person that has assigned a value to the variable 'room'
         // All other users will be segueing to another view controller where their app delegates
         // will contain nil for the variable 'room'
-        if self.room != nil
+        
+        if self.roomId != nil
         {
-            // Use Parse cloud code
-            PFCloud.callFunction(inBackground: "deleteRoom", withParameters: ["roomid" : self.room!.id])
+            //PFCloud.callFunction(inBackground: "deleteRoom", withParameters: ["roomid" : roomid as Any])
+            let query = PFQuery(className: "Room")
+            query.whereKey("roomid", equalTo: (self.roomId)!)
+            query.findObjectsInBackground { (objects, error) in
+                if error == nil
+                {
+                    if !(objects?.isEmpty)!
+                    {
+                        log("Parse query was successful")
+                        log("Attempting to delete object")
+                        let objToDelete = objects![0]
+                        objToDelete.deleteInBackground(block: { (success, error) in
+                            if error == nil
+                            {
+                                if success
+                                {
+                                    //         Clear User Defaults
+                                    UserDefaults.standard.removeObject(forKey: "roomid")
+                                    UserDefaults.standard.removeObject(forKey: "roomExists")
+                                    log("Deleted object successfully and cleared User Defaults")
+                                }
+                                else
+                                {
+                                    log("Deleted object unsuccessfully")
+                                }
+                            }
+                            else
+                            {
+                                log("Deleted object unsuccessfully")
+                            }
+                        })
+                    }
+                    else
+                    {
+                        log("Queried objects is empty.  Room might have been deleted already. (Deleted after 60 minutes)")
+                        log("----------------------------")
+                        print(error ?? "")
+                        
+                    }
+                }
+                else
+                {
+                    log("Querying Room objects failed")
+                    log("----------------------------")
+                    print(error ?? "")
+                    
+                }
+            }
         }
     }
 }

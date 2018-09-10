@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		300D323E2047AB3F004382A0 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
-		3011CEE9203442C900AB71F0 /* Easy Decision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Decision.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3011CEE9203442C900AB71F0 /* Decisively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decisively.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3011CEEC203442C900AB71F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3011CEEE203442C900AB71F0 /* Decisions_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decisions_VC.swift; sourceTree = "<group>"; };
 		3011CEF1203442C900AB71F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		3011CEEA203442C900AB71F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3011CEE9203442C900AB71F0 /* Easy Decision.app */,
+				3011CEE9203442C900AB71F0 /* Decisively.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3011CEE8203442C900AB71F0 /* Easy Decision */ = {
+		3011CEE8203442C900AB71F0 /* Decisively */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3011CEFB203442CA00AB71F0 /* Build configuration list for PBXNativeTarget "Easy Decision" */;
+			buildConfigurationList = 3011CEFB203442CA00AB71F0 /* Build configuration list for PBXNativeTarget "Decisively" */;
 			buildPhases = (
 				3011CEE5203442C900AB71F0 /* Sources */,
 				3011CEE6203442C900AB71F0 /* Frameworks */,
@@ -132,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = "Easy Decision";
+			name = Decisively;
 			productName = "Easy Decision";
-			productReference = 3011CEE9203442C900AB71F0 /* Easy Decision.app */;
+			productReference = 3011CEE9203442C900AB71F0 /* Decisively.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3011CEE4203442C900AB71F0 /* Build configuration list for PBXProject "Easy Decision" */;
+			buildConfigurationList = 3011CEE4203442C900AB71F0 /* Build configuration list for PBXProject "Decisively" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3011CEE8203442C900AB71F0 /* Easy Decision */,
+				3011CEE8203442C900AB71F0 /* Decisively */,
 			);
 		};
 /* End PBXProject section */
@@ -340,9 +340,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H23PX874P;
 				INFOPLIST_FILE = "Easy Decision/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SimplyTools.Easy-Decision";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daramji.Decisively;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,9 +356,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H23PX874P;
 				INFOPLIST_FILE = "Easy Decision/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SimplyTools.Easy-Decision";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daramji.Decisively;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3011CEE4203442C900AB71F0 /* Build configuration list for PBXProject "Easy Decision" */ = {
+		3011CEE4203442C900AB71F0 /* Build configuration list for PBXProject "Decisively" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3011CEF9203442CA00AB71F0 /* Debug */,
@@ -377,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3011CEFB203442CA00AB71F0 /* Build configuration list for PBXNativeTarget "Easy Decision" */ = {
+		3011CEFB203442CA00AB71F0 /* Build configuration list for PBXNativeTarget "Decisively" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3011CEFC203442CA00AB71F0 /* Debug */,

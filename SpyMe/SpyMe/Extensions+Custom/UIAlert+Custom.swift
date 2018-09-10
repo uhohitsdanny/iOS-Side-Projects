@@ -38,7 +38,7 @@ extension UIAlertController {
     static func RoomExistenceAlert() -> UIAlertController
     {
         let title : String = "Room ID already exists"
-        let message: String = "Please try a different room ID"
+        let message: String = "Please try a different room ID or try again in one hour"
         
         return generateCustomAlert(title, message, .notification, from: nil)
     }

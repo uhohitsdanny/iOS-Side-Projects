@@ -109,15 +109,18 @@ extension RoomCreation_VC {
                             // If room id already exists, alert user to enter a different ID
                             let existenceAlert = UIAlertController.RoomExistenceAlert()
                             self.present(existenceAlert, animated: false, completion: nil)
+                            
+                            self.busyScreen?.remove(busyView: view!, cb: nil)
                         }
                         else
                         {
                             // else continue
                             if success
                             {
-                                // Save to app delegate, so if app is terminated after room creation
-                                // The app delegate will take care of cleaning the database
-                                appDelegate.room = newroom
+                                // Save data, so if app is terminated after room creation
+                                // The app will take care of cleaning the database
+                                UserDefaults.standard.set(newroom.id, forKey: "roomid")
+                                UserDefaults.standard.set(true, forKey: "roomExists")
                                 
                                 self.busyScreen?.remove(busyView: view!, cb: { (sts) in
                                     // Perform segue
