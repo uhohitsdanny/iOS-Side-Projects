@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exc-ka-h3c">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meat Parts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MeatParts" title="Meat Parts" id="BYZ-38-t0r" customClass="MeatParts_VC" customModule="KBBQ_Time_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yRH-5u-FzN" customClass="DesignableImageView" customModule="KBBQ_Time_" customModuleProvider="target">
+                                <rect key="frame" x="80" y="89" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yRH-5u-FzN" secondAttribute="height" multiplier="1:1" id="sXh-k2-fbb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.92941176470588238" green="0.7803921568627451" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-A6-i9s">
+                                <rect key="frame" x="16" y="307" width="288" height="226"/>
+                                <color key="backgroundColor" red="0.92474740740000005" green="0.87103503940000004" blue="0.84313267469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ua-A6-i9s" secondAttribute="height" multiplier="36:13" constant="-337.84615384615381" id="8FM-cW-MvV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DXT-dy-cjk">
+                                    <size key="itemSize" width="144" height="206"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MeatPart" id="SxJ-wP-MAv" customClass="MeatCell" customModule="KBBQ_Time_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="144" height="206"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="206"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kbbq.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gqA-AH-x2T">
+                                                    <rect key="frame" x="20" y="33" width="104" height="104"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gqA-AH-x2T" secondAttribute="height" multiplier="1:1" id="iRo-J3-cqJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-GF-mu0">
+                                                    <rect key="frame" x="0.0" y="151" width="144" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.92474740740000005" green="0.87103503940000004" blue="0.84313267469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="G2J-GF-mu0" firstAttribute="top" secondItem="gqA-AH-x2T" secondAttribute="bottom" constant="14" id="TMp-fs-Qw5"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="gqA-AH-x2T" secondAttribute="trailing" constant="12" id="VWd-du-c62"/>
+                                            <constraint firstItem="G2J-GF-mu0" firstAttribute="leading" secondItem="SxJ-wP-MAv" secondAttribute="leading" id="dKo-qe-Y1z"/>
+                                            <constraint firstAttribute="trailing" secondItem="G2J-GF-mu0" secondAttribute="trailing" id="f2R-5C-qSF"/>
+                                            <constraint firstItem="gqA-AH-x2T" firstAttribute="top" secondItem="SxJ-wP-MAv" secondAttribute="topMargin" constant="5" id="qSH-g9-S7r"/>
+                                            <constraint firstItem="gqA-AH-x2T" firstAttribute="leading" secondItem="SxJ-wP-MAv" secondAttribute="leadingMargin" constant="12" id="s89-DU-p5Y"/>
+                                        </constraints>
+                                        <size key="customSize" width="144" height="206"/>
+                                        <connections>
+                                            <outlet property="meat_imageview" destination="gqA-AH-x2T" id="O3C-1A-rhz"/>
+                                            <outlet property="meat_label" destination="G2J-GF-mu0" id="dtp-iF-EXi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jLH-Fr-KT5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VJC-Va-cF9"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoX-rc-YaX">
+                                <rect key="frame" x="5" y="20" width="32" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.67450980390000004" green="0.23137254900000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeModule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Szs-nj-tIl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.83921568627450982" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yRH-5u-FzN" secondAttribute="trailing" constant="80" id="51I-Wx-t5I"/>
+                            <constraint firstItem="OoX-rc-YaX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7kL-er-alA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ua-A6-i9s" secondAttribute="trailing" constant="16" id="PD0-Ms-zdh"/>
+                            <constraint firstItem="yRH-5u-FzN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="QlY-C6-jbd"/>
+                            <constraint firstItem="5ua-A6-i9s" firstAttribute="top" secondItem="yRH-5u-FzN" secondAttribute="bottom" constant="58" id="Sql-B0-E3G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OoX-rc-YaX" secondAttribute="trailing" symbolic="YES" id="XbQ-j6-PLo"/>
+                            <constraint firstItem="OoX-rc-YaX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="iy1-UD-B0B"/>
+                            <constraint firstItem="yRH-5u-FzN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="jy6-1R-hvp"/>
+                            <constraint firstItem="5ua-A6-i9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lpE-AU-Jwy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="meat_collectionview" destination="5ua-A6-i9s" id="ax5-rP-31H"/>
+                        <outlet property="meat_imageview" destination="yRH-5u-FzN" id="6J9-db-nSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.875" y="24.295774647887324"/>
+        </scene>
+        <!--Meat Timer-->
+        <scene sceneID="pKr-8v-JWb">
+            <objects>
+                <viewController storyboardIdentifier="MeatTimer" title="Meat Timer" id="vAN-1R-yfg" customClass="MeatTimer_VC" customModule="KBBQ_Time_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b9r-i0-ycq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd2-NF-wU2">
+                                <rect key="frame" x="43" y="388" width="234" height="80"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28v-Gc-1Pk">
+                                <rect key="frame" x="6" y="25" width="32" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.67450980390000004" green="0.23137254900000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeModule:" destination="vAN-1R-yfg" eventType="touchUpInside" id="qMK-QY-yfK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat Part" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGU-Si-piB">
+                                <rect key="frame" x="16" y="75" width="288" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CGU-Si-piB" secondAttribute="height" multiplier="72:11" id="lje-fV-BPG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" red="0.67450980390000004" green="0.23137254900000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92474740743637085" green="0.87103503942489624" blue="0.84313267469406128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CGU-Si-piB" firstAttribute="leading" secondItem="TTl-PB-I5d" secondAttribute="leading" constant="16" id="6Gf-As-QJD"/>
+                            <constraint firstItem="28v-Gc-1Pk" firstAttribute="top" secondItem="TTl-PB-I5d" secondAttribute="top" constant="5" id="FFc-yb-XR0"/>
+                            <constraint firstItem="TTl-PB-I5d" firstAttribute="trailing" secondItem="CGU-Si-piB" secondAttribute="trailing" constant="16" id="Hh1-eD-U0y"/>
+                            <constraint firstItem="hd2-NF-wU2" firstAttribute="leading" secondItem="TTl-PB-I5d" secondAttribute="leading" constant="43" id="XTH-fw-gKC"/>
+                            <constraint firstItem="28v-Gc-1Pk" firstAttribute="leading" secondItem="TTl-PB-I5d" secondAttribute="leading" constant="6" id="Xme-4h-2k6"/>
+                            <constraint firstItem="TTl-PB-I5d" firstAttribute="trailing" secondItem="hd2-NF-wU2" secondAttribute="trailing" constant="43" id="ive-mP-8yd"/>
+                            <constraint firstItem="TTl-PB-I5d" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="28v-Gc-1Pk" secondAttribute="trailing" symbolic="YES" id="pDv-gd-EEJ"/>
+                            <constraint firstItem="CGU-Si-piB" firstAttribute="top" secondItem="b9r-i0-ycq" secondAttribute="topMargin" constant="55" id="pHd-W1-4dP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CGU-Si-piB" secondAttribute="bottom" constant="449" id="pbE-r2-NRx"/>
+                            <constraint firstItem="TTl-PB-I5d" firstAttribute="bottom" secondItem="hd2-NF-wU2" secondAttribute="bottom" constant="100" id="q6A-46-Vbe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TTl-PB-I5d"/>
+                    </view>
+                    <connections>
+                        <outlet property="meatpart_label" destination="CGU-Si-piB" id="oKr-Tv-kbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yux-pA-rb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.375" y="23.239436619718312"/>
+        </scene>
+        <!--Meat Selection-->
+        <scene sceneID="1ms-bW-dtp">
+            <objects>
+                <viewController storyboardIdentifier="MeatSelection" title="Meat Selection" id="exc-ka-h3c" customClass="MeatSelection_VC" customModule="KBBQ_Time_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cw4-IE-7GV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-Aw-8Uw" customClass="DesignableButton" customModule="KBBQ_Time_" customModuleProvider="target">
+                                <rect key="frame" x="184" y="155" width="120" height="95"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.78039215689999997" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pork">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segueToMeatType:" destination="exc-ka-h3c" eventType="touchUpInside" id="jWz-3U-Utv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-ct-3Xo" customClass="DesignableButton" customModule="KBBQ_Time_" customModuleProvider="target">
+                                <rect key="frame" x="16" y="338" width="120" height="95"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.78039215689999997" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Chicken">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segueToMeatType:" destination="exc-ka-h3c" eventType="touchUpInside" id="tCa-cT-edN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk5-I4-8F4" customClass="DesignableButton" customModule="KBBQ_Time_" customModuleProvider="target">
+                                <rect key="frame" x="184" y="338" width="120" height="95"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.78039215689999997" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Seafood">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segueToMeatType:" destination="exc-ka-h3c" eventType="touchUpInside" id="poH-nL-GME"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vds-4q-DZV" customClass="DesignableButton" customModule="KBBQ_Time_" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155" width="120" height="95"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.78039215689999997" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Beef">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segueToMeatType:" destination="exc-ka-h3c" eventType="touchUpInside" id="WOj-gO-6j7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92474740743637085" green="0.87103503942489624" blue="0.84313267469406128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Nqf-ct-3Xo" firstAttribute="height" secondItem="vds-4q-DZV" secondAttribute="height" id="2jZ-Yk-1HA"/>
+                            <constraint firstItem="wk5-I4-8F4" firstAttribute="width" secondItem="vds-4q-DZV" secondAttribute="width" id="3P9-s1-xlE"/>
+                            <constraint firstItem="ajS-Aw-8Uw" firstAttribute="height" secondItem="vds-4q-DZV" secondAttribute="height" id="8x7-bO-rKj"/>
+                            <constraint firstItem="ajS-Aw-8Uw" firstAttribute="leading" secondItem="vds-4q-DZV" secondAttribute="trailing" constant="48" id="9YJ-Lq-cmi"/>
+                            <constraint firstItem="wk5-I4-8F4" firstAttribute="top" secondItem="ajS-Aw-8Uw" secondAttribute="bottom" constant="88" id="9lo-Ra-FOT"/>
+                            <constraint firstItem="ajS-Aw-8Uw" firstAttribute="width" secondItem="vds-4q-DZV" secondAttribute="width" id="DJg-Tn-lFr"/>
+                            <constraint firstItem="Nqf-ct-3Xo" firstAttribute="width" secondItem="vds-4q-DZV" secondAttribute="width" id="FQO-M3-uP9"/>
+                            <constraint firstItem="w7i-Zr-rn2" firstAttribute="bottom" secondItem="wk5-I4-8F4" secondAttribute="bottom" constant="135" id="K7E-DK-gha"/>
+                            <constraint firstItem="Nqf-ct-3Xo" firstAttribute="leading" secondItem="w7i-Zr-rn2" secondAttribute="leading" constant="16" id="M1Z-bY-Fvr"/>
+                            <constraint firstItem="wk5-I4-8F4" firstAttribute="height" secondItem="vds-4q-DZV" secondAttribute="height" id="MkA-fp-D0V"/>
+                            <constraint firstItem="w7i-Zr-rn2" firstAttribute="trailing" secondItem="wk5-I4-8F4" secondAttribute="trailing" constant="16" id="Nkq-c0-vBC"/>
+                            <constraint firstItem="w7i-Zr-rn2" firstAttribute="bottom" secondItem="Nqf-ct-3Xo" secondAttribute="bottom" constant="135" id="OYS-sz-sIy"/>
+                            <constraint firstItem="wk5-I4-8F4" firstAttribute="leading" secondItem="Nqf-ct-3Xo" secondAttribute="trailing" constant="48" id="Obg-OF-PUN"/>
+                            <constraint firstItem="ajS-Aw-8Uw" firstAttribute="top" secondItem="w7i-Zr-rn2" secondAttribute="top" constant="135" id="SDk-EJ-QS0"/>
+                            <constraint firstItem="vds-4q-DZV" firstAttribute="top" secondItem="w7i-Zr-rn2" secondAttribute="top" constant="135" id="Sdq-Wl-kcX"/>
+                            <constraint firstItem="Nqf-ct-3Xo" firstAttribute="top" secondItem="vds-4q-DZV" secondAttribute="bottom" constant="88" id="SvO-Bn-gfE"/>
+                            <constraint firstItem="vds-4q-DZV" firstAttribute="leading" secondItem="w7i-Zr-rn2" secondAttribute="leading" constant="16" id="TM9-xw-q84"/>
+                            <constraint firstItem="w7i-Zr-rn2" firstAttribute="trailing" secondItem="ajS-Aw-8Uw" secondAttribute="trailing" constant="16" id="kdl-fq-b95"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w7i-Zr-rn2"/>
+                    </view>
+                    <connections>
+                        <outlet property="beef_btn" destination="vds-4q-DZV" id="e1a-HX-r2y"/>
+                        <outlet property="chkn_btn" destination="Nqf-ct-3Xo" id="pbt-8n-lHZ"/>
+                        <outlet property="pork_btn" destination="ajS-Aw-8Uw" id="qLU-YH-D4e"/>
+                        <outlet property="seafood_btn" destination="wk5-I4-8F4" id="Z8c-Yb-gHh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VI1-BG-xkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738.75" y="25.35211267605634"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Kbbq.jpeg" width="223" height="226"/>
+        <image name="pig.jpg" width="630" height="630"/>
+    </resources>
+</document>
