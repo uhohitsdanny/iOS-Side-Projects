@@ -248,7 +248,7 @@ class Room: NSObject {
                             log("Deleted object unsuccessfully")
                             cb (false)
                         }
-                    })
+                     })
                 }
                 else
                 {

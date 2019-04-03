@@ -47,4 +47,9 @@ extension StockManager
             completion (true,xchg_rate)
         }
     }
+    
+    func getWeeklySeries()
+    {
+        
+    }
 }
