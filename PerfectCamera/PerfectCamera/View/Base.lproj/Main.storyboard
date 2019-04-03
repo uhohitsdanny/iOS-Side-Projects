@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Perfect Cam-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PerfectCam" title="Perfect Cam" id="BYZ-38-t0r" customClass="PerfectCam_VC" customModule="PerfectCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an8-TM-1yX">
+                                <rect key="frame" x="0.0" y="360" width="320" height="208"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-39-c5f">
+                                        <rect key="frame" x="112" y="56" width="96" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuq-eF-cg4">
+                                                <rect key="frame" x="6" y="6" width="84" height="84"/>
+                                                <color key="backgroundColor" red="0.96873658900000004" green="0.82875543829999998" blue="0.29786205290000001" alpha="0.65336157569999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tuq-eF-cg4" firstAttribute="top" secondItem="OeT-39-c5f" secondAttribute="top" constant="6" id="BIj-jo-uL0"/>
+                                            <constraint firstAttribute="height" constant="96" id="aLO-Gl-vsn"/>
+                                            <constraint firstAttribute="width" constant="96" id="nEQ-Qt-qr1"/>
+                                            <constraint firstAttribute="trailing" secondItem="tuq-eF-cg4" secondAttribute="trailing" constant="6" id="pGh-uP-KXC"/>
+                                            <constraint firstAttribute="bottom" secondItem="tuq-eF-cg4" secondAttribute="bottom" constant="6" id="rje-7N-Azn"/>
+                                            <constraint firstItem="tuq-eF-cg4" firstAttribute="leading" secondItem="OeT-39-c5f" secondAttribute="leading" constant="6" id="ua8-7u-MFa"/>
+                                            <constraint firstAttribute="width" secondItem="OeT-39-c5f" secondAttribute="height" multiplier="1:1" id="xTt-nM-EYJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96873658895492554" green="0.92137312758652623" blue="0.45091737791252628" alpha="0.65336157570422537" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="OeT-39-c5f" firstAttribute="centerX" secondItem="an8-TM-1yX" secondAttribute="centerX" id="62h-2q-mSN"/>
+                                    <constraint firstAttribute="bottom" secondItem="OeT-39-c5f" secondAttribute="bottom" constant="56" id="BQp-mM-jZC"/>
+                                    <constraint firstAttribute="height" constant="208" id="KQX-JX-4FE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="an8-TM-1yX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7aR-4w-RlJ"/>
+                            <constraint firstItem="an8-TM-1yX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Brl-0t-48o"/>
+                            <constraint firstItem="an8-TM-1yX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gh0-0S-LrM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnView" destination="OeT-39-c5f" id="C2T-tG-IHB"/>
+                        <outlet property="camBtn" destination="tuq-eF-cg4" id="Zer-aG-QX4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="26.408450704225352"/>
+        </scene>
+    </scenes>
+</document>

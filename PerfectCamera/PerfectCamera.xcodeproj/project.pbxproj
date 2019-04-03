@@ -12,7 +12,7 @@
 		30F554FC21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30F554FA21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld */; };
 		30F554FE21F2BABA0010DC13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F554FD21F2BABA0010DC13 /* Assets.xcassets */; };
 		30F5550121F2BABA0010DC13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F554FF21F2BABA0010DC13 /* LaunchScreen.storyboard */; };
-		30F5550B21F2BC3B0010DC13 /* Main_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5550A21F2BC3B0010DC13 /* Main_VC.swift */; };
+		30F5550B21F2BC3B0010DC13 /* PerfectCam_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5550A21F2BC3B0010DC13 /* PerfectCam_VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		30F554FD21F2BABA0010DC13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30F5550021F2BABA0010DC13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30F5550221F2BABA0010DC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30F5550A21F2BC3B0010DC13 /* Main_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_VC.swift; sourceTree = "<group>"; };
+		30F5550A21F2BC3B0010DC13 /* PerfectCam_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectCam_VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +56,10 @@
 		30F554F221F2BAB90010DC13 /* PerfectCamera */ = {
 			isa = PBXGroup;
 			children = (
-				30F5550921F2BB270010DC13 /* View Controllers */,
 				30F5550821F2BB210010DC13 /* Model */,
-				30F554F321F2BAB90010DC13 /* AppDelegate.swift */,
-				30F554F721F2BAB90010DC13 /* Main.storyboard */,
-				30F554FD21F2BABA0010DC13 /* Assets.xcassets */,
-				30F554FF21F2BABA0010DC13 /* LaunchScreen.storyboard */,
+				30F5550921F2BB270010DC13 /* View Controllers */,
+				30F7797A225470B90078271B /* View */,
+				30F7797B225470CC0078271B /* Resources */,
 				30F5550221F2BABA0010DC13 /* Info.plist */,
 				30F554FA21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld */,
 			);
@@ -78,9 +76,27 @@
 		30F5550921F2BB270010DC13 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				30F5550A21F2BC3B0010DC13 /* Main_VC.swift */,
+				30F5550A21F2BC3B0010DC13 /* PerfectCam_VC.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		30F7797A225470B90078271B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30F554F721F2BAB90010DC13 /* Main.storyboard */,
+				30F554FF21F2BABA0010DC13 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30F7797B225470CC0078271B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30F554F321F2BAB90010DC13 /* AppDelegate.swift */,
+				30F554FD21F2BABA0010DC13 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +172,7 @@
 			files = (
 				30F554F421F2BAB90010DC13 /* AppDelegate.swift in Sources */,
 				30F554FC21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld in Sources */,
-				30F5550B21F2BC3B0010DC13 /* Main_VC.swift in Sources */,
+				30F5550B21F2BC3B0010DC13 /* PerfectCam_VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
