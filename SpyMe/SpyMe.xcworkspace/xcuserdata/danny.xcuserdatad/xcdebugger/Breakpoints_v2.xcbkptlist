@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/Model/Room.swift"
-            timestampString = "558230211.698063"
+            timestampString = "576731917.885964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "250"
             endingLineNumber = "250"
-            landmarkName = "deleteRoom(room:cb:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -54,33 +54,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpyMe/Model/Room.swift"
-            timestampString = "558230211.698424"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "createRoom(room:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/Model/Room.swift"
-            timestampString = "558230211.698648"
+            timestampString = "576731917.886663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "createRoom(room:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,109 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpyMe/Model/Room.swift"
-            timestampString = "558230211.698851"
+            timestampString = "576731917.886907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "createRoom(room:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpyMe/Model/Room.swift"
-            timestampString = "558230211.699053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "createRoom(room:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.Room.createRoom(room: Swift.Optional&lt;SpyMe.Room&gt;, completion: (Swift.Bool, Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/Model/Room.swift"
-                  timestampString = "573261513.470171"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "189">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.Room.createRoom(room: Swift.Optional&lt;SpyMe.Room&gt;, completion: (Swift.Bool, Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/Model/Room.swift"
-                  timestampString = "573261513.4720941"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "726">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpyMe/Model/Room.swift"
-            timestampString = "573261549.605492"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "createRoom(room:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpyMe.Room.createRoom(room: Swift.Optional&lt;SpyMe.Room&gt;, completion: (Swift.Bool, Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/Model/Room.swift"
-                  timestampString = "573261549.610816"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "569">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.PFObject&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SpyMe.Room.createRoom(room: Swift.Optional&lt;SpyMe.Room&gt;, completion: (Swift.Bool, Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SpyMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danny/Documents/GitHub/iOS-Side-Projects/SpyMe/SpyMe/Model/Room.swift"
-                  timestampString = "573261549.612728"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "57">
-               </Location>
-            </Locations>
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

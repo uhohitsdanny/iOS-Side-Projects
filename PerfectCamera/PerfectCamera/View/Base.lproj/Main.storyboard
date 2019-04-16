@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an8-TM-1yX">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an8-TM-1yX">
                                 <rect key="frame" x="0.0" y="360" width="320" height="208"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-39-c5f">
@@ -41,7 +41,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96873658895492554" green="0.92137312758652623" blue="0.45091737791252628" alpha="0.65336157570422537" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.97785300016403198" green="0.94892698526382446" blue="0.64308017492294312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="OeT-39-c5f" firstAttribute="centerX" secondItem="an8-TM-1yX" secondAttribute="centerX" id="62h-2q-mSN"/>
                                     <constraint firstAttribute="bottom" secondItem="OeT-39-c5f" secondAttribute="bottom" constant="56" id="BQp-mM-jZC"/>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="an8-TM-1yX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7aR-4w-RlJ"/>
                             <constraint firstItem="an8-TM-1yX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Brl-0t-48o"/>

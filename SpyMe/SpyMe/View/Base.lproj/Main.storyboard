@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max 25 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-Ax-Wvb">
-                                <rect key="frame" x="97" y="346" width="127" height="14"/>
+                                <rect key="frame" x="96.5" y="346" width="127" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="dfg-dQ-MiZ"/>
                                 </constraints>
@@ -278,13 +278,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-p6-Q8v">
-                                <rect key="frame" x="16" y="194.5" width="288" height="28"/>
+                                <rect key="frame" x="16" y="195.5" width="288" height="28"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-8m-QF8" userLabel="idTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="231.5" width="250" height="29"/>
+                                <rect key="frame" x="35" y="232.5" width="250" height="28"/>
                                 <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
@@ -305,7 +305,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55P-y4-J7v" userLabel="pwTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="305.5" width="250" height="29"/>
+                                <rect key="frame" x="35" y="305.5" width="250" height="28"/>
                                 <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
@@ -320,7 +320,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-YA-s0w" userLabel="joinRmBtn">
-                                <rect key="frame" x="119" y="342.5" width="82" height="32"/>
+                                <rect key="frame" x="119" y="341.5" width="82" height="32"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="tbZ-Dz-34k"/>
@@ -350,7 +350,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note that all text is case-sensitive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-w3-77j">
-                                <rect key="frame" x="91" y="392.5" width="139" height="18"/>
+                                <rect key="frame" x="92.5" y="391.5" width="135.5" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="UFD-rz-yN0"/>
                                     <constraint firstAttribute="height" constant="18" id="wtf-c3-Ifc"/>
@@ -665,13 +665,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the amount of time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-7x-vzl">
-                                <rect key="frame" x="16" y="270" width="288" height="28.5"/>
+                                <rect key="frame" x="16" y="270" width="288" height="28"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-JB-Lau" userLabel="Time Stack View">
-                                <rect key="frame" x="48" y="315.5" width="225" height="30"/>
+                                <rect key="frame" x="47.5" y="315.5" width="225" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhQ-Zp-ef8">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -747,13 +747,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Room ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-Ui-mob">
-                                <rect key="frame" x="16" y="119" width="288" height="28.5"/>
+                                <rect key="frame" x="16" y="121" width="288" height="28"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-vt-1ge" userLabel="idTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="156.5" width="250" height="29"/>
+                                <rect key="frame" x="35" y="158.5" width="250" height="28"/>
                                 <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
@@ -768,13 +768,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0R-u3-X3F">
-                                <rect key="frame" x="15" y="196.5" width="290" height="28.5"/>
+                                <rect key="frame" x="15" y="198" width="290" height="28"/>
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=".." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-lR-7rW" userLabel="pwTextField" customClass="TextFieldCustom" customModule="SpyMe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="233" width="250" height="29"/>
+                                <rect key="frame" x="35" y="234" width="250" height="28"/>
                                 <color key="tintColor" red="0.28983160619999998" green="0.28983160619999998" blue="0.28983160619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
@@ -800,7 +800,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note that all text is case-sensitive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW5-AW-Fcx">
-                                <rect key="frame" x="91.5" y="436" width="139" height="18"/>
+                                <rect key="frame" x="92.5" y="436" width="135.5" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="gT0-Rj-T93"/>
                                 </constraints>
@@ -853,10 +853,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackBtn" width="187" height="187"/>
-        <image name="SpyGlassesTransparent" width="682" height="682"/>
+        <image name="BackBtn" width="187.5" height="187"/>
+        <image name="SpyGlassesTransparent" width="682.66668701171875" height="682.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tyk-RB-PNO"/>
+        <segue reference="Fdx-HJ-GaO"/>
     </inferredMetricsTieBreakers>
 </document>
