@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308F9CBF22677F79009E82DC /* Designables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F9CBE22677F79009E82DC /* Designables.swift */; };
+		308F9CC122679800009E82DC /* CaptureOutput_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F9CC022679800009E82DC /* CaptureOutput_VC.swift */; };
 		30F554F421F2BAB90010DC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F554F321F2BAB90010DC13 /* AppDelegate.swift */; };
 		30F554F921F2BAB90010DC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F554F721F2BAB90010DC13 /* Main.storyboard */; };
 		30F554FC21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30F554FA21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		308F9CBE22677F79009E82DC /* Designables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables.swift; sourceTree = "<group>"; };
+		308F9CC022679800009E82DC /* CaptureOutput_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOutput_VC.swift; sourceTree = "<group>"; };
 		30F554F021F2BAB90010DC13 /* PerfectCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F554F321F2BAB90010DC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F554F821F2BAB90010DC13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				30F5550A21F2BC3B0010DC13 /* PerfectCam_VC.swift */,
+				308F9CC022679800009E82DC /* CaptureOutput_VC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				30F554F321F2BAB90010DC13 /* AppDelegate.swift */,
+				308F9CBE22677F79009E82DC /* Designables.swift */,
 				30F554FD21F2BABA0010DC13 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -131,6 +137,7 @@
 				TargetAttributes = {
 					30F554EF21F2BAB90010DC13 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -170,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308F9CBF22677F79009E82DC /* Designables.swift in Sources */,
 				30F554F421F2BAB90010DC13 /* AppDelegate.swift in Sources */,
+				308F9CC122679800009E82DC /* CaptureOutput_VC.swift in Sources */,
 				30F554FC21F2BAB90010DC13 /* PerfectCamera.xcdatamodeld in Sources */,
 				30F5550B21F2BC3B0010DC13 /* PerfectCam_VC.swift in Sources */,
 			);
@@ -327,7 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Squirrel.PerfectCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -345,7 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Squirrel.PerfectCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Perfect Cam-->
+        <!--PerfectCam-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PerfectCam" title="Perfect Cam" id="BYZ-38-t0r" customClass="PerfectCam_VC" customModule="PerfectCamera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PerfectCam_VC" title="PerfectCam" id="BYZ-38-t0r" customClass="PerfectCam_VC" customModule="PerfectCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,10 +21,10 @@
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an8-TM-1yX">
                                 <rect key="frame" x="0.0" y="360" width="320" height="208"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-39-c5f">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-39-c5f" customClass="DesignableView" customModule="PerfectCamera" customModuleProvider="target">
                                         <rect key="frame" x="112" y="56" width="96" height="96"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuq-eF-cg4">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuq-eF-cg4" customClass="DesignableButton" customModule="PerfectCamera" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="6" width="84" height="84"/>
                                                 <color key="backgroundColor" red="0.96873658900000004" green="0.82875543829999998" blue="0.29786205290000001" alpha="0.65336157569999997" colorSpace="custom" customColorSpace="displayP3"/>
                                             </button>
@@ -48,23 +48,75 @@
                                     <constraint firstAttribute="height" constant="208" id="KQX-JX-4FE"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-cv-XHn">
+                                <rect key="frame" x="0.0" y="20" width="320" height="340"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QP4-cv-XHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Md-AU-JnO"/>
+                            <constraint firstItem="an8-TM-1yX" firstAttribute="top" secondItem="QP4-cv-XHn" secondAttribute="bottom" id="7Pz-hy-Zxy"/>
                             <constraint firstItem="an8-TM-1yX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7aR-4w-RlJ"/>
                             <constraint firstItem="an8-TM-1yX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Brl-0t-48o"/>
                             <constraint firstItem="an8-TM-1yX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gh0-0S-LrM"/>
+                            <constraint firstItem="QP4-cv-XHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IHH-qT-vv5"/>
+                            <constraint firstItem="QP4-cv-XHn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jyZ-WF-ZvP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btnView" destination="OeT-39-c5f" id="C2T-tG-IHB"/>
                         <outlet property="camBtn" destination="tuq-eF-cg4" id="Zer-aG-QX4"/>
+                        <outlet property="camView" destination="QP4-cv-XHn" id="E3e-40-nr6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52.5" y="26.408450704225352"/>
+        </scene>
+        <!--CaptureOutput-->
+        <scene sceneID="hQ9-it-83Q">
+            <objects>
+                <viewController storyboardIdentifier="CaptureOutput_VC" title="CaptureOutput" id="dPP-Nm-6my" customClass="CaptureOutput_VC" customModule="PerfectCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cJd-kA-KVF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vJm-Hz-g6q">
+                                <rect key="frame" x="0.0" y="20" width="320" height="340"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-Pb-3C8">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.97133583700000004" green="0.94258008319999997" blue="0.56602672190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HWy-Jw-afc"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="dismissVC" destination="dPP-Nm-6my" eventType="touchUpInside" id="Kh2-lt-bor"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LWl-Pb-3C8" firstAttribute="leading" secondItem="QxX-3e-NaB" secondAttribute="leading" id="51A-KS-rP8"/>
+                            <constraint firstItem="vJm-Hz-g6q" firstAttribute="trailing" secondItem="QxX-3e-NaB" secondAttribute="trailing" id="5Wj-hM-eIX"/>
+                            <constraint firstItem="QxX-3e-NaB" firstAttribute="bottom" secondItem="vJm-Hz-g6q" secondAttribute="bottom" constant="208" id="WQr-nM-JNo"/>
+                            <constraint firstItem="vJm-Hz-g6q" firstAttribute="top" secondItem="QxX-3e-NaB" secondAttribute="top" id="XDa-Eq-AdI"/>
+                            <constraint firstItem="vJm-Hz-g6q" firstAttribute="leading" secondItem="QxX-3e-NaB" secondAttribute="leading" id="fdX-AK-mrh"/>
+                            <constraint firstItem="LWl-Pb-3C8" firstAttribute="trailing" secondItem="QxX-3e-NaB" secondAttribute="trailing" id="tNN-z8-qj9"/>
+                            <constraint firstItem="LWl-Pb-3C8" firstAttribute="bottom" secondItem="QxX-3e-NaB" secondAttribute="bottom" id="vnY-g0-AhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QxX-3e-NaB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="vJm-Hz-g6q" id="b6W-F8-oa8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4rs-Cx-vpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729.375" y="25.35211267605634"/>
         </scene>
     </scenes>
 </document>

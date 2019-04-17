@@ -27,7 +27,6 @@ extension GetMoney_VC
     func setup()
     {
         numberGen!.generate()
-        
     }
 }
 
@@ -41,14 +40,15 @@ extension GetMoney_VC : UICollectionViewDelegate, UICollectionViewDataSource, UI
         return numberGen!.numbers.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let pt = collectionView.frame.size.width / 7.5
+        
+        return CGSize(width: pt, height: pt)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Number Cell", for: indexPath) as! NumberCell
-        
-        cell.frame.size.width = collectionView.frame.width / 7
-        cell.frame.size.height = collectionView.frame.width / 7
-        
-        print("\(cell.frame.size.width) : \(collectionView.frame.width / 7)")
         
         if(indexPath.row == 5)
         {

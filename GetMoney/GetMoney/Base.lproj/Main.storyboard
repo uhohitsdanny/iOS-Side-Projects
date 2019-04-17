@@ -57,9 +57,9 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-0i-n0c">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-0i-n0c">
                                                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
                                                                     <color key="textColor" red="0.70759755369999999" green="0.6184545159" blue="0.39603257180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -71,6 +71,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="h5C-0i-n0c" secondAttribute="trailing" id="U4H-bV-eiU"/>
                                                             <constraint firstAttribute="bottom" secondItem="h5C-0i-n0c" secondAttribute="bottom" id="lwN-hX-TZG"/>
                                                         </constraints>
+                                                        <size key="customSize" width="25" height="25"/>
                                                         <connections>
                                                             <outlet property="numberLbl" destination="h5C-0i-n0c" id="jmj-Rw-qfm"/>
                                                         </connections>
@@ -113,6 +114,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="numberslist" destination="pjL-HB-36N" id="F38-gi-kog"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
