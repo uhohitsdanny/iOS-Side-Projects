@@ -13,6 +13,7 @@
 		304ACF312262D73200F8660A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304ACF302262D73200F8660A /* Assets.xcassets */; };
 		304ACF342262D73200F8660A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304ACF322262D73200F8660A /* LaunchScreen.storyboard */; };
 		304ACF3C2262DDC200F8660A /* NumberGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304ACF3B2262DDC200F8660A /* NumberGen.swift */; };
+		304ACF412266952C00F8660A /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304ACF402266952C00F8660A /* NumberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		304ACF332262D73200F8660A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304ACF352262D73200F8660A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		304ACF3B2262DDC200F8660A /* NumberGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGen.swift; sourceTree = "<group>"; };
+		304ACF402266952C00F8660A /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		304ACF282262D72F00F8660A /* GetMoney */ = {
 			isa = PBXGroup;
 			children = (
+				304ACF3D226679C000F8660A /* Models */,
+				304ACF3E226679CC00F8660A /* ViewControllers */,
+				304ACF3F2266951100F8660A /* Views */,
 				304ACF292262D72F00F8660A /* AppDelegate.swift */,
-				304ACF2B2262D72F00F8660A /* GetMoney_VC.swift */,
-				304ACF3B2262DDC200F8660A /* NumberGen.swift */,
 				304ACF2D2262D72F00F8660A /* Main.storyboard */,
 				304ACF302262D73200F8660A /* Assets.xcassets */,
 				304ACF322262D73200F8660A /* LaunchScreen.storyboard */,
 				304ACF352262D73200F8660A /* Info.plist */,
 			);
 			path = GetMoney;
+			sourceTree = "<group>";
+		};
+		304ACF3D226679C000F8660A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				304ACF3B2262DDC200F8660A /* NumberGen.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		304ACF3E226679CC00F8660A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				304ACF2B2262D72F00F8660A /* GetMoney_VC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		304ACF3F2266951100F8660A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				304ACF402266952C00F8660A /* NumberCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304ACF412266952C00F8660A /* NumberCell.swift in Sources */,
 				304ACF2C2262D72F00F8660A /* GetMoney_VC.swift in Sources */,
 				304ACF3C2262DDC200F8660A /* NumberGen.swift in Sources */,
 				304ACF2A2262D72F00F8660A /* AppDelegate.swift in Sources */,

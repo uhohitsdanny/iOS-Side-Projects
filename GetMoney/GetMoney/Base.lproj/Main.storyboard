@@ -24,26 +24,72 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cie-gS-MAE" userLabel="LotteryView">
                                         <rect key="frame" x="36" y="0.0" width="204" height="240"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L O T T O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-ll-4cn">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="90"/>
-                                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="34"/>
-                                                <color key="textColor" red="0.97785300019999999" green="0.86100300159999998" blue="0.5438820862" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-ll-4cn">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="68"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="46Z-ll-4cn" secondAttribute="height" multiplier="3:1" id="BVe-r3-tPJ"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="L O T T O">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.97785300019999999" green="0.86100300159999998" blue="0.5438820862" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="34" name="HoeflerText-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="2" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1   3   12   11  30          10" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dUi-jt-Lyo">
-                                                <rect key="frame" x="8" y="80" width="188" height="152"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-HB-36N">
+                                                <rect key="frame" x="8" y="76" width="188" height="156"/>
                                                 <color key="backgroundColor" red="0.96965175867080688" green="0.94170087575912476" blue="0.56462836265563965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" red="0.70692521522590668" green="0.61985631404130692" blue="0.39684360788837014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="Bfl-S2-TFY">
+                                                    <size key="itemSize" width="25" height="25"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Number Cell" id="4yR-8g-G1f" customClass="NumberCell" customModule="GetMoney" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-0i-n0c">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="15"/>
+                                                                    <color key="textColor" red="0.70759755369999999" green="0.6184545159" blue="0.39603257180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="h5C-0i-n0c" firstAttribute="leading" secondItem="4yR-8g-G1f" secondAttribute="leading" id="H9a-2C-kS1"/>
+                                                            <constraint firstItem="h5C-0i-n0c" firstAttribute="top" secondItem="4yR-8g-G1f" secondAttribute="top" id="RSk-Do-Ta0"/>
+                                                            <constraint firstAttribute="trailing" secondItem="h5C-0i-n0c" secondAttribute="trailing" id="U4H-bV-eiU"/>
+                                                            <constraint firstAttribute="bottom" secondItem="h5C-0i-n0c" secondAttribute="bottom" id="lwN-hX-TZG"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="numberLbl" destination="h5C-0i-n0c" id="jmj-Rw-qfm"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="j9Y-8B-YWN"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rna-6Z-gbY"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97133583700000004" green="0.94258008323073861" blue="0.56602672193702219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="46Z-ll-4cn" secondAttribute="bottom" constant="150" id="Co3-6I-DDO"/>
                                             <constraint firstItem="46Z-ll-4cn" firstAttribute="leading" secondItem="Cie-gS-MAE" secondAttribute="leading" id="Gxr-qU-eiK"/>
+                                            <constraint firstItem="pjL-HB-36N" firstAttribute="leading" secondItem="Cie-gS-MAE" secondAttribute="leading" constant="8" id="R7h-nZ-0uM"/>
+                                            <constraint firstAttribute="bottom" secondItem="pjL-HB-36N" secondAttribute="bottom" constant="8" id="RJf-iN-gun"/>
+                                            <constraint firstAttribute="trailing" secondItem="pjL-HB-36N" secondAttribute="trailing" constant="8" id="UPK-gM-vPk"/>
                                             <constraint firstAttribute="trailing" secondItem="46Z-ll-4cn" secondAttribute="trailing" id="Vp2-Zr-y1u"/>
+                                            <constraint firstItem="pjL-HB-36N" firstAttribute="top" secondItem="46Z-ll-4cn" secondAttribute="bottom" constant="8" id="sTt-Fz-mxB"/>
                                             <constraint firstItem="46Z-ll-4cn" firstAttribute="top" secondItem="Cie-gS-MAE" secondAttribute="top" id="umP-IZ-4w1"/>
                                         </constraints>
                                     </view>
@@ -61,8 +107,9 @@
                         <color key="backgroundColor" red="0.97785300019999999" green="0.94892698529999997" blue="0.64308017490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Tgh-Xa-UbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1FU-yY-clS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tgh-Xa-UbS" secondAttribute="bottom" constant="164" id="GgM-1m-cU1"/>
+                            <constraint firstItem="Tgh-Xa-UbS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WGm-zD-84f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tgh-Xa-UbS" secondAttribute="trailing" constant="40" id="cNe-45-2lU"/>
+                            <constraint firstItem="Tgh-Xa-UbS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mdb-za-MG8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
