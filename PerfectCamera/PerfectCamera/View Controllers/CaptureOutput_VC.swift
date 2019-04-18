@@ -13,21 +13,28 @@ class CaptureOutput_VC : UIViewController
 {
     @IBOutlet weak var imageView : UIImageView!
     
-    var stillImageOut : AVCapturePhotoOutput!
-    var videoPreviewLayer : AVCaptureVideoPreviewLayer!
+    var image : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setup()
     }
 }
 
 extension CaptureOutput_VC
 {
+    func setup()
+    {
+        if self.image != nil
+        {
+            self.imageView.image = self.image
+        }
+    }
+    
     func setImageView(with image:UIImage)
     {
-        self.imageView.image = image
+        self.image = image
     }
     
     @IBAction func dismissVC()

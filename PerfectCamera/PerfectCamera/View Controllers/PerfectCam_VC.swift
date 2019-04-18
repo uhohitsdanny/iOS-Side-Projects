@@ -39,44 +39,19 @@ extension PerfectCam_VC
     {
         setupUI()
         buttonSetup()
-        cameraSetup { (success) in
-            // MARK: Step 5
-            // if camera is setup successfully,
-            // Associate capture session with the video preview layer
-            // Setup the video preview layer
-            // The reason the attributes are video,e.g. videoGravity & videoOrientation,
-            // is that even though we are taking a picture, the screen that allows you
-            // to see before capturing is technically a video session.
-            // Image capturing is essentially snapshotting the screen of a video layer
-            if success
-            {
-                self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.capSesh)
-                
-                // This will tell the video to resize its aspect ratio
-                // when we change the view size for any reason
-                self.videoPreviewLayer.videoGravity = .resizeAspect
-                self.videoPreviewLayer.connection?.videoOrientation = .portrait
-                // Add it to the sublayer of the view you are using
-                self.camView.layer.addSublayer(self.videoPreviewLayer)
-            
-                // Setup is done! Now add it to the background thread and start it!
-                // If the capture session is ran on main thread, UI would be blocked
-                DispatchQueue.global(qos: .userInitiated).async {
-                    self.capSesh.startRunning()
-                    
-                    // Now we actually size the video preview layer to the view
-                    // because video gravity is set, the framework will automatically
-                    // scale the live video when changinge the layer size
-                    // Since we are changing frames, which is a UI change, we need to
-                    // go into the main thread.
-                    DispatchQueue.main.async {
-                        self.videoPreviewLayer.frame = self.camView.bounds
-                    }
-                    
-                    // The live video preview is now ready, and the camera input/output is
-                    // connected to a capture session.  Now, we can take some pictures!
+        
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            self.cameraSetup()
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                if granted
+                {
+                    self.cameraSetup()
                 }
             }
+        default:
+            return
         }
     }
     
@@ -95,7 +70,7 @@ extension PerfectCam_VC
         self.camBtn.addGestureRecognizer(longPressGest)
     }
     
-    func cameraSetup(callback cb:@escaping (_ success:Bool)->Void)
+    func cameraSetup()
     {
         // MARK: Step 1
         // A Capture Session needs to be created
@@ -110,7 +85,6 @@ extension PerfectCam_VC
         else
         {
             print("Unable to access rear camera")
-            cb(false)
             return
         }
         
@@ -129,15 +103,46 @@ extension PerfectCam_VC
             {
                 capSesh.addInput(input)
                 capSesh.addOutput(stillImageOutput)
-                cb(true)
+                
+                // MARK: Step 5
+                // if camera is setup successfully,
+                // Associate capture session with the video preview layer
+                // Setup the video preview layer
+                // The reason the attributes are video,e.g. videoGravity & videoOrientation,
+                // is that even though we are taking a picture, the screen that allows you
+                // to see before capturing is technically a video session.
+                // Image capturing is essentially snapshotting the screen of a video layer
+                videoPreviewLayer = AVCaptureVideoPreviewLayer(session: capSesh)
+                
+                // This will tell the video to resize its aspect ratio
+                // when we change the view size for any reason
+                videoPreviewLayer.videoGravity = .resizeAspect
+                videoPreviewLayer.connection?.videoOrientation = .portrait
+                // Add it to the sublayer of the view you are using
+                camView.layer.addSublayer(videoPreviewLayer)
+                // Setup is done! Now add it to the background thread and start it!
+                // If the capture session is ran on main thread, UI would be blocked
+                DispatchQueue.global(qos: .userInitiated).async
+                {
+                    self.capSesh.startRunning()
+                    
+                    // Now we actually size the video preview layer to the view
+                    // because video gravity is set, the framework will automatically
+                    // scale the live video when changinge the layer size
+                    // Since we are changing frames, which is a UI change, we need to
+                    // go into the main thread.
+                    DispatchQueue.main.async
+                    {
+                        self.videoPreviewLayer.frame = self.camView.frame
+                    }
+                    // The live video preview is now ready, and the camera input/output is
+                    // connected to a capture session.  Now, we can take some pictures!
+                }
             }
-            else
-            {   cb(false)   }
         }
         catch
         {
             print("Unable to initialize rear camera: \(error.localizedDescription)")
-            cb(false)
         }
     }
 }
