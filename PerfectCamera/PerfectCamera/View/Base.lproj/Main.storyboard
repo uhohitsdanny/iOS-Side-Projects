@@ -26,7 +26,12 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuq-eF-cg4" customClass="DesignableButton" customModule="PerfectCamera" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="78" height="78"/>
-                                                <color key="backgroundColor" red="0.96873658900000004" green="0.82875543829999998" blue="0.29786205290000001" alpha="0.65336157569999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.97709554433822632" green="0.88696044683456421" blue="0.48225975036621094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="cameraTouchDown" destination="BYZ-38-t0r" eventType="touchDown" id="0Oa-je-xtC"/>
+                                                    <action selector="cameraTouchUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVo-lg-usL"/>
+                                                    <action selector="cameraTouchUp" destination="BYZ-38-t0r" eventType="touchUpOutside" id="TW5-BQ-jp4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,11 +93,13 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-Pb-3C8">
                                 <rect key="frame" x="0.0" y="538" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.97133583700000004" green="0.94258008319999997" blue="0.56602672190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.91917604207992554" green="0.88986164331436157" blue="0.60386830568313599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HWy-Jw-afc"/>
                                 </constraints>
-                                <state key="normal" title="Close"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="1" green="0.49816844459999998" blue="0.47551844739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="dismissVC" destination="dPP-Nm-6my" eventType="touchUpInside" id="Kh2-lt-bor"/>
                                 </connections>

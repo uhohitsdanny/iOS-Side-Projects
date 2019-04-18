@@ -161,23 +161,30 @@ extension PerfectCam_VC : AVCapturePhotoCaptureDelegate
 {
     @objc func takePic()
     {
-        print("""
-                Action: taking picture
-
-                Using new Multi-line system
-                """)
+        print("Action: taking picture")
         // Set the photo format to JPEG
         // AVVideoCodecKey is a string that will tell the settings that
         // we want to change the video codec
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey:AVVideoCodecType.jpeg])
         stillImageOutput.capturePhoto(with: settings, delegate: self)
-        
         // The delegate function photoOutput will process the captured data
     }
     
     @objc func recordVideo()
     {
+        
+    }
+    
+    @IBAction func cameraTouchDown()
+    {
         print("Action: recording video")
+        self.camBtn.backgroundColor = UIColor.init(red: 255/255, green: 127/255, blue: 126/255, alpha: 1.0)
+    }
+    
+    @IBAction func cameraTouchUp()
+    {
+        print("Action: stopped recording")
+        self.camBtn.backgroundColor = UIColor.init(red: 249/255, green: 226/255, blue: 123/255, alpha: 1.0)
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
