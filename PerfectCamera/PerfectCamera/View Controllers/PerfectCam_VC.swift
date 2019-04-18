@@ -157,7 +157,7 @@ extension PerfectCam_VC
 }
 
 // MARK: - Button Functions
-extension PerfectCam_VC : AVCapturePhotoCaptureDelegate
+extension PerfectCam_VC : AVCapturePhotoCaptureDelegate, UIGestureRecognizerDelegate
 {
     @objc func takePic()
     {
@@ -170,25 +170,23 @@ extension PerfectCam_VC : AVCapturePhotoCaptureDelegate
         // The delegate function photoOutput will process the captured data
     }
     
-    @objc func recordVideo()
+    @objc func recordVideo(sender : UILongPressGestureRecognizer)
     {
         
-    }
-    
-    @IBAction func cameraTouchDown()
-    {
-        print("Action: recording video")
-        self.camBtn.backgroundColor = UIColor.init(red: 255/255, green: 127/255, blue: 126/255, alpha: 1.0)
-    }
-    
-    @IBAction func cameraTouchUp()
-    {
-        print("Action: stopped recording")
-        self.camBtn.backgroundColor = UIColor.init(red: 249/255, green: 226/255, blue: 123/255, alpha: 1.0)
+        if sender.state == .began
+        {
+            print("Action: started recording")
+            self.camBtn.backgroundColor = UIColor.init(red: 255/255, green: 127/255, blue: 126/255, alpha: 1.0)
+        }
+        else if sender.state == .ended
+        {
+            print("Action: stopped recording")
+            self.camBtn.backgroundColor = UIColor.init(red: 249/255, green: 226/255, blue: 123/255, alpha: 1.0)
+        }
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        // MARK: Step 7
+        // MARK: Step 6
         // Process the captured data!
         guard let imgData = photo.fileDataRepresentation()
         else{   return  }
