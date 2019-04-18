@@ -24,6 +24,15 @@ class PerfectCam_VC: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.capSesh != nil
+        {
+            self.capSesh.startRunning()
+            return
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // MARK: Final Step - Clean up!
@@ -77,7 +86,7 @@ extension PerfectCam_VC
         // This API allows us to coordinate input and output
         // of the data
         capSesh = AVCaptureSession()
-        capSesh.sessionPreset = .medium
+        capSesh.sessionPreset = .high
         
         // MARK: Step 2
         // Choose an input device (front camera, rear camera)
@@ -116,7 +125,7 @@ extension PerfectCam_VC
                 
                 // This will tell the video to resize its aspect ratio
                 // when we change the view size for any reason
-                videoPreviewLayer.videoGravity = .resizeAspect
+                videoPreviewLayer.videoGravity = .resize
                 videoPreviewLayer.connection?.videoOrientation = .portrait
                 // Add it to the sublayer of the view you are using
                 camView.layer.addSublayer(videoPreviewLayer)
@@ -133,7 +142,7 @@ extension PerfectCam_VC
                     // go into the main thread.
                     DispatchQueue.main.async
                     {
-                        self.videoPreviewLayer.frame = self.camView.frame
+                        self.videoPreviewLayer.frame = self.camView.bounds
                     }
                     // The live video preview is now ready, and the camera input/output is
                     // connected to a capture session.  Now, we can take some pictures!
