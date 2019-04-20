@@ -104,18 +104,28 @@
                                     <constraint firstItem="Cie-gS-MAE" firstAttribute="top" secondItem="Tgh-Xa-UbS" secondAttribute="top" id="yBi-gC-7Uj"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shaken :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ6-64-r1G">
+                                <rect key="frame" x="0.0" y="527.5" width="320" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97785300019999999" green="0.94892698529999997" blue="0.64308017490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Tgh-Xa-UbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1FU-yY-clS"/>
+                            <constraint firstItem="hJ6-64-r1G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cwa-Zz-eAw"/>
+                            <constraint firstItem="hJ6-64-r1G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MDD-2y-s52"/>
                             <constraint firstItem="Tgh-Xa-UbS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WGm-zD-84f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tgh-Xa-UbS" secondAttribute="trailing" constant="40" id="cNe-45-2lU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hJ6-64-r1G" secondAttribute="bottom" constant="20" id="eyy-c7-4oi"/>
                             <constraint firstItem="Tgh-Xa-UbS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mdb-za-MG8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="numberslist" destination="pjL-HB-36N" id="F38-gi-kog"/>
+                        <outlet property="shakerLbl" destination="hJ6-64-r1G" id="Xha-Hq-QB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

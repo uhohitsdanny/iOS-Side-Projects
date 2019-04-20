@@ -11,14 +11,48 @@ import UIKit
 class GetMoney_VC: UIViewController {
     
     @IBOutlet weak var numberslist : UICollectionView!
+    @IBOutlet weak var shakerLbl : UILabel!
     
-     var numberGen : NumberGen?
+    var numberGen : NumberGen?
+    var shakecount : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         numberGen = NumberGen()
         setup()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake
+        {
+            shakecount += 1
+            shakerLbl.text! = "Shaken \(shakecount) times"
+            
+            let alertVC = UIAlertController(title: "", message: "Reshuffle numbers?", preferredStyle: .alert)
+            let titleFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "AmericanTypewriter", size: 18)! ]
+            let messageFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 14)! ]
+            let attributedTitle = NSMutableAttributedString(string: "Multiple buttons", attributes: titleFont)
+            let attributedMessage = NSMutableAttributedString(string: "Select an Action", attributes: messageFont)
+            alertVC.setValue(attributedTitle, forKey: "attributedTitle")
+            alertVC.setValue(attributedMessage, forKey: "attributedMessage")
+            
+            alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.numberGen?.generate()
+                self.numberslist.reloadData()
+            }))
+            alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            alertVC.view.tintColor = UIColor(red: 180/255, green: 158/255, blue: 101/255, alpha: 1.0)
+            alertVC.view.backgroundColor = UIColor(red: 249/255, green: 242/255, blue: 154/255, alpha: 1.0)
+            alertVC.view.layer.cornerRadius = 25
+            
+            self.present(alertVC, animated: true, completion: nil)
+        }
     }
 }
 

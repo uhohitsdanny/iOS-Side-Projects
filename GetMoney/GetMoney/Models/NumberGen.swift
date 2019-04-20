@@ -25,6 +25,7 @@ extension NumberGen
 {
     func generate()
     {
+        numbers = []
         for i in 1...MAXLINES
         {
             numbers.append(Array.init())
