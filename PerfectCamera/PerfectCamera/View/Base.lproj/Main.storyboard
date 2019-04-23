@@ -27,9 +27,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuq-eF-cg4" customClass="DesignableButton" customModule="PerfectCamera" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="78" height="78"/>
                                                 <color key="backgroundColor" red="0.97709554433822632" green="0.88696044683456421" blue="0.48225975036621094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <connections>
-                                                    <action selector="cameraTouchDown" destination="BYZ-38-t0r" eventType="touchDown" id="0Oa-je-xtC"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

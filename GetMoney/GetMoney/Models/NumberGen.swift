@@ -42,4 +42,9 @@ extension NumberGen
     {
         
     }
+    
+    func getLastWinningNumbers()
+    {
+        // TODO: - DO IT
+    }
 }

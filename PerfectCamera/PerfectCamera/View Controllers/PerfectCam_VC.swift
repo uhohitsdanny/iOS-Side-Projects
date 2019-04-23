@@ -125,7 +125,7 @@ extension PerfectCam_VC
                 
                 // This will tell the video to resize its aspect ratio
                 // when we change the view size for any reason
-                videoPreviewLayer.videoGravity = .resize
+                videoPreviewLayer.videoGravity = .resizeAspect
                 videoPreviewLayer.connection?.videoOrientation = .portrait
                 // Add it to the sublayer of the view you are using
                 camView.layer.addSublayer(videoPreviewLayer)
