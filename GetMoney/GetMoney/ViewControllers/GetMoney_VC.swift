@@ -25,36 +25,25 @@ class GetMoney_VC: UIViewController {
         return true
     }
     
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        if motion == .motionShake
-        {
-            let alertVC = UIAlertController(title: "", message: "Reshuffle numbers?", preferredStyle: .alert)
-            let titleFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "AmericanTypewriter", size: 18)! ]
-            let messageFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 14)! ]
-            let attributedTitle = NSMutableAttributedString(string: "Lotto ", attributes: titleFont)
-            let attributedMessage = NSMutableAttributedString(string: "Reshuffle the lotto numbers?", attributes: messageFont)
-            alertVC.setValue(attributedTitle, forKey: "attributedTitle")
-            alertVC.setValue(attributedMessage, forKey: "attributedMessage")
-            
-            alertVC.view.tintColor = UIColor(red: 180/255, green: 158/255, blue: 101/255, alpha: 1.0)
-            alertVC.view.layer.cornerRadius = 25
-            
-            alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.numberGen?.generate()
-                self.numberslist.reloadData()
-            }))
-            alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            
-            self.present(alertVC, animated: true, completion: nil)
-        }
-    }
 }
 
 extension GetMoney_VC
 {
     func setup()
     {
+        let appdelegate = AppDelegate()
+        
+        if(appdelegate.isAppAlreadyLaunchedOnce())
+        {
+            initBeginngerTips()
+        }
+        
         numberGen!.generate()
+    }
+    
+    func initBeginngerTips()
+    {
+        
     }
 }
 
@@ -94,6 +83,30 @@ extension GetMoney_VC : UICollectionViewDelegate, UICollectionViewDataSource, UI
         }
         
         return cell
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake
+        {
+            let alertVC = UIAlertController(title: "", message: "Reshuffle numbers?", preferredStyle: .alert)
+            let titleFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "AmericanTypewriter", size: 18)! ]
+            let messageFont:[NSAttributedString.Key : AnyObject] = [ NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 14)! ]
+            let attributedTitle = NSMutableAttributedString(string: "Lotto ", attributes: titleFont)
+            let attributedMessage = NSMutableAttributedString(string: "Reshuffle the lotto numbers?", attributes: messageFont)
+            alertVC.setValue(attributedTitle, forKey: "attributedTitle")
+            alertVC.setValue(attributedMessage, forKey: "attributedMessage")
+            
+            alertVC.view.tintColor = UIColor(red: 180/255, green: 158/255, blue: 101/255, alpha: 1.0)
+            alertVC.view.layer.cornerRadius = 25
+            
+            alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.numberGen?.generate()
+                self.numberslist.reloadData()
+            }))
+            alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alertVC, animated: true, completion: nil)
+        }
     }
 }
 

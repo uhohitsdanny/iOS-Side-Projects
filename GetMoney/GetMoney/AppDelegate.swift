@@ -41,6 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func isAppAlreadyLaunchedOnce() -> Bool
+    {
+        let defaults = UserDefaults.standard
+        let key = "alreadyLaunched"
+        if let _ = defaults.string(forKey: key)
+        {
+            return true
+        }
+        else
+        {
+            defaults.set(true, forKey: key)
+            return false
+        }
+        
+    }
 
 }
 
